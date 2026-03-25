@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://yuhasprosoftwaretester.github.io/Java-course/1-Introduction/index.md/Java/1-Introduction/</loc>
+         <loc>https://yuhasproSoftwareTester.github.io/Java-course/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://yuhasproSoftwareTester.github.io/Java-course/Java/1-Introduction/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
 </urlset>
