@@ -1,0 +1,69 @@
+site_name: Yuhaspro 
+
+site_description: Core Java 
+site_author: Afwan
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - content.code.copy
+
+nav:
+  - Java:
+      - Introduction: 1-Introduction/index.md
+      - Install: 2-Install/index.md
+      - Syntax: 3-Syntax/index.md
+      - Comments: 4-Comment/index.md
+      - Input & Output:
+          - Print: 5-Output&Input/Print.md
+          - Scanner: 5-Output&Input/Scanner.md
+      - Variables: 6-Variables/index.md
+      - Data Types: 7-Data Types/index.md
+      - Type Casting: 8-Type Casting/index.md
+
+      - Operators:
+          - Arithmetic: 9-Operators/Arithmetic Operators.md
+          - Assignment: 9-Operators/Assignment Operators.md
+          - Comparison: 9-Operators/Comparison Operators.md
+          - Logical: 9-Operators/Logical Operators.md
+
+      - Strings: 10-Strings/index.md
+      - Math: 11-Math/index.md
+      - Control Statements:
+          - If Else:
+              - If: 1-If... Else/If.md
+              - If Else: 1-If... Else/If else Statements.md
+              - Else If: 1-If... Else/else if Statement.md
+              - Nested If: 1-If... Else/Nested If.md
+              - Ternary: 1-If... Else/Ternary operator.md
+
+          - Switch: 2-Switch Statements/index.md
+
+          - Loops:
+              - For Loop: 3-Loops/For Loop.md
+              - While Loop: 3-Loops/While Loop.md
+              - Do While: 3-Loops/DoWhile Loop.md
+              - Nested Loops: 3-Loops/Nested Loops.md
+              - Break & Continue: 3-Loops/Break and Continue.md
+
+      - Collections:
+          - ArrayList: 13-Collection/ArrayList.md
+          - Arrays: 13-Collection/Arrays.md
+          - HashMap: 13-Collection/HashMap.md
+          - HashSet: 13-Collection/HashSet.md
+          - List: 13-Collection/List.md
+          - Map: 13-Collection/Map.md
+          - Set: 13-Collection/Set.md
+
+      - OOP: 14-OOP/index.md
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: cyan
