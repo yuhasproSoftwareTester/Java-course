@@ -12,31 +12,27 @@
         <meta name="author" content="Afwan">
       
       
-        <link rel="canonical" href="https://yuhasproSoftwareTester.github.io/Java-course/Java/8-Operators/Arithmetic%20Operators/arithmetic/">
+        <link rel="canonical" href="https://yuhasproSoftwareTester.github.io/Java-course/Java/11-Control%20Statements/1-If%20...%20Else/If%20else%20Statements/If%20else/">
       
       
-        <link rel="prev" href="../../../7-Type%20Casting/typeCasting/">
-      
-      
-        <link rel="next" href="../../Assignment%20Operators/assignment/">
       
       
         
       
       
-      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Arithmetic - Yuhaspro</title>
+        <title>Section 15: Basic If-Else - Yuhaspro</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -80,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arithmetic-operators" class="md-skip">
+        <a href="#section-15-basic-if-else" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Yuhaspro" class="md-header__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
+    <a href="../../../../.." title="Yuhaspro" class="md-header__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -116,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Arithmetic
+              Section 15: Basic If-Else
             
           </span>
         </div>
@@ -206,7 +202,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Yuhaspro" class="md-nav__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
+    <a href="../../../../.." title="Yuhaspro" class="md-nav__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -221,20 +217,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
         
           
           <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
@@ -255,7 +249,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -270,20 +264,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
         
           
           <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
@@ -304,7 +296,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -322,7 +314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-Introduction/" class="md-nav__link">
+      <a href="../../../../1-Introduction/" class="md-nav__link">
         
   
   
@@ -350,7 +342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../2-Install/" class="md-nav__link">
+      <a href="../../../../2-Install/" class="md-nav__link">
         
   
   
@@ -378,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../3-Syntax/Syntax/" class="md-nav__link">
+      <a href="../../../../3-Syntax/Syntax/" class="md-nav__link">
         
   
   
@@ -406,7 +398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../4-Data%20Types/DataType/" class="md-nav__link">
+      <a href="../../../../4-Data%20Types/DataType/" class="md-nav__link">
         
   
   
@@ -434,7 +426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../5-Variables/Variables/" class="md-nav__link">
+      <a href="../../../../5-Variables/Variables/" class="md-nav__link">
         
   
   
@@ -509,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6-Output%26Input/Print/output/" class="md-nav__link">
+      <a href="../../../../6-Output%26Input/Print/output/" class="md-nav__link">
         
   
   
@@ -537,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../6-Output%26Input/Scanner/input/" class="md-nav__link">
+      <a href="../../../../6-Output%26Input/Scanner/input/" class="md-nav__link">
         
   
   
@@ -573,7 +565,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../7-Type%20Casting/typeCasting/" class="md-nav__link">
+      <a href="../../../../7-Type%20Casting/typeCasting/" class="md-nav__link">
         
   
   
@@ -598,20 +590,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_8" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_8" >
         
           
           <label class="md-nav__link" for="__nav_1_1_8" id="__nav_1_1_8_label" tabindex="0">
@@ -632,7 +622,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_8_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_8_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_1_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -647,37 +637,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Arithmetic
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../8-Operators/Arithmetic%20Operators/arithmetic/" class="md-nav__link">
         
   
   
@@ -693,248 +656,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-arithmetic-operators-overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        1. Arithmetic Operators Overview
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-increment-decrement-deep-dive" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Increment &amp; Decrement Deep Dive
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Increment &amp; Decrement Deep Dive">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pre-vs-post-the-critical-difference" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Pre vs Post - The Critical Difference
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#visual-comparison" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Visual Comparison
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#memory-step-by-step" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Memory Step-by-Step
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-complete-working-examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Complete Working Examples
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. Complete Working Examples">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#example-1-basic-calculator" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example 1: Basic Calculator
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#example-2-shopping-cart-calculator" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Example 2: Shopping Cart Calculator
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-five-practical-programs-copy-paste-ready" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        4. Five Practical Programs (Copy-Paste Ready)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="4. Five Practical Programs (Copy-Paste Ready)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#program-1-score-calculator-post-increment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Program 1: Score Calculator (Post-Increment)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#program-2-level-up-system-pre-increment" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Program 2: Level Up System (Pre-Increment)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#program-3-order-counter-loop-simulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Program 3: Order Counter (Loop Simulation)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#program-4-bank-interest-calculator" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Program 4: Bank Interest Calculator
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#program-5-pagination-calculator-selenium-prep" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Program 5: Pagination Calculator (Selenium Prep)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-common-errors-fixes" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        5. Common Errors &amp; Fixes
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-quick-rules-checklist" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6. Quick Rules Checklist
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="6. Quick Rules Checklist">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#arithmetic-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Arithmetic Rules
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#incrementdecrement-rules" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Increment/Decrement Rules
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -947,7 +668,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Assignment%20Operators/assignment/" class="md-nav__link">
+      <a href="../../../../8-Operators/Assignment%20Operators/assignment/" class="md-nav__link">
         
   
   
@@ -975,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Comparison%20Operators/comparison/" class="md-nav__link">
+      <a href="../../../../8-Operators/Comparison%20Operators/comparison/" class="md-nav__link">
         
   
   
@@ -1003,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Logical%20Operators/logical/" class="md-nav__link">
+      <a href="../../../../8-Operators/Logical%20Operators/logical/" class="md-nav__link">
         
   
   
@@ -1039,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../9-Strings/string/" class="md-nav__link">
+      <a href="../../../../9-Strings/string/" class="md-nav__link">
         
   
   
@@ -1067,7 +788,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../10-Math/math/" class="md-nav__link">
+      <a href="../../../../10-Math/math/" class="md-nav__link">
         
   
   
@@ -1189,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-If... Else/If.md" class="md-nav__link">
+      <a href="../../../../1-If... Else/If.md" class="md-nav__link">
         
   
   
@@ -1217,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-If... Else/If else.md" class="md-nav__link">
+      <a href="../../../../1-If... Else/If else.md" class="md-nav__link">
         
   
   
@@ -1245,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-If... Else/else if.md" class="md-nav__link">
+      <a href="../../../../1-If... Else/else if.md" class="md-nav__link">
         
   
   
@@ -1273,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-If... Else/Nested If.md" class="md-nav__link">
+      <a href="../../../../1-If... Else/Nested If.md" class="md-nav__link">
         
   
   
@@ -1301,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../1-If... Else/Ternary.md" class="md-nav__link">
+      <a href="../../../../1-If... Else/Ternary.md" class="md-nav__link">
         
   
   
@@ -1337,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2-Switch Statements/index.md" class="md-nav__link">
+      <a href="../../../../../2-Switch Statements/index.md" class="md-nav__link">
         
   
   
@@ -1412,7 +1133,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3-Loops/For Loop.md" class="md-nav__link">
+      <a href="../../../../../3-Loops/For Loop.md" class="md-nav__link">
         
   
   
@@ -1440,7 +1161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3-Loops/While Loop.md" class="md-nav__link">
+      <a href="../../../../../3-Loops/While Loop.md" class="md-nav__link">
         
   
   
@@ -1468,7 +1189,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3-Loops/DoWhile Loop.md" class="md-nav__link">
+      <a href="../../../../../3-Loops/DoWhile Loop.md" class="md-nav__link">
         
   
   
@@ -1496,7 +1217,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3-Loops/Nested Loops.md" class="md-nav__link">
+      <a href="../../../../../3-Loops/Nested Loops.md" class="md-nav__link">
         
   
   
@@ -1524,7 +1245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3-Loops/Break and Continue.md" class="md-nav__link">
+      <a href="../../../../../3-Loops/Break and Continue.md" class="md-nav__link">
         
   
   
@@ -1615,7 +1336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../12-Collection/ArrayList.md" class="md-nav__link">
+      <a href="../../../../../12-Collection/ArrayList.md" class="md-nav__link">
         
   
   
@@ -1643,7 +1364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../12-Collection/Arrays.md" class="md-nav__link">
+      <a href="../../../../../12-Collection/Arrays.md" class="md-nav__link">
         
   
   
@@ -1671,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../12-Collection/HashMap.md" class="md-nav__link">
+      <a href="../../../../../12-Collection/HashMap.md" class="md-nav__link">
         
   
   
@@ -1699,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../12-Collection/HashSet.md" class="md-nav__link">
+      <a href="../../../../../12-Collection/HashSet.md" class="md-nav__link">
         
   
   
@@ -1727,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../12-Collection/List.md" class="md-nav__link">
+      <a href="../../../../../12-Collection/List.md" class="md-nav__link">
         
   
   
@@ -1755,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../12-Collection/Map.md" class="md-nav__link">
+      <a href="../../../../../12-Collection/Map.md" class="md-nav__link">
         
   
   
@@ -1783,7 +1504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../12-Collection/Set.md" class="md-nav__link">
+      <a href="../../../../../12-Collection/Set.md" class="md-nav__link">
         
   
   
@@ -1819,7 +1540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../13-OOP/index.md" class="md-nav__link">
+      <a href="../../../../../13-OOP/index.md" class="md-nav__link">
         
   
   
@@ -1882,33 +1603,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-arithmetic-operators-overview" class="md-nav__link">
+  <a href="#1-if-else-structure-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Arithmetic Operators Overview
+        1. If-Else Structure Overview
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-increment-decrement-deep-dive" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Increment &amp; Decrement Deep Dive
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. Increment &amp; Decrement Deep Dive">
+    <nav class="md-nav" aria-label="1. If-Else Structure Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#pre-vs-post-the-critical-difference" class="md-nav__link">
+  <a href="#three-basic-forms" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Pre vs Post - The Critical Difference
+        Three Basic Forms
       
     </span>
   </a>
@@ -1916,10 +1626,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#visual-comparison" class="md-nav__link">
+  <a href="#visual-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Visual Comparison
+        Visual Flow
       
     </span>
   </a>
@@ -1927,10 +1637,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#memory-step-by-step" class="md-nav__link">
+  <a href="#rule-2-braces-required-for-multiple-statements" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Memory Step-by-Step
+        Rule 2: Braces Required for Multiple Statements
       
     </span>
   </a>
@@ -1955,10 +1665,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-1-basic-calculator" class="md-nav__link">
+  <a href="#example-1-simple-if" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example 1: Basic Calculator
+        Example 1: Simple If
       
     </span>
   </a>
@@ -1966,10 +1676,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-2-shopping-cart-calculator" class="md-nav__link">
+  <a href="#example-2-if-else" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example 2: Shopping Cart Calculator
+        Example 2: If-Else
       
     </span>
   </a>
@@ -1994,10 +1704,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#program-1-score-calculator-post-increment" class="md-nav__link">
+  <a href="#program-1-number-classifier" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Program 1: Score Calculator (Post-Increment)
+        Program 1: Number Classifier
       
     </span>
   </a>
@@ -2005,10 +1715,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#program-2-level-up-system-pre-increment" class="md-nav__link">
+  <a href="#program-2-login-system-with-attempts" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Program 2: Level Up System (Pre-Increment)
+        Program 2: Login System with Attempts
       
     </span>
   </a>
@@ -2016,10 +1726,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#program-3-order-counter-loop-simulation" class="md-nav__link">
+  <a href="#program-3-grade-calculator-with-validation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Program 3: Order Counter (Loop Simulation)
+        Program 3: Grade Calculator with Validation
       
     </span>
   </a>
@@ -2027,10 +1737,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#program-4-bank-interest-calculator" class="md-nav__link">
+  <a href="#program-4-e-commerce-discount-engine" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Program 4: Bank Interest Calculator
+        Program 4: E-commerce Discount Engine
       
     </span>
   </a>
@@ -2038,10 +1748,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#program-5-pagination-calculator-selenium-prep" class="md-nav__link">
+  <a href="#program-5-selenium-element-state-checker-automation-prep" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Program 5: Pagination Calculator (Selenium Prep)
+        Program 5: Selenium Element State Checker (Automation Prep)
       
     </span>
   </a>
@@ -2054,10 +1764,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-common-errors-fixes" class="md-nav__link">
+  <a href="#6-common-errors-fixes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5. Common Errors &amp; Fixes
+        6. Common Errors &amp; Fixes
       
     </span>
   </a>
@@ -2065,22 +1775,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#6-quick-rules-checklist" class="md-nav__link">
+  <a href="#7-quick-rules-checklist" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Quick Rules Checklist
+        7. Quick Rules Checklist
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="6. Quick Rules Checklist">
+    <nav class="md-nav" aria-label="7. Quick Rules Checklist">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#arithmetic-rules" class="md-nav__link">
+  <a href="#if-else-rules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Arithmetic Rules
+        ✅ If-Else Rules
       
     </span>
   </a>
@@ -2088,10 +1798,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#incrementdecrement-rules" class="md-nav__link">
+  <a href="#best-practices" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Increment/Decrement Rules
+        ✅ Best Practices
       
     </span>
   </a>
@@ -2100,6 +1810,17 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Summary
+      
+    </span>
+  </a>
   
 </li>
       
@@ -2120,351 +1841,161 @@
 
 
 
-<h1 id="arithmetic-operators">Arithmetic Operators</h1>
-<h2 id="1-arithmetic-operators-overview">1. Arithmetic Operators Overview</h2>
+<h1 id="section-15-basic-if-else">Section 15: Basic If-Else</h1>
+<h2 id="1-if-else-structure-overview">1. If-Else Structure Overview</h2>
+<h3 id="three-basic-forms">Three Basic Forms</h3>
 <table>
 <thead>
 <tr>
-<th>Operator</th>
-<th>Name</th>
-<th>Description</th>
-<th>Example</th>
-<th>Result</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>+</code></td>
-<td>Addition</td>
-<td>Adds two values</td>
-<td><code>5 + 3</code></td>
-<td><code>8</code></td>
-</tr>
-<tr>
-<td><code>-</code></td>
-<td>Subtraction</td>
-<td>Subtracts right from left</td>
-<td><code>5 - 3</code></td>
-<td><code>2</code></td>
-</tr>
-<tr>
-<td><code>*</code></td>
-<td>Multiplication</td>
-<td>Multiplies two values</td>
-<td><code>5 * 3</code></td>
-<td><code>15</code></td>
-</tr>
-<tr>
-<td><code>/</code></td>
-<td>Division</td>
-<td>Divides left by right</td>
-<td><code>5 / 3</code></td>
-<td><code>1</code> (int) or <code>1.67</code> (double)</td>
-</tr>
-<tr>
-<td><code>%</code></td>
-<td>Modulo (Remainder)</td>
-<td>Returns division remainder</td>
-<td><code>5 % 3</code></td>
-<td><code>2</code></td>
-</tr>
-<tr>
-<td><code>++</code></td>
-<td>Increment</td>
-<td>Adds 1 to value</td>
-<td><code>++a</code> or <code>a++</code></td>
-<td><code>a + 1</code></td>
-</tr>
-<tr>
-<td><code>--</code></td>
-<td>Decrement</td>
-<td>Subtracts 1 from value</td>
-<td><code>--a</code> or <code>a--</code></td>
-<td><code>a - 1</code></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="2-increment-decrement-deep-dive">2. Increment &amp; Decrement Deep Dive</h2>
-<h3 id="pre-vs-post-the-critical-difference">Pre vs Post - The Critical Difference</h3>
-<table>
-<thead>
-<tr>
-<th>Type</th>
+<th>Form</th>
 <th>Syntax</th>
-<th>When Value Changes</th>
 <th>Use Case</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Pre-increment</strong></td>
-<td><code>++a</code></td>
-<td>Before expression is evaluated</td>
-<td>When you need the new value immediately</td>
+<td><strong>Simple if</strong></td>
+<td><code>if (condition) { ... }</code></td>
+<td>Execute only if true</td>
 </tr>
 <tr>
-<td><strong>Post-increment</strong></td>
-<td><code>a++</code></td>
-<td>After expression is evaluated</td>
-<td>When you need the old value first</td>
+<td><strong>If-else</strong></td>
+<td><code>if (condition) { ... } else { ... }</code></td>
+<td>Two-way decision</td>
+</tr>
+<tr>
+<td><strong>If-else-if</strong></td>
+<td><code>if (c1) { ... } else if (c2) { ... } else { ... }</code></td>
+<td>Multi-way decision</td>
 </tr>
 </tbody>
 </table>
-<h3 id="visual-comparison">Visual Comparison</h3>
-<pre><code class="language-java">int a = 5;
-int b = ++a;  // a becomes 6, THEN b gets 6
-// Result: a = 6, b = 6
+<h3 id="visual-flow">Visual Flow</h3>
+<pre><code>SIMPLE IF:
+condition? ──Yes──► execute block
+    │
+    No
+    ▼
+   [continue]
 
-int c = 5;
-int d = c++;  // d gets 5, THEN c becomes 6  
-// Result: c = 6, d = 5
+IF-ELSE:
+condition? ──Yes──► if-block
+    │
+    No
+    ▼
+  else-block
+
+---
+
+##  2. Syntax Rules
+
+### Rule 1: Condition Must Be Boolean
+```java
+// CORRECT
+if (score &gt;= 60) { }
+
+// WRONG - must be boolean, not int
+if (score) { }  // ERROR!
+
+// CORRECT - comparison returns boolean
+if (score == 100) { }
 </code></pre>
-<h3 id="memory-step-by-step">Memory Step-by-Step</h3>
-<pre><code>POST-INCREMENT (a++):
-┌─────────┐     ┌─────────┐     ┌─────────┐
-│ a = 5   │ ──→ │ d = a   │ ──→ │ a = a+1 │
-│         │     │ (d=5)   │     │ (a=6)   │
-└─────────┘     └─────────┘     └─────────┘
+<h3 id="rule-2-braces-required-for-multiple-statements">Rule 2: Braces Required for Multiple Statements</h3>
+<pre><code class="language-java">// Without braces - only ONE statement belongs to if
+if (passed)
+    System.out.println(&quot;Pass&quot;);  // Only this is conditional
+    System.out.println(&quot;Award&quot;); // This ALWAYS executes!
 
-PRE-INCREMENT (++a):
-┌─────────┐     ┌─────────┐     ┌─────────┐
-│ a = 5   │ ──→ │ a = a+1 │ ──→ │ b = a   │
-│         │     │ (a=6)   │     │ (b=6)   │
-└─────────┘     └─────────┘     └─────────┘
+// With braces - ALL statements conditional
+if (passed) {
+    System.out.println(&quot;Pass&quot;);
+    System.out.println(&quot;Award&quot;);
+}
 </code></pre>
 <hr />
 <h2 id="3-complete-working-examples">3. Complete Working Examples</h2>
-<h3 id="example-1-basic-calculator">Example 1: Basic Calculator</h3>
+<h3 id="example-1-simple-if">Example 1: Simple If</h3>
 <pre><code class="language-java">import java.util.Scanner;
 
-public class BasicCalculator {
+public class SimpleIf {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print(&quot;Enter first number: &quot;);
-        double num1 = scanner.nextDouble();
+        System.out.print(&quot;Enter your score: &quot;);
+        int score = scanner.nextInt();
 
-        System.out.print(&quot;Enter second number: &quot;);
-        double num2 = scanner.nextDouble();
+        // Simple if - only executes when condition is true
+        if (score &gt;= 60) {
+            System.out.println(&quot;Congratulations! You passed.&quot;);
+        }
 
-        // All arithmetic operations
-        System.out.println(&quot;Addition: &quot; + (num1 + num2));
-        System.out.println(&quot;Subtraction: &quot; + (num1 - num2));
-        System.out.println(&quot;Multiplication: &quot; + (num1 * num2));
-        System.out.println(&quot;Division: &quot; + (num1 / num2));
-        System.out.println(&quot;Modulo: &quot; + (num1 % num2));
+        // This always executes
+        System.out.println(&quot;Your score: &quot; + score);
 
         scanner.close();
     }
 }
 </code></pre>
-<h3 id="example-2-shopping-cart-calculator">Example 2: Shopping Cart Calculator</h3>
-<pre><code class="language-java">public class ShoppingCart {
+<h3 id="example-2-if-else">Example 2: If-Else</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class IfElse {
     public static void main(String[] args) {
-        double item1 = 29.99;
-        double item2 = 15.50;
-        double item3 = 8.99;
-        int quantity = 3;
+        Scanner scanner = new Scanner(System.in);
 
-        // Calculate subtotal
-        double subtotal = item1 + item2 + item3;
+        System.out.print(&quot;Enter password: &quot;);
+        String password = scanner.nextLine();
 
-        // Apply quantity multiplier
-        subtotal = subtotal * quantity;  // Can also write: subtotal *= quantity
+        // Two-way decision
+        if (password.equals(&quot;secret123&quot;)) {
+            System.out.println(&quot;Access granted.&quot;);
+            System.out.println(&quot;Welcome to the system.&quot;);
+        } else {
+            System.out.println(&quot;Access denied.&quot;);
+            System.out.println(&quot;Please try again.&quot;);
+        }
 
-        // Calculate tax (8%)
-        double tax = subtotal * 0.08;
-
-        // Final total
-        double total = subtotal + tax;
-
-        System.out.println(&quot;Subtotal: $&quot; + subtotal);
-        System.out.println(&quot;Tax (8%): $&quot; + tax);
-        System.out.println(&quot;Total: $&quot; + total);
+        scanner.close();
     }
 }
 </code></pre>
 <hr />
 <h2 id="4-five-practical-programs-copy-paste-ready">4. Five Practical Programs (Copy-Paste Ready)</h2>
-<h3 id="program-1-score-calculator-post-increment">Program 1: Score Calculator (Post-Increment)</h3>
+<h3 id="program-1-number-classifier">Program 1: Number Classifier</h3>
 <pre><code class="language-java">import java.util.Scanner;
 
-public class ScoreCalculator {
+public class NumberClassifier {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int currentScore = 100;
-        int bonusPoints = 10;
+        System.out.print(&quot;Enter a number: &quot;);
+        int num = scanner.nextInt();
 
-        System.out.println(&quot;=== Score Calculator ===&quot;);
-        System.out.println(&quot;Current Score: &quot; + currentScore);
-
-        // Post-increment: use value, THEN add
-        int newScore = currentScore++ + bonusPoints;
-
-        System.out.println(&quot;New Score (with post-increment): &quot; + newScore);
-        System.out.println(&quot;Current Score after increment: &quot; + currentScore);
-
-        scanner.close();
-    }
-}
-</code></pre>
-<p><strong>Expected Output:</strong></p>
-<pre><code>Current Score: 100
-New Score (with post-increment): 110
-Current Score after increment: 101
-</code></pre>
-<hr />
-<h3 id="program-2-level-up-system-pre-increment">Program 2: Level Up System (Pre-Increment)</h3>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class LevelUpSystem {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        int playerLevel = 5;
-        int experienceNeeded = 100;
-
-        System.out.println(&quot;=== RPG Level System ===&quot;);
-        System.out.println(&quot;Current Level: &quot; + playerLevel);
-
-        // Pre-increment: add first, THEN use value
-        int nextLevelCost = ++playerLevel * experienceNeeded;
-
-        System.out.println(&quot;Next Level: &quot; + playerLevel);
-        System.out.println(&quot;XP needed for next level: &quot; + nextLevelCost);
-
-        // Reset for comparison
-        playerLevel = 5;
-        int wrongCost = playerLevel++ * experienceNeeded;
-        System.out.println(&quot;WRONG calculation (post-increment): &quot; + wrongCost);
-        System.out.println(&quot;Level after wrong calc: &quot; + playerLevel);
-
-        scanner.close();
-    }
-}
-</code></pre>
-<p><strong>Expected Output:</strong></p>
-<pre><code>Current Level: 5
-Next Level: 6
-XP needed for next level: 600
-WRONG calculation (post-increment): 500
-Level after wrong calc: 6
-</code></pre>
-<hr />
-<h3 id="program-3-order-counter-loop-simulation">Program 3: Order Counter (Loop Simulation)</h3>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class OrderCounter {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        int orderNumber = 1000;
-        int processedToday = 0;
-
-        System.out.println(&quot;=== Order Processing System ===&quot;);
-
-        // Simulate processing 5 orders
-        System.out.println(&quot;Processing order: &quot; + orderNumber++);  // 1000, then becomes 1001
-        processedToday++;
-
-        System.out.println(&quot;Processing order: &quot; + orderNumber++);  // 1001, then becomes 1002
-        processedToday++;
-
-        System.out.println(&quot;Processing order: &quot; + orderNumber++);  // 1002, then becomes 1003
-        processedToday++;
-
-        System.out.println(&quot;\nTotal orders processed: &quot; + processedToday);
-        System.out.println(&quot;Next order number: &quot; + orderNumber);
-
-        scanner.close();
-    }
-}
-</code></pre>
-<p><strong>Expected Output:</strong></p>
-<pre><code>Processing order: 1000
-Processing order: 1001
-Processing order: 1002
-
-Total orders processed: 3
-Next order number: 1003
-</code></pre>
-<hr />
-<h3 id="program-4-bank-interest-calculator">Program 4: Bank Interest Calculator</h3>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class BankInterest {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print(&quot;Enter principal amount: $&quot;);
-        double principal = scanner.nextDouble();
-
-        System.out.print(&quot;Enter annual interest rate (as decimal, e.g., 0.05 for 5%): &quot;);
-        double rate = scanner.nextDouble();
-
-        System.out.print(&quot;Enter time in years: &quot;);
-        int years = scanner.nextInt();
-
-        // Simple interest formula: A = P(1 + rt)
-        double amount = principal * (1 + rate * years);
-        double interest = amount - principal;
-
-        System.out.println(&quot;\n=== Interest Calculation ===&quot;);
-        System.out.println(&quot;Principal: $&quot; + principal);
-        System.out.println(&quot;Interest earned: $&quot; + interest);
-        System.out.println(&quot;Total amount: $&quot; + amount);
-
-        // Compound interest (year by year using increment)
-        double compoundPrincipal = principal;
-        int yearCounter = 1;
-
-        System.out.println(&quot;\n=== Year-by-Year Compound Growth ===&quot;);
-        while (yearCounter &lt;= years) {
-            compoundPrincipal = compoundPrincipal * (1 + rate);
-            System.out.println(&quot;Year &quot; + yearCounter + &quot;: $&quot; + compoundPrincipal);
-            yearCounter++;  // Post-increment
+        // Simple if - check positive
+        if (num &gt; 0) {
+            System.out.println(num + &quot; is positive&quot;);
         }
 
-        scanner.close();
-    }
-}
-</code></pre>
-<hr />
-<h3 id="program-5-pagination-calculator-selenium-prep">Program 5: Pagination Calculator (Selenium Prep)</h3>
-<pre><code class="language-java">import java.util.Scanner;
+        // If-else - check even/odd (only for non-zero)
+        if (num != 0) {
+            if (num % 2 == 0) {
+                System.out.println(num + &quot; is even&quot;);
+            } else {
+                System.out.println(num + &quot; is odd&quot;);
+            }
+        }
 
-public class PaginationCalculator {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print(&quot;Enter total number of items: &quot;);
-        int totalItems = scanner.nextInt();
-
-        System.out.print(&quot;Enter items per page: &quot;);
-        int itemsPerPage = scanner.nextInt();
-
-        // Calculate total pages using division and modulo
-        int fullPages = totalItems / itemsPerPage;
-        int remainingItems = totalItems % itemsPerPage;
-
-        // If there are remaining items, we need one more page
-        int totalPages = fullPages + (remainingItems &gt; 0 ? 1 : 0);
-
-        System.out.println(&quot;\n=== Pagination Results ===&quot;);
-        System.out.println(&quot;Total items: &quot; + totalItems);
-        System.out.println(&quot;Items per page: &quot; + itemsPerPage);
-        System.out.println(&quot;Full pages: &quot; + fullPages);
-        System.out.println(&quot;Items on last page: &quot; + (remainingItems &gt; 0 ? remainingItems : itemsPerPage));
-        System.out.println(&quot;Total pages to navigate: &quot; + totalPages);
-
-        // Simulate page navigation using increment
-        System.out.println(&quot;\n=== Page Navigation Simulation ===&quot;);
-        int currentPage = 1;
-
-        while (currentPage &lt;= totalPages) {
-            System.out.println(&quot;Navigating to page &quot; + currentPage++);
+        // If-else-if - classify range
+        if (num &lt; 0) {
+            System.out.println(&quot;Range: Negative&quot;);
+        } else if (num &gt;= 0 &amp;&amp; num &lt;= 10) {
+            System.out.println(&quot;Range: Small (0-10)&quot;);
+        } else if (num &gt; 10 &amp;&amp; num &lt;= 100) {
+            System.out.println(&quot;Range: Medium (11-100)&quot;);
+        } else if (num &gt; 100 &amp;&amp; num &lt;= 1000) {
+            System.out.println(&quot;Range: Large (101-1000)&quot;);
+        } else {
+            System.out.println(&quot;Range: Extra Large (1000+)&quot;);
         }
 
         scanner.close();
@@ -2472,23 +2003,313 @@ public class PaginationCalculator {
 }
 </code></pre>
 <p><strong>Expected Output:</strong></p>
-<pre><code>Enter total number of items: 25
-Enter items per page: 10
-
-=== Pagination Results ===
-Total items: 25
-Items per page: 10
-Full pages: 2
-Items on last page: 5
-Total pages to navigate: 3
-
-=== Page Navigation Simulation ===
-Navigating to page 1
-Navigating to page 2
-Navigating to page 3
+<pre><code>Enter a number: 42
+42 is positive
+42 is even
+Range: Medium (11-100)
 </code></pre>
 <hr />
-<h2 id="5-common-errors-fixes">5. Common Errors &amp; Fixes</h2>
+<h3 id="program-2-login-system-with-attempts">Program 2: Login System with Attempts</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class LoginSystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String correctUsername = &quot;admin&quot;;
+        String correctPassword = &quot;pass123&quot;;
+        int maxAttempts = 3;
+        int attempts = 0;
+        boolean loggedIn = false;
+
+        System.out.println(&quot;=== Secure Login ===&quot;);
+
+        while (attempts &lt; maxAttempts &amp;&amp; !loggedIn) {
+            System.out.print(&quot;Username: &quot;);
+            String username = scanner.nextLine();
+
+            System.out.print(&quot;Password: &quot;);
+            String password = scanner.nextLine();
+
+            // Nested if-else for validation
+            if (username.equals(correctUsername)) {
+                if (password.equals(correctPassword)) {
+                    System.out.println(&quot;Login successful!&quot;);
+                    loggedIn = true;
+                } else {
+                    System.out.println(&quot;Incorrect password.&quot;);
+                    attempts++;
+                    if (attempts &lt; maxAttempts) {
+                        System.out.println(&quot;Attempts remaining: &quot; + (maxAttempts - attempts));
+                    }
+                }
+            } else {
+                System.out.println(&quot;Username not found.&quot;);
+                attempts++;
+                if (attempts &lt; maxAttempts) {
+                    System.out.println(&quot;Attempts remaining: &quot; + (maxAttempts - attempts));
+                }
+            }
+        }
+
+        // Final check after loop
+        if (!loggedIn) {
+            System.out.println(&quot;Account locked. Too many failed attempts.&quot;);
+        } else {
+            System.out.println(&quot;Welcome to the dashboard!&quot;);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-3-grade-calculator-with-validation">Program 3: Grade Calculator with Validation</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class GradeCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter score (0-100): &quot;);
+        int score = scanner.nextInt();
+
+        // Input validation first
+        if (score &lt; 0 || score &gt; 100) {
+            System.out.println(&quot;Error: Score must be between 0 and 100&quot;);
+        } else {
+            // Valid score - determine grade
+            char grade;
+            String message;
+
+            if (score &gt;= 90) {
+                grade = 'A';
+                message = &quot;Outstanding!&quot;;
+            } else if (score &gt;= 80) {
+                grade = 'B';
+                message = &quot;Good job!&quot;;
+            } else if (score &gt;= 70) {
+                grade = 'C';
+                message = &quot;Satisfactory&quot;;
+            } else if (score &gt;= 60) {
+                grade = 'D';
+                message = &quot;Needs improvement&quot;;
+            } else {
+                grade = 'F';
+                message = &quot;Failed - please retake&quot;;
+            }
+
+            System.out.println(&quot;Score: &quot; + score);
+            System.out.println(&quot;Grade: &quot; + grade);
+            System.out.println(&quot;Feedback: &quot; + message);
+
+            // Additional feedback
+            if (grade == 'A' || grade == 'B') {
+                System.out.println(&quot;Status: Honors&quot;);
+            } else if (grade == 'C') {
+                System.out.println(&quot;Status: Pass&quot;);
+            } else {
+                System.out.println(&quot;Status: Fail&quot;);
+            }
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-4-e-commerce-discount-engine">Program 4: E-commerce Discount Engine</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class DiscountEngine {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter purchase amount: $&quot;);
+        double amount = scanner.nextDouble();
+
+        System.out.print(&quot;Is customer a member? (true/false): &quot;);
+        boolean isMember = scanner.nextBoolean();
+
+        System.out.print(&quot;Has coupon code? (true/false): &quot;);
+        boolean hasCoupon = scanner.nextBoolean();
+
+        double discount = 0;
+        double finalAmount = amount;
+
+        // Calculate discount with nested logic
+        if (amount &gt; 0) {
+            if (amount &gt;= 500) {
+                discount = 20;  // 20% off
+                System.out.println(&quot;Tier: Platinum (20% off)&quot;);
+            } else if (amount &gt;= 200) {
+                discount = 10;  // 10% off
+                System.out.println(&quot;Tier: Gold (10% off)&quot;);
+            } else if (amount &gt;= 100) {
+                discount = 5;   // 5% off
+                System.out.println(&quot;Tier: Silver (5% off)&quot;);
+            } else {
+                discount = 0;
+                System.out.println(&quot;Tier: Standard (no discount)&quot;);
+            }
+
+            // Member bonus
+            if (isMember) {
+                discount = discount + 5;  // Extra 5%
+                System.out.println(&quot;Member bonus: +5%&quot;);
+            }
+
+            // Coupon bonus
+            if (hasCoupon) {
+                discount = discount + 10;  // Extra 10%
+                System.out.println(&quot;Coupon bonus: +10%&quot;);
+            }
+
+            // Cap discount at 50%
+            if (discount &gt; 50) {
+                discount = 50;
+                System.out.println(&quot;Discount capped at 50%&quot;);
+            }
+
+            // Calculate final
+            finalAmount = amount - (amount * discount / 100);
+
+            System.out.println(&quot;\n=== Summary ===&quot;);
+            System.out.println(&quot;Original: $&quot; + amount);
+            System.out.println(&quot;Discount: &quot; + discount + &quot;%&quot;);
+            System.out.println(&quot;You save: $&quot; + (amount - finalAmount));
+            System.out.println(&quot;Final: $&quot; + finalAmount);
+
+            // Free shipping check
+            if (finalAmount &gt; 50 || isMember) {
+                System.out.println(&quot;Shipping: FREE&quot;);
+            } else {
+                System.out.println(&quot;Shipping: $5.99&quot;);
+                finalAmount = finalAmount + 5.99;
+                System.out.println(&quot;Total with shipping: $&quot; + finalAmount);
+            }
+
+        } else {
+            System.out.println(&quot;Error: Amount must be positive&quot;);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-5-selenium-element-state-checker-automation-prep">Program 5: Selenium Element State Checker (Automation Prep)</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class ElementStateChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;=== Selenium Element State Checker ===&quot;);
+
+        System.out.print(&quot;Element exists (true/false): &quot;);
+        boolean exists = scanner.nextBoolean();
+
+        System.out.print(&quot;Element is displayed (true/false): &quot;);
+        boolean displayed = scanner.nextBoolean();
+
+        System.out.print(&quot;Element is enabled (true/false): &quot;);
+        boolean enabled = scanner.nextBoolean();
+
+        System.out.print(&quot;Element text is empty (true/false): &quot;);
+        boolean textEmpty = scanner.nextBoolean();
+
+        String action = &quot;&quot;;
+        String warning = &quot;&quot;;
+
+        // Decision tree for element interaction
+        if (exists) {
+            if (displayed) {
+                if (enabled) {
+                    if (!textEmpty) {
+                        action = &quot;CLICK_AND_VERIFY&quot;;
+                        warning = &quot;Ready for interaction with text verification&quot;;
+                    } else {
+                        action = &quot;CLICK_ONLY&quot;;
+                        warning = &quot;Element clickable but no text to verify&quot;;
+                    }
+                } else {
+                    action = &quot;WAIT_FOR_ENABLE&quot;;
+                    warning = &quot;Element visible but disabled - possible loading state&quot;;
+                }
+            } else {
+                if (enabled) {
+                    action = &quot;SCROLL_AND_CLICK&quot;;
+                    warning = &quot;Element enabled but not visible - may need scroll&quot;;
+                } else {
+                    action = &quot;SKIP_OR_FAIL&quot;;
+                    warning = &quot;Element hidden and disabled - check locator&quot;;
+                }
+            }
+        } else {
+            action = &quot;FAIL_TEST&quot;;
+            warning = &quot;Element not found - verify locator or wait for presence&quot;;
+        }
+
+        System.out.println(&quot;\n=== Recommendation ===&quot;);
+        System.out.println(&quot;Action: &quot; + action);
+        System.out.println(&quot;Warning: &quot; + warning);
+
+        // Additional specific checks
+        System.out.println(&quot;\n=== Specific Checks ===&quot;);
+
+        if (exists &amp;&amp; displayed &amp;&amp; enabled) {
+            System.out.println(&quot;✓ Element is interactable&quot;);
+
+            if (!textEmpty) {
+                System.out.println(&quot;✓ Can verify text content&quot;);
+            } else {
+                System.out.println(&quot;⚠ Text verification not possible&quot;);
+            }
+        } else {
+            System.out.println(&quot;✗ Element not ready for interaction&quot;);
+
+            if (!exists) {
+                System.out.println(&quot;  - Not in DOM&quot;);
+            }
+            if (exists &amp;&amp; !displayed) {
+                System.out.println(&quot;  - Not visible&quot;);
+            }
+            if (exists &amp;&amp; displayed &amp;&amp; !enabled) {
+                System.out.println(&quot;  - Not enabled&quot;);
+            }
+        }
+
+        // Retry logic suggestion
+        if (exists &amp;&amp; !displayed) {
+            System.out.println(&quot;\nSuggested: Wait for visibility or scroll into view&quot;);
+        } else if (exists &amp;&amp; displayed &amp;&amp; !enabled) {
+            System.out.println(&quot;\nSuggested: Wait for element to be enabled&quot;);
+        } else if (!exists) {
+            System.out.println(&quot;\nSuggested: Add explicit wait for element presence&quot;);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<p><strong>Expected Output:</strong></p>
+<pre><code>=== Selenium Element State Checker ===
+Element exists (true/false): true
+Element is displayed (true/false): true
+Element is enabled (true/false): true
+Element text is empty (true/false): false
+
+=== Recommendation ===
+Action: CLICK_AND_VERIFY
+Warning: Ready for interaction with text verification
+
+=== Specific Checks ===
+✓ Element is interactable
+✓ Can verify text content
+</code></pre>
+<hr />
+<h2 id="6-common-errors-fixes">6. Common Errors &amp; Fixes</h2>
 <table>
 <thead>
 <tr>
@@ -2500,54 +2321,95 @@ Navigating to page 3
 </thead>
 <tbody>
 <tr>
-<td><strong>Integer Division</strong></td>
-<td><code>int result = 5 / 2;</code> // Result: 2</td>
-<td>Loses decimal part</td>
-<td><code>double result = 5.0 / 2;</code> // Result: 2.5</td>
+<td><strong>Semicolon after if</strong></td>
+<td><code>if (x &gt; 0); { ... }</code></td>
+<td>Empty if body, braces always execute</td>
+<td>Remove semicolon: <code>if (x &gt; 0) { ... }</code></td>
 </tr>
 <tr>
-<td><strong>Modulo with Negative</strong></td>
-<td><code>-5 % 3</code> // Result: -2</td>
-<td>Sign follows dividend</td>
-<td>Use <code>Math.abs()</code> if needed</td>
+<td><strong>Assignment instead of comparison</strong></td>
+<td><code>if (x = 5)</code></td>
+<td>Assigns 5, always true</td>
+<td><code>if (x == 5)</code></td>
 </tr>
 <tr>
-<td><strong>Pre vs Post Confusion</strong></td>
-<td><code>int x = a++ + ++a;</code> // Unpredictable</td>
-<td>Multiple increments in one line</td>
-<td>Split into separate statements</td>
+<td><strong>Missing braces</strong></td>
+<td><code>if (x &gt; 0) System.out.print("A"); System.out.print("B");</code></td>
+<td>Only A is conditional</td>
+<td>Add braces for both statements</td>
 </tr>
 <tr>
-<td><strong>Dividing by Zero</strong></td>
-<td><code>int x = 5 / 0;</code></td>
-<td>Runtime exception</td>
-<td>Check divisor: <code>if (b != 0) result = a / b;</code></td>
+<td><strong>Wrong else matching</strong></td>
+<td><code>if (a) if (b) x(); else y();</code></td>
+<td>Else matches inner if</td>
+<td>Use braces to clarify intent</td>
 </tr>
 <tr>
-<td><strong>Lost Increment</strong></td>
-<td><code>a++;</code> alone on line</td>
-<td>Value not used</td>
-<td>Assign or use in expression: <code>b = a++;</code></td>
+<td><strong>Double comparison</strong></td>
+<td><code>if (5 &lt; x &lt; 10)</code></td>
+<td>Syntax error</td>
+<td><code>if (x &gt; 5 &amp;&amp; x &lt; 10)</code></td>
+</tr>
+<tr>
+<td><strong>String comparison</strong></td>
+<td><code>if (input == "yes")</code></td>
+<td>Compares references</td>
+<td><code>if (input.equals("yes"))</code></td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="6-quick-rules-checklist">6. Quick Rules Checklist</h2>
-<h3 id="arithmetic-rules">Arithmetic Rules</h3>
+<h2 id="7-quick-rules-checklist">7. Quick Rules Checklist</h2>
+<h3 id="if-else-rules">✅ If-Else Rules</h3>
 <ul>
-<li>[ ] <strong>Integer division truncates</strong> - always cast to double for decimals</li>
-<li>[ ] <strong>Modulo sign follows dividend</strong>: <code>-5 % 3 = -2</code>, <code>5 % -3 = 2</code></li>
-<li>[ ] <strong>Division by zero</strong> throws <code>ArithmeticException</code> for integers</li>
-<li>[ ] <strong>Use compound operators</strong> (<code>+=</code>, <code>-=</code>) for cleaner code</li>
+<li>[ ] Condition must evaluate to boolean</li>
+<li>[ ] Use braces <code>{}</code> even for single statements (prevents bugs)</li>
+<li>[ ] Indent consistently for readability</li>
+<li>[ ] Match <code>else</code> to correct <code>if</code> using braces</li>
+<li>[ ] Handle all cases (include final <code>else</code> as catch-all)</li>
 </ul>
-<h3 id="incrementdecrement-rules">Increment/Decrement Rules</h3>
+<h3 id="best-practices">✅ Best Practices</h3>
 <ul>
-<li>[ ] <strong>Pre (<code>++a</code>)</strong>: Change first, then use (for immediate updates)</li>
-<li>[ ] <strong>Post (<code>a++</code>)</strong>: Use first, then change (for current value preservation)</li>
-<li>[ ] <strong>Never chain</strong> multiple increments in one expression</li>
-<li>[ ] <strong>In loops</strong>, post-increment (<code>i++</code>) is standard convention</li>
+<li>[ ] Put simplest/most likely case first</li>
+<li>[ ] Avoid deep nesting (more than 3 levels is code smell)</li>
+<li>[ ] Extract complex conditions to boolean variables</li>
+<li>[ ] Keep if-else-if ladder under 5-6 branches (use switch or polymorphism if more)</li>
+<li>[ ] Validate input first (guard clauses)</li>
 </ul>
 <hr />
+<h2 id="summary">📝 Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Structure</th>
+<th>Syntax</th>
+<th>When to Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Simple if</strong></td>
+<td><code>if (condition) { ... }</code></td>
+<td>Single condition, optional action</td>
+</tr>
+<tr>
+<td><strong>If-else</strong></td>
+<td><code>if (c) { ... } else { ... }</code></td>
+<td>Two mutually exclusive paths</td>
+</tr>
+<tr>
+<td><strong>If-else-if</strong></td>
+<td><code>if (c1) ... else if (c2) ...</code></td>
+<td>Multiple exclusive conditions</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Golden Rules:</strong>
+1. Always use braces <code>{}</code> for clarity
+2. Condition must be boolean
+3. Use <code>.equals()</code> for String comparison
+4. Handle the "else" case (even if just logging)
+5. Keep nesting shallow (3 levels max)</p>
 
 
 
@@ -2597,10 +2459,10 @@ Navigating to page 3
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

@@ -1,0 +1,2830 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Core Java">
+      
+      
+        <meta name="author" content="Afwan">
+      
+      
+        <link rel="canonical" href="https://yuhasproSoftwareTester.github.io/Java-course/Java/11-Control%20Statements/1-If%20...%20Else/else%20if%20Statement/else%20if/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Else-If Ladder - Yuhaspro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#else-if-ladder" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Yuhaspro" class="md-header__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yuhaspro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Else-If Ladder
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Yuhaspro" class="md-nav__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Yuhaspro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SoftwareTesting notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SoftwareTesting notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Java
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2-Install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3-Syntax/Syntax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../4-Data%20Types/DataType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../5-Variables/Variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_6" id="__nav_1_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input & Output
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input & Output
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../6-Output%26Input/Print/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Print
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../6-Output%26Input/Scanner/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scanner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../7-Type%20Casting/typeCasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Type Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_8" id="__nav_1_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../8-Operators/Arithmetic%20Operators/arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arithmetic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../8-Operators/Assignment%20Operators/assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../8-Operators/Comparison%20Operators/comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../8-Operators/Logical%20Operators/logical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logical
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../9-Strings/string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../10-Math/math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Math
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11" id="__nav_1_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control Statements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Control Statements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11_1" id="__nav_1_1_11_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If Else
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_1_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    If Else
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1-If... Else/If.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1-If... Else/If else.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If Else
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1-If... Else/else if.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Else If
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1-If... Else/Nested If.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nested If
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1-If... Else/Ternary.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ternary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../2-Switch Statements/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11_3" id="__nav_1_1_11_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loops
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_1_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Loops
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../3-Loops/For Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For Loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../3-Loops/While Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    While Loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../3-Loops/DoWhile Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Do While
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../3-Loops/Nested Loops.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nested Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../3-Loops/Break and Continue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Break & Continue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_12" id="__nav_1_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collections
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Collections
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/ArrayList.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ArrayList
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/Arrays.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arrays
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/HashMap.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HashMap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/HashSet.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HashSet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/List.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/Map.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/Set.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Set
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../13-OOP/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-else-if-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Else-If Structure
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Else-If Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Syntax
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execution-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Execution Flow
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#key-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-ordering-conditions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Ordering Conditions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Ordering Conditions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#specific-general-correct" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Specific → General (Correct)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#general-specific-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        General → Specific (Wrong!)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-complete-working-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Complete Working Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Complete Working Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-bmi-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: BMI Calculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-shipping-rate-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Shipping Rate Calculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-five-practical-programs-copy-paste-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Five Practical Programs (Copy-Paste Ready)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Five Practical Programs (Copy-Paste Ready)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-1-age-group-classifier" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 1: Age Group Classifier
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-2-temperature-converter-with-scale-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 2: Temperature Converter with Scale Detection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-3-credit-score-rating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 3: Credit Score Rating
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-4-file-extension-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 4: File Extension Handler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-5-selenium-test-priority-assigner-automation-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 5: Selenium Test Priority Assigner (Automation Prep)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-common-errors-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Common Errors &amp; Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-quick-rules-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Quick Rules Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Quick Rules Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#else-if-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Else-If Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="else-if-ladder">Else-If Ladder</h1>
+<h2 id="1-else-if-structure">1. Else-If Structure</h2>
+<h3 id="basic-syntax">Basic Syntax</h3>
+<pre><code class="language-java">if (condition1) {
+    // Block 1: condition1 is true
+} else if (condition2) {
+    // Block 2: condition1 false, condition2 true
+} else if (condition3) {
+    // Block 3: conditions 1-2 false, condition3 true
+} else {
+    // Block 4: all above false (default case)
+}
+</code></pre>
+<h3 id="execution-flow">Execution Flow</h3>
+<pre><code>Check condition1? ──Yes──► Execute Block 1 ──► Exit
+    │
+    No
+    ▼
+Check condition2? ──Yes──► Execute Block 2 ──► Exit
+    │
+    No
+    ▼
+Check condition3? ──Yes──► Execute Block 3 ──► Exit
+    │
+    No
+    ▼
+Execute Else Block ──► Exit
+</code></pre>
+<h3 id="key-rules">Key Rules</h3>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Top to bottom</strong></td>
+<td>Checks conditions in order, stops at first true</td>
+</tr>
+<tr>
+<td><strong>Mutually exclusive</strong></td>
+<td>Only ONE block executes</td>
+</tr>
+<tr>
+<td><strong>Final else optional</strong></td>
+<td>Catches all remaining cases</td>
+</tr>
+<tr>
+<td><strong>Conditions can overlap</strong></td>
+<td>Put specific before general</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-ordering-conditions">2. Ordering Conditions</h2>
+<h3 id="specific-general-correct">Specific → General (Correct)</h3>
+<pre><code class="language-java">// CORRECT: Specific first
+if (score &gt;= 90) {
+    grade = 'A';      // 90-100
+} else if (score &gt;= 80) {
+    grade = 'B';      // 80-89 (already know &lt;90)
+} else if (score &gt;= 70) {
+    grade = 'C';      // 70-79 (already know &lt;80)
+} else if (score &gt;= 60) {
+    grade = 'D';      // 60-69 (already know &lt;70)
+} else {
+    grade = 'F';      // &lt;60 (everything else)
+}
+</code></pre>
+<h3 id="general-specific-wrong">General → Specific (Wrong!)</h3>
+<pre><code class="language-java">// WRONG: General first catches everything!
+if (score &gt;= 60) {
+    grade = 'D';      // 60-100 (catches too much!)
+} else if (score &gt;= 70) {
+    grade = 'C';      // NEVER REACHED (70+ already caught)
+} else if (score &gt;= 80) {
+    grade = 'B';      // NEVER REACHED
+} else if (score &gt;= 90) {
+    grade = 'A';      // NEVER REACHED
+} else {
+    grade = 'F';
+}
+</code></pre>
+<hr />
+<h2 id="3-complete-working-examples">3. Complete Working Examples</h2>
+<h3 id="example-1-bmi-calculator">Example 1: BMI Calculator</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class BMICalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter weight (kg): &quot;);
+        double weight = scanner.nextDouble();
+
+        System.out.print(&quot;Enter height (m): &quot;);
+        double height = scanner.nextDouble();
+
+        double bmi = weight / (height * height);
+        String category;
+        String advice;
+
+        // Else-if ladder for BMI categories
+        if (bmi &lt; 18.5) {
+            category = &quot;Underweight&quot;;
+            advice = &quot;Eat more nutritious food&quot;;
+        } else if (bmi &gt;= 18.5 &amp;&amp; bmi &lt; 25) {
+            category = &quot;Normal weight&quot;;
+            advice = &quot;Keep up the good work!&quot;;
+        } else if (bmi &gt;= 25 &amp;&amp; bmi &lt; 30) {
+            category = &quot;Overweight&quot;;
+            advice = &quot;Consider regular exercise&quot;;
+        } else if (bmi &gt;= 30 &amp;&amp; bmi &lt; 35) {
+            category = &quot;Obese Class I&quot;;
+            advice = &quot;Consult a nutritionist&quot;;
+        } else if (bmi &gt;= 35 &amp;&amp; bmi &lt; 40) {
+            category = &quot;Obese Class II&quot;;
+            advice = &quot;Medical consultation recommended&quot;;
+        } else {
+            category = &quot;Obese Class III&quot;;
+            advice = &quot;Immediate medical attention&quot;;
+        }
+
+        System.out.println(&quot;\nBMI: &quot; + String.format(&quot;%.1f&quot;, bmi));
+        System.out.println(&quot;Category: &quot; + category);
+        System.out.println(&quot;Advice: &quot; + advice);
+
+        scanner.close();
+    }
+}
+</code></pre>
+<h3 id="example-2-shipping-rate-calculator">Example 2: Shipping Rate Calculator</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class ShippingCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Package weight (kg): &quot;);
+        double weight = scanner.nextDouble();
+
+        System.out.print(&quot;Destination (local/national/international): &quot;);
+        String destination = scanner.next().toLowerCase();
+
+        double rate;
+        String zone;
+
+        // Nested else-if: weight first, then destination
+        if (weight &lt;= 0) {
+            System.out.println(&quot;Error: Weight must be positive&quot;);
+            scanner.close();
+            return;
+        } else if (weight &lt;= 1) {
+            zone = &quot;Zone A (Light)&quot;;
+            if (destination.equals(&quot;local&quot;)) {
+                rate = 5.00;
+            } else if (destination.equals(&quot;national&quot;)) {
+                rate = 8.00;
+            } else if (destination.equals(&quot;international&quot;)) {
+                rate = 15.00;
+            } else {
+                System.out.println(&quot;Error: Invalid destination&quot;);
+                scanner.close();
+                return;
+            }
+        } else if (weight &lt;= 5) {
+            zone = &quot;Zone B (Medium)&quot;;
+            if (destination.equals(&quot;local&quot;)) {
+                rate = 10.00;
+            } else if (destination.equals(&quot;national&quot;)) {
+                rate = 15.00;
+            } else if (destination.equals(&quot;international&quot;)) {
+                rate = 30.00;
+            } else {
+                System.out.println(&quot;Error: Invalid destination&quot;);
+                scanner.close();
+                return;
+            }
+        } else if (weight &lt;= 10) {
+            zone = &quot;Zone C (Heavy)&quot;;
+            if (destination.equals(&quot;local&quot;)) {
+                rate = 18.00;
+            } else if (destination.equals(&quot;national&quot;)) {
+                rate = 25.00;
+            } else if (destination.equals(&quot;international&quot;)) {
+                rate = 50.00;
+            } else {
+                System.out.println(&quot;Error: Invalid destination&quot;);
+                scanner.close();
+                return;
+            }
+        } else {
+            zone = &quot;Zone D (Freight)&quot;;
+            if (destination.equals(&quot;local&quot;)) {
+                rate = 30.00 + (weight - 10) * 2;
+            } else if (destination.equals(&quot;national&quot;)) {
+                rate = 40.00 + (weight - 10) * 3;
+            } else if (destination.equals(&quot;international&quot;)) {
+                rate = 80.00 + (weight - 10) * 5;
+            } else {
+                System.out.println(&quot;Error: Invalid destination&quot;);
+                scanner.close();
+                return;
+            }
+        }
+
+        System.out.println(&quot;\n=== Shipping Quote ===&quot;);
+        System.out.println(&quot;Weight: &quot; + weight + &quot; kg&quot;);
+        System.out.println(&quot;Zone: &quot; + zone);
+        System.out.println(&quot;Destination: &quot; + destination);
+        System.out.println(&quot;Rate: $&quot; + rate);
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h2 id="4-five-practical-programs-copy-paste-ready">4. Five Practical Programs (Copy-Paste Ready)</h2>
+<h3 id="program-1-age-group-classifier">Program 1: Age Group Classifier</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class AgeClassifier {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter age: &quot;);
+        int age = scanner.nextInt();
+
+        String group;
+        String rights;
+
+        // Else-if ladder for age classification
+        if (age &lt; 0) {
+            group = &quot;Invalid&quot;;
+            rights = &quot;Age cannot be negative&quot;;
+        } else if (age &lt;= 2) {
+            group = &quot;Infant&quot;;
+            rights = &quot;Dependent on guardian&quot;;
+        } else if (age &lt;= 12) {
+            group = &quot;Child&quot;;
+            rights = &quot;School attendance required&quot;;
+        } else if (age &lt;= 17) {
+            group = &quot;Teenager&quot;;
+            rights = &quot;Limited driving license at 16&quot;;
+        } else if (age &lt;= 19) {
+            group = &quot;Young Adult&quot;;
+            rights = &quot;Voting rights, full license&quot;;
+        } else if (age &lt;= 35) {
+            group = &quot;Adult&quot;;
+            rights = &quot;Full citizenship rights&quot;;
+        } else if (age &lt;= 50) {
+            group = &quot;Middle-aged&quot;;
+            rights = &quot;Full citizenship rights&quot;;
+        } else if (age &lt;= 65) {
+            group = &quot;Mature Adult&quot;;
+            rights = &quot;Retirement planning age&quot;;
+        } else if (age &lt;= 120) {
+            group = &quot;Senior Citizen&quot;;
+            rights = &quot;Eligible for pension benefits&quot;;
+        } else {
+            group = &quot;Invalid&quot;;
+            rights = &quot;Age exceeds human lifespan&quot;;
+        }
+
+        System.out.println(&quot;\n=== Classification ===&quot;);
+        System.out.println(&quot;Age: &quot; + age);
+        System.out.println(&quot;Group: &quot; + group);
+        System.out.println(&quot;Rights: &quot; + rights);
+
+        // Additional specific checks
+        if (age &gt;= 0 &amp;&amp; age &lt;= 120) {
+            if (age &gt;= 18) {
+                System.out.println(&quot;Status: Legal adult&quot;);
+            } else {
+                System.out.println(&quot;Status: Minor&quot;);
+                System.out.println(&quot;Years until adult: &quot; + (18 - age));
+            }
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<p><strong>Expected Output:</strong></p>
+<pre><code>Enter age: 25
+
+=== Classification ===
+Age: 25
+Group: Adult
+Rights: Full citizenship rights
+Status: Legal adult
+</code></pre>
+<hr />
+<h3 id="program-2-temperature-converter-with-scale-detection">Program 2: Temperature Converter with Scale Detection</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class SmartTemperatureConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter temperature value: &quot;);
+        double temp = scanner.nextDouble();
+
+        System.out.print(&quot;Enter scale (C/F/K): &quot;);
+        char scale = scanner.next().toUpperCase().charAt(0);
+
+        double celsius, fahrenheit, kelvin;
+        String weatherDesc;
+
+        // Convert to all scales first
+        if (scale == 'C') {
+            celsius = temp;
+            fahrenheit = (temp * 9/5) + 32;
+            kelvin = temp + 273.15;
+        } else if (scale == 'F') {
+            celsius = (temp - 32) * 5/9;
+            fahrenheit = temp;
+            kelvin = celsius + 273.15;
+        } else if (scale == 'K') {
+            celsius = temp - 273.15;
+            fahrenheit = (celsius * 9/5) + 32;
+            kelvin = temp;
+        } else {
+            System.out.println(&quot;Error: Invalid scale. Use C, F, or K.&quot;);
+            scanner.close();
+            return;
+        }
+
+        // Determine weather description based on Celsius
+        if (celsius &lt;= -40) {
+            weatherDesc = &quot;Extreme Cold (Dangerous)&quot;;
+        } else if (celsius &lt;= -20) {
+            weatherDesc = &quot;Severe Cold&quot;;
+        } else if (celsius &lt;= 0) {
+            weatherDesc = &quot;Freezing&quot;;
+        } else if (celsius &lt;= 10) {
+            weatherDesc = &quot;Very Cold&quot;;
+        } else if (celsius &lt;= 15) {
+            weatherDesc = &quot;Chilly&quot;;
+        } else if (celsius &lt;= 20) {
+            weatherDesc = &quot;Cool&quot;;
+        } else if (celsius &lt;= 25) {
+            weatherDesc = &quot;Mild&quot;;
+        } else if (celsius &lt;= 30) {
+            weatherDesc = &quot;Warm&quot;;
+        } else if (celsius &lt;= 35) {
+            weatherDesc = &quot;Hot&quot;;
+        } else if (celsius &lt;= 40) {
+            weatherDesc = &quot;Very Hot&quot;;
+        } else {
+            weatherDesc = &quot;Extreme Heat (Dangerous)&quot;;
+        }
+
+        System.out.println(&quot;\n=== Temperature Conversion ===&quot;);
+        System.out.println(&quot;Input: &quot; + temp + &quot;°&quot; + scale);
+        System.out.println(&quot;Celsius: &quot; + String.format(&quot;%.2f&quot;, celsius) + &quot;°C&quot;);
+        System.out.println(&quot;Fahrenheit: &quot; + String.format(&quot;%.2f&quot;, fahrenheit) + &quot;°F&quot;);
+        System.out.println(&quot;Kelvin: &quot; + String.format(&quot;%.2f&quot;, kelvin) + &quot;K&quot;);
+
+        System.out.println(&quot;\n=== Weather Description ===&quot;);
+        System.out.println(weatherDesc);
+
+        // Clothing advice
+        String clothing;
+        if (celsius &lt;= 0) {
+            clothing = &quot;Heavy winter coat, gloves, hat&quot;;
+        } else if (celsius &lt;= 10) {
+            clothing = &quot;Jacket or coat required&quot;;
+        } else if (celsius &lt;= 20) {
+            clothing = &quot;Light jacket or sweater&quot;;
+        } else if (celsius &lt;= 30) {
+            clothing = &quot;T-shirt and light clothing&quot;;
+        } else {
+            clothing = &quot;Minimal clothing, stay hydrated&quot;;
+        }
+
+        System.out.println(&quot;Recommended: &quot; + clothing);
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-3-credit-score-rating">Program 3: Credit Score Rating</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class CreditScoreRating {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter credit score (300-850): &quot;);
+        int score = scanner.nextInt();
+
+        String rating;
+        String aprRange;
+        String approvalChance;
+
+        // Validate range first
+        if (score &lt; 300 || score &gt; 850) {
+            System.out.println(&quot;Error: Credit score must be between 300 and 850&quot;);
+            scanner.close();
+            return;
+        }
+
+        // Else-if ladder for credit ratings
+        if (score &gt;= 800) {
+            rating = &quot;Exceptional&quot;;
+            aprRange = &quot;3.0% - 4.0%&quot;;
+            approvalChance = &quot;99% - Instant approval&quot;;
+        } else if (score &gt;= 740) {
+            rating = &quot;Very Good&quot;;
+            aprRange = &quot;4.0% - 5.0%&quot;;
+            approvalChance = &quot;95% - Fast approval&quot;;
+        } else if (score &gt;= 670) {
+            rating = &quot;Good&quot;;
+            aprRange = &quot;5.0% - 7.0%&quot;;
+            approvalChance = &quot;85% - Standard approval&quot;;
+        } else if (score &gt;= 580) {
+            rating = &quot;Fair&quot;;
+            aprRange = &quot;7.0% - 12.0%&quot;;
+            approvalChance = &quot;60% - Manual review&quot;;
+        } else if (score &gt;= 500) {
+            rating = &quot;Poor&quot;;
+            aprRange = &quot;12.0% - 18.0%&quot;;
+            approvalChance = &quot;30% - Conditional approval&quot;;
+        } else {
+            rating = &quot;Very Poor&quot;;
+            aprRange = &quot;18.0%+ or Secured only&quot;;
+            approvalChance = &quot;10% - Denied usually&quot;;
+        }
+
+        System.out.println(&quot;\n=== Credit Assessment ===&quot;);
+        System.out.println(&quot;Score: &quot; + score);
+        System.out.println(&quot;Rating: &quot; + rating);
+        System.out.println(&quot;Estimated APR: &quot; + aprRange);
+        System.out.println(&quot;Approval Chance: &quot; + approvalChance);
+
+        // Product eligibility
+        System.out.println(&quot;\n=== Product Eligibility ===&quot;);
+
+        if (score &gt;= 750) {
+            System.out.println(&quot;✓ Premium credit cards&quot;);
+            System.out.println(&quot;✓ Lowest mortgage rates&quot;);
+            System.out.println(&quot;✓ Personal loans up to $100k&quot;);
+        } else if (score &gt;= 700) {
+            System.out.println(&quot;✓ Standard credit cards&quot;);
+            System.out.println(&quot;✓ Good mortgage rates&quot;);
+            System.out.println(&quot;✓ Personal loans up to $50k&quot;);
+        } else if (score &gt;= 650) {
+            System.out.println(&quot;✓ Basic credit cards&quot;);
+            System.out.println(&quot;✓ Standard mortgage rates&quot;);
+            System.out.println(&quot;✓ Personal loans up to $25k&quot;);
+        } else if (score &gt;= 600) {
+            System.out.println(&quot;✓ Secured credit cards&quot;);
+            System.out.println(&quot;⚠ Higher mortgage rates&quot;);
+            System.out.println(&quot;⚠ Small personal loans only&quot;);
+        } else if (score &gt;= 550) {
+            System.out.println(&quot;⚠ Credit builder cards only&quot;);
+            System.out.println(&quot;✗ Mortgage unlikely&quot;);
+            System.out.println(&quot;✗ Unsecured loans denied&quot;);
+        } else {
+            System.out.println(&quot;✗ No credit products available&quot;);
+            System.out.println(&quot;→ Recommend credit counseling&quot;);
+        }
+
+        // Improvement tips
+        System.out.println(&quot;\n=== Improvement Tips ===&quot;);
+        if (score &lt; 600) {
+            System.out.println(&quot;1. Pay all bills on time&quot;);
+            System.out.println(&quot;2. Reduce credit utilization below 30%&quot;);
+            System.out.println(&quot;3. Dispute errors on credit report&quot;);
+        } else if (score &lt; 700) {
+            System.out.println(&quot;1. Keep old accounts open&quot;);
+            System.out.println(&quot;2. Limit new credit applications&quot;);
+            System.out.println(&quot;3. Diversify credit mix&quot;);
+        } else {
+            System.out.println(&quot;1. Maintain current habits&quot;);
+            System.out.println(&quot;2. Monitor credit regularly&quot;);
+            System.out.println(&quot;3. Consider premium products&quot;);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-4-file-extension-handler">Program 4: File Extension Handler</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class FileExtensionHandler {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter filename: &quot;);
+        String filename = scanner.nextLine();
+
+        // Extract extension
+        String extension = &quot;&quot;;
+        int dotIndex = filename.lastIndexOf('.');
+
+        if (dotIndex &gt; 0 &amp;&amp; dotIndex &lt; filename.length() - 1) {
+            extension = filename.substring(dotIndex + 1).toLowerCase();
+        }
+
+        String fileType;
+        String defaultProgram;
+        boolean canEdit;
+        boolean canExecute;
+
+        // Else-if ladder for file types
+        if (extension.equals(&quot;txt&quot;) || extension.equals(&quot;md&quot;) || extension.equals(&quot;rtf&quot;)) {
+            fileType = &quot;Text Document&quot;;
+            defaultProgram = &quot;Notepad / TextEdit&quot;;
+            canEdit = true;
+            canExecute = false;
+        } else if (extension.equals(&quot;doc&quot;) || extension.equals(&quot;docx&quot;)) {
+            fileType = &quot;Microsoft Word Document&quot;;
+            defaultProgram = &quot;Microsoft Word&quot;;
+            canEdit = true;
+            canExecute = false;
+        } else if (extension.equals(&quot;xls&quot;) || extension.equals(&quot;xlsx&quot;)) {
+            fileType = &quot;Microsoft Excel Spreadsheet&quot;;
+            defaultProgram = &quot;Microsoft Excel&quot;;
+            canEdit = true;
+            canExecute = false;
+        } else if (extension.equals(&quot;pdf&quot;)) {
+            fileType = &quot;PDF Document&quot;;
+            defaultProgram = &quot;Adobe Reader / Browser&quot;;
+            canEdit = false;
+            canExecute = false;
+        } else if (extension.equals(&quot;jpg&quot;) || extension.equals(&quot;jpeg&quot;) || 
+                   extension.equals(&quot;png&quot;) || extension.equals(&quot;gif&quot;)) {
+            fileType = &quot;Image File&quot;;
+            defaultProgram = &quot;Image Viewer / Browser&quot;;
+            canEdit = true;
+            canExecute = false;
+        } else if (extension.equals(&quot;mp3&quot;) || extension.equals(&quot;wav&quot;) || 
+                   extension.equals(&quot;ogg&quot;)) {
+            fileType = &quot;Audio File&quot;;
+            defaultProgram = &quot;Media Player&quot;;
+            canEdit = false;
+            canExecute = false;
+        } else if (extension.equals(&quot;mp4&quot;) || extension.equals(&quot;avi&quot;) || 
+                   extension.equals(&quot;mkv&quot;)) {
+            fileType = &quot;Video File&quot;;
+            defaultProgram = &quot;Video Player&quot;;
+            canEdit = false;
+            canExecute = false;
+        } else if (extension.equals(&quot;zip&quot;) || extension.equals(&quot;rar&quot;) || 
+                   extension.equals(&quot;7z&quot;)) {
+            fileType = &quot;Compressed Archive&quot;;
+            defaultProgram = &quot;Archive Manager&quot;;
+            canEdit = false;
+            canExecute = false;
+        } else if (extension.equals(&quot;exe&quot;) || extension.equals(&quot;bat&quot;) || 
+                   extension.equals(&quot;sh&quot;)) {
+            fileType = &quot;Executable Program&quot;;
+            defaultProgram = &quot;Operating System&quot;;
+            canEdit = false;
+            canExecute = true;
+        } else if (extension.equals(&quot;java&quot;)) {
+            fileType = &quot;Java Source Code&quot;;
+            defaultProgram = &quot;IDE / Text Editor&quot;;
+            canEdit = true;
+            canExecute = false;  // Needs compilation
+        } else if (extension.equals(&quot;class&quot;)) {
+            fileType = &quot;Java Compiled Bytecode&quot;;
+            defaultProgram = &quot;JVM&quot;;
+            canEdit = false;
+            canExecute = true;
+        } else if (extension.equals(&quot;html&quot;) || extension.equals(&quot;htm&quot;)) {
+            fileType = &quot;HTML Web Page&quot;;
+            defaultProgram = &quot;Web Browser&quot;;
+            canEdit = true;
+            canExecute = false;
+        } else if (extension.equals(&quot;css&quot;)) {
+            fileType = &quot;CSS Stylesheet&quot;;
+            defaultProgram = &quot;Text Editor / Browser&quot;;
+            canEdit = true;
+            canExecute = false;
+        } else if (extension.equals(&quot;js&quot;)) {
+            fileType = &quot;JavaScript Code&quot;;
+            defaultProgram = &quot;Web Browser / Node.js&quot;;
+            canEdit = true;
+            canExecute = true;
+        } else if (extension.isEmpty()) {
+            fileType = &quot;No Extension&quot;;
+            defaultProgram = &quot;Unknown&quot;;
+            canEdit = true;
+            canExecute = false;
+        } else {
+            fileType = &quot;Unknown Type (.&quot; + extension + &quot;)&quot;;
+            defaultProgram = &quot;Generic Viewer&quot;;
+            canEdit = true;
+            canExecute = false;
+        }
+
+        System.out.println(&quot;\n=== File Analysis ===&quot;);
+        System.out.println(&quot;Filename: &quot; + filename);
+        System.out.println(&quot;Extension: &quot; + (extension.isEmpty() ? &quot;None&quot; : extension));
+        System.out.println(&quot;Type: &quot; + fileType);
+        System.out.println(&quot;Open with: &quot; + defaultProgram);
+        System.out.println(&quot;Editable: &quot; + (canEdit ? &quot;Yes&quot; : &quot;No&quot;));
+        System.out.println(&quot;Executable: &quot; + (canExecute ? &quot;Yes&quot; : &quot;No&quot;));
+
+        // Security warning
+        if (canExecute &amp;&amp; (extension.equals(&quot;exe&quot;) || extension.equals(&quot;bat&quot;) || extension.equals(&quot;sh&quot;))) {
+            System.out.println(&quot;\n⚠️  SECURITY WARNING: Executable files may contain malware!&quot;);
+            System.out.println(&quot;Only run from trusted sources.&quot;);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-5-selenium-test-priority-assigner-automation-prep">Program 5: Selenium Test Priority Assigner (Automation Prep)</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class TestPriorityAssigner {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;=== Selenium Test Priority Assigner ===&quot;);
+
+        System.out.print(&quot;Test type (smoke/regression/e2e/performance/security): &quot;);
+        String testType = scanner.next().toLowerCase();
+
+        System.out.print(&quot;Business impact (critical/high/medium/low): &quot;);
+        String impact = scanner.next().toLowerCase();
+
+        System.out.print(&quot;Failure history (frequent/occasional/rare/none): &quot;);
+        String failureHistory = scanner.next().toLowerCase();
+
+        System.out.print(&quot;Execution time in seconds: &quot;);
+        int executionTime = scanner.nextInt();
+
+        int priorityScore = 0;
+        String priorityLevel;
+        String executionOrder;
+        String retryPolicy;
+
+        // Calculate base score from test type
+        if (testType.equals(&quot;smoke&quot;)) {
+            priorityScore += 100;
+        } else if (testType.equals(&quot;regression&quot;)) {
+            priorityScore += 75;
+        } else if (testType.equals(&quot;e2e&quot;)) {
+            priorityScore += 60;
+        } else if (testType.equals(&quot;performance&quot;)) {
+            priorityScore += 50;
+        } else if (testType.equals(&quot;security&quot;)) {
+            priorityScore += 90;
+        } else {
+            priorityScore += 25;
+        }
+
+        // Adjust for business impact
+        if (impact.equals(&quot;critical&quot;)) {
+            priorityScore += 50;
+        } else if (impact.equals(&quot;high&quot;)) {
+            priorityScore += 30;
+        } else if (impact.equals(&quot;medium&quot;)) {
+            priorityScore += 15;
+        } else if (impact.equals(&quot;low&quot;)) {
+            priorityScore += 5;
+        }
+
+        // Adjust for failure history
+        if (failureHistory.equals(&quot;frequent&quot;)) {
+            priorityScore += 40;
+        } else if (failureHistory.equals(&quot;occasional&quot;)) {
+            priorityScore += 20;
+        } else if (failureHistory.equals(&quot;rare&quot;)) {
+            priorityScore += 5;
+        }
+
+        // Adjust for execution time (faster tests get slight boost)
+        if (executionTime &lt; 10) {
+            priorityScore += 10;
+        } else if (executionTime &lt; 30) {
+            priorityScore += 5;
+        } else if (executionTime &gt; 120) {
+            priorityScore -= 10;  // Long tests slightly deprioritized
+        }
+
+        // Determine priority level
+        if (priorityScore &gt;= 150) {
+            priorityLevel = &quot;P0 - Critical&quot;;
+            executionOrder = &quot;First in suite&quot;;
+            retryPolicy = &quot;Retry 3 times, fail fast&quot;;
+        } else if (priorityScore &gt;= 120) {
+            priorityLevel = &quot;P1 - High&quot;;
+            executionOrder = &quot;After P0 tests&quot;;
+            retryPolicy = &quot;Retry 2 times&quot;;
+        } else if (priorityScore &gt;= 90) {
+            priorityLevel = &quot;P2 - Medium&quot;;
+            executionOrder = &quot;Parallel execution allowed&quot;;
+            retryPolicy = &quot;Retry 1 time&quot;;
+        } else if (priorityScore &gt;= 60) {
+            priorityLevel = &quot;P3 - Low&quot;;
+            executionOrder = &quot;End of suite&quot;;
+            retryPolicy = &quot;No retry, log only&quot;;
+        } else {
+            priorityLevel = &quot;P4 - Minimal&quot;;
+            executionOrder = &quot;Optional/On-demand&quot;;
+            retryPolicy = &quot;Manual investigation only&quot;;
+        }
+
+        System.out.println(&quot;\n=== Priority Assessment ===&quot;);
+        System.out.println(&quot;Priority Score: &quot; + priorityScore);
+        System.out.println(&quot;Priority Level: &quot; + priorityLevel);
+        System.out.println(&quot;Execution Order: &quot; + executionOrder);
+        System.out.println(&quot;Retry Policy: &quot; + retryPolicy);
+
+        // Recommendations
+        System.out.println(&quot;\n=== Recommendations ===&quot;);
+
+        if (priorityScore &gt;= 150) {
+            System.out.println(&quot;✓ Run on every build&quot;);
+            System.out.println(&quot;✓ Block deployment on failure&quot;);
+            System.out.println(&quot;✓ Alert team immediately&quot;);
+            System.out.println(&quot;✓ Execute in isolated environment&quot;);
+        } else if (priorityScore &gt;= 120) {
+            System.out.println(&quot;✓ Run on every build&quot;);
+            System.out.println(&quot;✓ Notify on failure&quot;);
+            System.out.println(&quot;✓ Include in smoke suite&quot;);
+        } else if (priorityScore &gt;= 90) {
+            System.out.println(&quot;✓ Run nightly&quot;);
+            System.out.println(&quot;✓ Parallel execution recommended&quot;);
+            System.out.println(&quot;✓ Report weekly summary&quot;);
+        } else if (priorityScore &gt;= 60) {
+            System.out.println(&quot;⚠ Run weekly or on-demand&quot;);
+            System.out.println(&quot;⚠ Consider deprecation if flaky&quot;);
+        } else {
+            System.out.println(&quot;✗ Review necessity&quot;);
+            System.out.println(&quot;✗ Consider removal or merging&quot;);
+        }
+
+        // Specific advice based on inputs
+        System.out.println(&quot;\n=== Specific Notes ===&quot;);
+
+        if (executionTime &gt; 300) {
+            System.out.println(&quot;⚠ Test is very slow (&gt;5 min). Consider optimization or breaking into smaller tests.&quot;);
+        } else if (executionTime &gt; 60) {
+            System.out.println(&quot;ℹ Test is moderately slow. Monitor execution time trends.&quot;);
+        }
+
+        if (failureHistory.equals(&quot;frequent&quot;)) {
+            System.out.println(&quot;⚠ High failure rate. Investigate for flakiness or environment issues.&quot;);
+        }
+
+        if (testType.equals(&quot;security&quot;) &amp;&amp; priorityScore &lt; 120) {
+            System.out.println(&quot;⚠ Security test with low priority - verify impact assessment.&quot;);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<p><strong>Expected Output:</strong></p>
+<pre><code>=== Selenium Test Priority Assigner ===
+Test type (smoke/regression/e2e/performance/security): smoke
+Business impact (critical/high/medium/low): critical
+Failure history (frequent/occasional/rare/none): frequent
+Execution time in seconds: 5
+
+=== Priority Assessment ===
+Priority Score: 200
+Priority Level: P0 - Critical
+Execution Order: First in suite
+Retry Policy: Retry 3 times, fail fast
+
+=== Recommendations ===
+✓ Run on every build
+✓ Block deployment on failure
+✓ Alert team immediately
+✓ Execute in isolated environment
+
+=== Specific Notes ===
+⚠ High failure rate. Investigate for flakiness or environment issues.
+</code></pre>
+<hr />
+<h2 id="6-common-errors-fixes">6. Common Errors &amp; Fixes</h2>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Wrong Code</th>
+<th>Problem</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wrong order</strong></td>
+<td><code>if (score &gt; 60)</code> before <code>if (score &gt; 90)</code></td>
+<td>90+ never reached</td>
+<td>Put most specific first</td>
+</tr>
+<tr>
+<td><strong>Overlapping without else</strong></td>
+<td>Separate if statements</td>
+<td>Multiple blocks may execute</td>
+<td>Use else-if for mutual exclusion</td>
+</tr>
+<tr>
+<td><strong>Missing final else</strong></td>
+<td>Ends with <code>else if</code></td>
+<td>Unhandled cases silent</td>
+<td>Add final <code>else</code> as catch-all</td>
+</tr>
+<tr>
+<td><strong>Assignment in condition</strong></td>
+<td><code>else if (grade = 'A')</code></td>
+<td>Always true, wrong variable</td>
+<td><code>else if (grade == 'A')</code></td>
+</tr>
+<tr>
+<td><strong>Semicolon after condition</strong></td>
+<td><code>else if (x &gt; 0); { ... }</code></td>
+<td>Empty statement, braces always run</td>
+<td>Remove semicolon</td>
+</tr>
+<tr>
+<td><strong>Incompatible types</strong></td>
+<td><code>else if (score == "90")</code></td>
+<td>String vs int comparison</td>
+<td><code>else if (score == 90)</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-quick-rules-checklist">7. Quick Rules Checklist</h2>
+<h3 id="else-if-rules">Else-If Rules</h3>
+<ul>
+<li>[ ] <strong>Order matters</strong>: Specific → General, Rare → Common</li>
+<li>[ ] <strong>Mutually exclusive</strong>: Only one block executes</li>
+<li>[ ] <strong>Final else</strong>: Always include for unhandled cases</li>
+<li>[ ] <strong>Boolean conditions</strong>: Each must evaluate to true/false</li>
+<li>[ ] <strong>Break long ladders</strong>: Consider switch or polymorphism if &gt;6-7 branches</li>
+</ul>
+<h3 id="best-practices">Best Practices</h3>
+<ul>
+<li>[ ] <strong>Comment the "why"</strong> for complex condition logic</li>
+<li>[ ] <strong>Extract complex conditions</strong> to descriptive boolean variables</li>
+<li>[ ] <strong>Keep it flat</strong>: Avoid nesting else-if inside else-if</li>
+<li>[ ] <strong>Test boundary values</strong>: Every condition edge case</li>
+<li>[ ] <strong>Default action</strong>: Final else should handle or error</li>
+</ul>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Key Point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Structure</strong></td>
+<td><code>if → else if → else if → else</code></td>
+</tr>
+<tr>
+<td><strong>Execution</strong></td>
+<td>Top to bottom, stops at first true</td>
+</tr>
+<tr>
+<td><strong>Mutual exclusion</strong></td>
+<td>Only ONE block runs</td>
+</tr>
+<tr>
+<td><strong>Ordering</strong></td>
+<td>Most specific condition FIRST</td>
+</tr>
+<tr>
+<td><strong>Final else</strong></td>
+<td>Catches all remaining cases (optional but recommended)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Golden Rules:</strong>
+1. Order conditions from most specific to most general
+2. Ensure conditions are mutually exclusive (or intentionally not)
+3. Always include a final else for error handling
+4. Keep ladder under 6-7 branches for readability
+5. Test boundary values between each range</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
