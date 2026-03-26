@@ -12,7 +12,7 @@
         <meta name="author" content="Afwan">
       
       
-        <link rel="canonical" href="https://yuhasproSoftwareTester.github.io/Java-course/Java/11-Control%20Statements/3-Loops/DoWhile%20Loop/doWhile/">
+        <link rel="canonical" href="https://yuhasproSoftwareTester.github.io/Java-course/Java/11-Control%20Statements/3-Loops/Nested%20Loops/nested/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Section 23: Do-While Loop - Yuhaspro</title>
+        <title>Section 24: Nested Loops - Yuhaspro</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#section-23-do-while-loop" class="md-skip">
+        <a href="#section-24-nested-loops" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Section 23: Do-While Loop
+              Section 24: Nested Loops
             
           </span>
         </div>
@@ -1575,22 +1575,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-do-while-loop-structure" class="md-nav__link">
+  <a href="#1-nested-loop-structure" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Do-While Loop Structure
+        1. Nested Loop Structure
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1. Do-While Loop Structure">
+    <nav class="md-nav" aria-label="1. Nested Loop Structure">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
+  <a href="#basic-syntax" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Syntax
+        Basic Syntax
       
     </span>
   </a>
@@ -1598,10 +1598,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#how-it-works" class="md-nav__link">
+  <a href="#execution-flow" class="md-nav__link">
     <span class="md-ellipsis">
       
-        How It Works
+        Execution Flow
       
     </span>
   </a>
@@ -1625,22 +1625,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-do-while-vs-while-comparison" class="md-nav__link">
+  <a href="#2-nested-loop-variations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Do-While vs While Comparison
+        2. Nested Loop Variations
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Do-While vs While Comparison">
+    <nav class="md-nav" aria-label="2. Nested Loop Variations">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#visual-comparison" class="md-nav__link">
+  <a href="#for-for-most-common" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Visual Comparison
+        For-For (Most Common)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#while-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        While-For
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#three-levels-deep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Three Levels Deep
       
     </span>
   </a>
@@ -1665,10 +1687,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#example-1-basic-do-while-patterns" class="md-nav__link">
+  <a href="#example-1-basic-nested-patterns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example 1: Basic Do-While Patterns
+        Example 1: Basic Nested Patterns
       
     </span>
   </a>
@@ -1676,10 +1698,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#example-2-guaranteed-execution-demo" class="md-nav__link">
+  <a href="#example-2-multiplication-table" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Example 2: Guaranteed Execution Demo
+        Example 2: Multiplication Table
       
     </span>
   </a>
@@ -1704,10 +1726,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#program-1-menu-system-classic-use-case" class="md-nav__link">
+  <a href="#program-1-number-patterns" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Program 1: Menu System (Classic Use Case)
+        Program 1: Number Patterns
       
     </span>
   </a>
@@ -1715,10 +1737,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#program-2-input-validation-guaranteed-prompt" class="md-nav__link">
+  <a href="#program-2-matrix-operations" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Program 2: Input Validation (Guaranteed Prompt)
+        Program 2: Matrix Operations
       
     </span>
   </a>
@@ -1726,10 +1748,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#program-3-calculator-with-repeat-option" class="md-nav__link">
+  <a href="#program-3-search-and-replace" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Program 3: Calculator with Repeat Option
+        Program 3: Search and Replace
       
     </span>
   </a>
@@ -1737,10 +1759,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#program-4-number-reversal" class="md-nav__link">
+  <a href="#program-4-bubble-sort" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Program 4: Number Reversal
+        Program 4: Bubble Sort
       
     </span>
   </a>
@@ -1748,10 +1770,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#program-5-dice-game-with-betting" class="md-nav__link">
+  <a href="#program-5-pattern-matching-game" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Program 5: Dice Game with Betting
+        Program 5: Pattern Matching Game
       
     </span>
   </a>
@@ -1767,7 +1789,7 @@
   <a href="#6-common-errors-fixes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        6. Common Errors &amp; Fixes
+        ⚠️ 6. Common Errors &amp; Fixes
       
     </span>
   </a>
@@ -1787,10 +1809,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#do-while-rules" class="md-nav__link">
+  <a href="#nested-loop-rules" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✅ Do-While Rules
+        ✅ Nested Loop Rules
       
     </span>
   </a>
@@ -1809,10 +1831,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#do-while-vs-while-vs-for" class="md-nav__link">
+  <a href="#complexity-awareness" class="md-nav__link">
     <span class="md-ellipsis">
       
-        ✅ Do-While vs While vs For
+        ✅ Complexity Awareness
       
     </span>
   </a>
@@ -1852,22 +1874,25 @@
 
 
 
-<h1 id="section-23-do-while-loop">Section 23: Do-While Loop</h1>
-<h2 id="1-do-while-loop-structure">1. Do-While Loop Structure</h2>
-<h3 id="syntax">Syntax</h3>
-<pre><code class="language-java">do {
-    // loop body
-} while (condition);
+<h1 id="section-24-nested-loops">Section 24: Nested Loops</h1>
+<h2 id="1-nested-loop-structure">1. Nested Loop Structure</h2>
+<h3 id="basic-syntax">Basic Syntax</h3>
+<pre><code class="language-java">// Outer loop
+for (int i = 0; i &lt; 3; i++) {
+
+    // Inner loop
+    for (int j = 0; j &lt; 3; j++) {
+        // Inner body
+    }
+
+}
 </code></pre>
-<h3 id="how-it-works">How It Works</h3>
-<pre><code>Execute Body (always once)
-    │
-    ▼
-Check Condition ──Yes──► Execute Body (repeat)
-    │
-    No
-    ▼
-   Exit
+<h3 id="execution-flow">Execution Flow</h3>
+<pre><code>Outer i=0 ──┬──► Inner j=0 ──► Body ──► j=1 ──► Body ──► j=2 ──► Body ──► j done
+            │
+            ├──► Outer i=1 ──► Inner j=0,1,2 (repeat inner fully)
+            │
+            └──► Outer i=2 ──► Inner j=0,1,2 (repeat inner fully)
 </code></pre>
 <h3 id="key-characteristics">Key Characteristics</h3>
 <table>
@@ -1879,454 +1904,529 @@ Check Condition ──Yes──► Execute Body (repeat)
 </thead>
 <tbody>
 <tr>
-<td><strong>Post-test</strong></td>
-<td>Condition checked AFTER each iteration</td>
+<td><strong>Inner completes first</strong></td>
+<td>Full inner loop runs for each outer iteration</td>
 </tr>
 <tr>
-<td><strong>Executes at least once</strong></td>
-<td>Body runs before first condition check</td>
+<td><strong>Multiplication of iterations</strong></td>
+<td>Total = outer count × inner count</td>
 </tr>
 <tr>
-<td><strong>Semicolon required</strong></td>
-<td><code>while (condition);</code> at end</td>
+<td><strong>Independent counters</strong></td>
+<td>Inner variable resets each outer iteration</td>
 </tr>
 <tr>
-<td><strong>Use when</strong></td>
-<td>First iteration must happen unconditionally</td>
+<td><strong>Any loop types</strong></td>
+<td>for-for, for-while, while-do, etc.</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="2-do-while-vs-while-comparison">2. Do-While vs While Comparison</h2>
-<table>
-<thead>
-<tr>
-<th>Aspect</th>
-<th>Do-While</th>
-<th>While</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>When condition checked</strong></td>
-<td>After iteration</td>
-<td>Before iteration</td>
-</tr>
-<tr>
-<td><strong>Minimum executions</strong></td>
-<td>1 time</td>
-<td>0 times</td>
-</tr>
-<tr>
-<td><strong>Syntax ending</strong></td>
-<td><code>} while (condition);</code></td>
-<td><code>while (condition) {</code></td>
-</tr>
-<tr>
-<td><strong>Best for</strong></td>
-<td>Menu systems, input validation</td>
-<td>General indefinite loops</td>
-</tr>
-</tbody>
-</table>
-<h3 id="visual-comparison">Visual Comparison</h3>
-<p><strong>Do-While (Post-test):</strong></p>
-<pre><code>Execute Body
-    │
-    ▼
-Check? ──Yes──► Execute Body (repeat)
-    │
-    No ──► Exit
+<h2 id="2-nested-loop-variations">2. Nested Loop Variations</h2>
+<h3 id="for-for-most-common">For-For (Most Common)</h3>
+<pre><code class="language-java">for (int row = 0; row &lt; 3; row++) {
+    for (int col = 0; col &lt; 3; col++) {
+        System.out.print(&quot;(&quot; + row + &quot;,&quot; + col + &quot;) &quot;);
+    }
+    System.out.println();
+}
+// Output: (0,0) (0,1) (0,2)
+//         (1,0) (1,1) (1,2)
+//         (2,0) (2,1) (2,2)
 </code></pre>
-<p><strong>While (Pre-test):</strong></p>
-<pre><code>Check? ──No──► Exit (never execute)
-    │
-   Yes
-    ▼
-Execute Body ──► Check? (repeat)
+<h3 id="while-for">While-For</h3>
+<pre><code class="language-java">int i = 0;
+while (i &lt; 3) {
+    for (int j = 0; j &lt; 3; j++) {
+        // Process
+    }
+    i++;
+}
+</code></pre>
+<h3 id="three-levels-deep">Three Levels Deep</h3>
+<pre><code class="language-java">for (int i = 0; i &lt; 2; i++) {
+    for (int j = 0; j &lt; 2; j++) {
+        for (int k = 0; k &lt; 2; k++) {
+            // 2 × 2 × 2 = 8 iterations
+        }
+    }
+}
 </code></pre>
 <hr />
 <h2 id="3-complete-working-examples">3. Complete Working Examples</h2>
-<h3 id="example-1-basic-do-while-patterns">Example 1: Basic Do-While Patterns</h3>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class DoWhilePatterns {
+<h3 id="example-1-basic-nested-patterns">Example 1: Basic Nested Patterns</h3>
+<pre><code class="language-java">public class NestedPatterns {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Forward counting (guaranteed at least one)
-        System.out.print(&quot;Forward: &quot;);
-        int i = 1;
-        do {
-            System.out.print(i + &quot; &quot;);
-            i++;
-        } while (i &lt;= 5);
-
-        // Backward counting
-        System.out.print(&quot;\nBackward: &quot;);
-        int j = 5;
-        do {
-            System.out.print(j + &quot; &quot;);
-            j--;
-        } while (j &gt;= 1);
-
-        // With continue (rare but valid)
-        System.out.print(&quot;\nSkip 3: &quot;);
-        int k = 0;
-        do {
-            k++;
-            if (k == 3) continue;
-            System.out.print(k + &quot; &quot;);
-        } while (k &lt; 5);
-
-        // With break
-        System.out.print(&quot;\nStop at 4: &quot;);
-        int m = 0;
-        do {
-            m++;
-            if (m &gt; 4) break;
-            System.out.print(m + &quot; &quot;);
-        } while (m &lt; 10);
-
-        scanner.close();
-    }
-}
-</code></pre>
-<h3 id="example-2-guaranteed-execution-demo">Example 2: Guaranteed Execution Demo</h3>
-<pre><code class="language-java">public class GuaranteedExecution {
-    public static void main(String[] args) {
-        // Condition false immediately, but body runs once
-        int x = 10;
-
-        System.out.println(&quot;Do-While:&quot;);
-        do {
-            System.out.println(&quot;x = &quot; + x);  // Prints once
-            x++;
-        } while (x &lt; 5);  // False immediately, but we already executed
-
-        // Reset
-        x = 10;
-
-        System.out.println(&quot;\nWhile:&quot;);
-        while (x &lt; 5) {
-            System.out.println(&quot;x = &quot; + x);  // Never prints
-            x++;
+        // Square pattern
+        System.out.println(&quot;=== Square ===&quot;);
+        for (int i = 0; i &lt; 4; i++) {
+            for (int j = 0; j &lt; 4; j++) {
+                System.out.print(&quot;* &quot;);
+            }
+            System.out.println();
         }
-        System.out.println(&quot;(Never executed)&quot;);
+
+        // Right triangle
+        System.out.println(&quot;\n=== Right Triangle ===&quot;);
+        for (int i = 1; i &lt;= 5; i++) {
+            for (int j = 1; j &lt;= i; j++) {
+                System.out.print(&quot;* &quot;);
+            }
+            System.out.println();
+        }
+
+        // Inverted triangle
+        System.out.println(&quot;\n=== Inverted Triangle ===&quot;);
+        for (int i = 5; i &gt;= 1; i--) {
+            for (int j = 1; j &lt;= i; j++) {
+                System.out.print(&quot;* &quot;);
+            }
+            System.out.println();
+        }
+
+        // Pyramid
+        System.out.println(&quot;\n=== Pyramid ===&quot;);
+        for (int i = 1; i &lt;= 5; i++) {
+            // Spaces
+            for (int s = 1; s &lt;= 5 - i; s++) {
+                System.out.print(&quot;  &quot;);
+            }
+            // Stars
+            for (int j = 1; j &lt;= 2 * i - 1; j++) {
+                System.out.print(&quot;* &quot;);
+            }
+            System.out.println();
+        }
     }
 }
 </code></pre>
-<p><strong>Output:</strong></p>
-<pre><code>Do-While:
-x = 10
+<h3 id="example-2-multiplication-table">Example 2: Multiplication Table</h3>
+<pre><code class="language-java">public class MultiplicationTable {
+    public static void main(String[] args) {
+        // Header
+        System.out.print(&quot;   |&quot;);
+        for (int col = 1; col &lt;= 10; col++) {
+            System.out.printf(&quot;%4d&quot;, col);
+        }
+        System.out.println(&quot;\n---+&quot; + &quot;-&quot;.repeat(40));
 
-While:
-(Never executed)
+        // Rows
+        for (int row = 1; row &lt;= 10; row++) {
+            System.out.printf(&quot;%2d |&quot;, row);
+            for (int col = 1; col &lt;= 10; col++) {
+                System.out.printf(&quot;%4d&quot;, row * col);
+            }
+            System.out.println();
+        }
+    }
+}
 </code></pre>
 <hr />
 <h2 id="4-five-practical-programs-copy-paste-ready">4. Five Practical Programs (Copy-Paste Ready)</h2>
-<h3 id="program-1-menu-system-classic-use-case">Program 1: Menu System (Classic Use Case)</h3>
+<h3 id="program-1-number-patterns">Program 1: Number Patterns</h3>
 <pre><code class="language-java">import java.util.Scanner;
 
-public class MenuDoWhile {
+public class NumberPatterns {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int choice;
+        System.out.print(&quot;Enter size: &quot;);
+        int n = scanner.nextInt();
 
-        do {
-            System.out.println(&quot;\n=== Main Menu ===&quot;);
-            System.out.println(&quot;1. View Profile&quot;);
-            System.out.println(&quot;2. Edit Settings&quot;);
-            System.out.println(&quot;3. View Reports&quot;);
-            System.out.println(&quot;4. Logout&quot;);
-            System.out.print(&quot;Enter choice: &quot;);
-
-            choice = scanner.nextInt();
-
-            switch (choice) {
-                case 1:
-                    System.out.println(&quot;Displaying profile...&quot;);
-                    break;
-                case 2:
-                    System.out.println(&quot;Opening settings...&quot;);
-                    break;
-                case 3:
-                    System.out.println(&quot;Loading reports...&quot;);
-                    break;
-                case 4:
-                    System.out.println(&quot;Logging out...&quot;);
-                    break;
-                default:
-                    System.out.println(&quot;Invalid choice. Try again.&quot;);
+        // Pattern 1: Incrementing row
+        System.out.println(&quot;\n=== Pattern 1 ===&quot;);
+        for (int i = 1; i &lt;= n; i++) {
+            for (int j = 1; j &lt;= i; j++) {
+                System.out.print(j + &quot; &quot;);
             }
+            System.out.println();
+        }
 
-        } while (choice != 4);  // Continue until logout
+        // Pattern 2: Same number row
+        System.out.println(&quot;\n=== Pattern 2 ===&quot;);
+        for (int i = 1; i &lt;= n; i++) {
+            for (int j = 1; j &lt;= i; j++) {
+                System.out.print(i + &quot; &quot;);
+            }
+            System.out.println();
+        }
 
-        System.out.println(&quot;Goodbye!&quot;);
+        // Pattern 3: Reverse row
+        System.out.println(&quot;\n=== Pattern 3 ===&quot;);
+        for (int i = n; i &gt;= 1; i--) {
+            for (int j = 1; j &lt;= i; j++) {
+                System.out.print(j + &quot; &quot;);
+            }
+            System.out.println();
+        }
+
+        // Pattern 4: Floyd's Triangle
+        System.out.println(&quot;\n=== Floyd's Triangle ===&quot;);
+        int num = 1;
+        for (int i = 1; i &lt;= n; i++) {
+            for (int j = 1; j &lt;= i; j++) {
+                System.out.printf(&quot;%3d&quot;, num++);
+            }
+            System.out.println();
+        }
+
+        // Pattern 5: Pascal's Triangle
+        System.out.println(&quot;\n=== Pascal's Triangle ===&quot;);
+        for (int i = 0; i &lt; n; i++) {
+            // Spaces
+            for (int s = 0; s &lt; n - i - 1; s++) {
+                System.out.print(&quot;  &quot;);
+            }
+            // Numbers
+            int value = 1;
+            for (int j = 0; j &lt;= i; j++) {
+                System.out.printf(&quot;%4d&quot;, value);
+                value = value * (i - j) / (j + 1);
+            }
+            System.out.println();
+        }
+
         scanner.close();
     }
 }
 </code></pre>
 <p><strong>Expected Output:</strong></p>
-<pre><code>=== Main Menu ===
-1. View Profile
-2. Edit Settings
-3. View Reports
-4. Logout
-Enter choice: 5
-Invalid choice. Try again.
+<pre><code>Enter size: 5
 
-=== Main Menu ===
-1. View Profile
-...
-Enter choice: 4
-Logging out...
-Goodbye!
+=== Pattern 1 ===
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5 
+
+=== Pattern 2 ===
+1 
+2 2 
+3 3 3 
+4 4 4 4 
+5 5 5 5 5 
+
+=== Floyd's Triangle ===
+  1
+  2  3
+  4  5  6
+  7  8  9 10
+ 11 12 13 14 15
 </code></pre>
 <hr />
-<h3 id="program-2-input-validation-guaranteed-prompt">Program 2: Input Validation (Guaranteed Prompt)</h3>
+<h3 id="program-2-matrix-operations">Program 2: Matrix Operations</h3>
 <pre><code class="language-java">import java.util.Scanner;
 
-public class InputValidationDoWhile {
+public class MatrixOperations {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int age;
+        System.out.print(&quot;Enter matrix rows: &quot;);
+        int rows = scanner.nextInt();
+        System.out.print(&quot;Enter matrix columns: &quot;);
+        int cols = scanner.nextInt();
 
-        // Keep asking until valid input
-        do {
-            System.out.print(&quot;Enter your age (1-120): &quot;);
-            age = scanner.nextInt();
+        int[][] matrix = new int[rows][cols];
 
-            if (age &lt; 1 || age &gt; 120) {
-                System.out.println(&quot;Invalid age. Please try again.&quot;);
+        // Input matrix
+        System.out.println(&quot;\nEnter matrix elements:&quot;);
+        for (int i = 0; i &lt; rows; i++) {
+            for (int j = 0; j &lt; cols; j++) {
+                System.out.print(&quot;Element [&quot; + i + &quot;][&quot; + j + &quot;]: &quot;);
+                matrix[i][j] = scanner.nextInt();
             }
-
-        } while (age &lt; 1 || age &gt; 120);
-
-        System.out.println(&quot;Valid age entered: &quot; + age);
-
-        // Another example: Yes/No confirmation
-        scanner.nextLine(); // Clear buffer
-        String response;
-
-        do {
-            System.out.print(&quot;\nConfirm deletion (yes/no): &quot;);
-            response = scanner.nextLine().toLowerCase();
-
-            if (!response.equals(&quot;yes&quot;) &amp;&amp; !response.equals(&quot;no&quot;)) {
-                System.out.println(&quot;Please enter 'yes' or 'no'&quot;);
-            }
-
-        } while (!response.equals(&quot;yes&quot;) &amp;&amp; !response.equals(&quot;no&quot;));
-
-        System.out.println(&quot;You chose: &quot; + response);
-
-        scanner.close();
-    }
-}
-</code></pre>
-<hr />
-<h3 id="program-3-calculator-with-repeat-option">Program 3: Calculator with Repeat Option</h3>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class CalculatorDoWhile {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        char continueCalc;
-
-        do {
-            System.out.print(&quot;\nEnter first number: &quot;);
-            double num1 = scanner.nextDouble();
-
-            System.out.print(&quot;Enter operator (+, -, *, /): &quot;);
-            char operator = scanner.next().charAt(0);
-
-            System.out.print(&quot;Enter second number: &quot;);
-            double num2 = scanner.nextDouble();
-
-            double result = 0;
-            boolean valid = true;
-
-            switch (operator) {
-                case '+':
-                    result = num1 + num2;
-                    break;
-                case '-':
-                    result = num1 - num2;
-                    break;
-                case '*':
-                    result = num1 * num2;
-                    break;
-                case '/':
-                    if (num2 != 0) {
-                        result = num1 / num2;
-                    } else {
-                        System.out.println(&quot;Error: Cannot divide by zero&quot;);
-                        valid = false;
-                    }
-                    break;
-                default:
-                    System.out.println(&quot;Error: Invalid operator&quot;);
-                    valid = false;
-            }
-
-            if (valid) {
-                System.out.println(&quot;Result: &quot; + result);
-            }
-
-            System.out.print(&quot;\nPerform another calculation? (y/n): &quot;);
-            continueCalc = scanner.next().toLowerCase().charAt(0);
-
-        } while (continueCalc == 'y');
-
-        System.out.println(&quot;Calculator closed.&quot;);
-        scanner.close();
-    }
-}
-</code></pre>
-<hr />
-<h3 id="program-4-number-reversal">Program 4: Number Reversal</h3>
-<pre><code class="language-java">import java.util.Scanner;
-
-public class NumberReversal {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print(&quot;Enter a positive integer: &quot;);
-        int number = scanner.nextInt();
-
-        int original = number;
-        int reversed = 0;
-
-        // Do-while ensures we process at least one digit (handles 0 correctly)
-        do {
-            int digit = number % 10;           // Get last digit
-            reversed = reversed * 10 + digit;  // Add to reversed number
-            number = number / 10;              // Remove last digit
-        } while (number &gt; 0);
-
-        System.out.println(&quot;Original: &quot; + original);
-        System.out.println(&quot;Reversed: &quot; + reversed);
-
-        // Check palindrome
-        if (original == reversed) {
-            System.out.println(original + &quot; is a palindrome&quot;);
-        } else {
-            System.out.println(original + &quot; is not a palindrome&quot;);
         }
 
-        // Digit sum using do-while
-        number = original;
-        int sum = 0;
+        // Display matrix
+        System.out.println(&quot;\n=== Matrix ===&quot;);
+        for (int i = 0; i &lt; rows; i++) {
+            for (int j = 0; j &lt; cols; j++) {
+                System.out.printf(&quot;%4d&quot;, matrix[i][j]);
+            }
+            System.out.println();
+        }
 
-        do {
-            sum += number % 10;
-            number /= 10;
-        } while (number &gt; 0);
+        // Row sums
+        System.out.println(&quot;\n=== Row Sums ===&quot;);
+        for (int i = 0; i &lt; rows; i++) {
+            int sum = 0;
+            for (int j = 0; j &lt; cols; j++) {
+                sum += matrix[i][j];
+            }
+            System.out.println(&quot;Row &quot; + i + &quot;: &quot; + sum);
+        }
 
-        System.out.println(&quot;Sum of digits: &quot; + sum);
+        // Column sums
+        System.out.println(&quot;\n=== Column Sums ===&quot;);
+        for (int j = 0; j &lt; cols; j++) {
+            int sum = 0;
+            for (int i = 0; i &lt; rows; i++) {
+                sum += matrix[i][j];
+            }
+            System.out.println(&quot;Col &quot; + j + &quot;: &quot; + sum);
+        }
+
+        // Diagonal sum (square matrix only)
+        if (rows == cols) {
+            System.out.println(&quot;\n=== Diagonal Sums ===&quot;);
+            int mainDiag = 0, antiDiag = 0;
+            for (int i = 0; i &lt; rows; i++) {
+                mainDiag += matrix[i][i];
+                antiDiag += matrix[i][rows - 1 - i];
+            }
+            System.out.println(&quot;Main diagonal: &quot; + mainDiag);
+            System.out.println(&quot;Anti diagonal: &quot; + antiDiag);
+        }
+
+        // Transpose
+        System.out.println(&quot;\n=== Transpose ===&quot;);
+        for (int j = 0; j &lt; cols; j++) {
+            for (int i = 0; i &lt; rows; i++) {
+                System.out.printf(&quot;%4d&quot;, matrix[i][j]);
+            }
+            System.out.println();
+        }
 
         scanner.close();
     }
 }
 </code></pre>
 <hr />
-<h3 id="program-5-dice-game-with-betting">Program 5: Dice Game with Betting</h3>
+<h3 id="program-3-search-and-replace">Program 3: Search and Replace</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class SearchReplace {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        char[][] grid = {
+            {'A', 'B', 'C', 'D', 'E'},
+            {'F', 'G', 'H', 'I', 'J'},
+            {'K', 'L', 'M', 'N', 'O'},
+            {'P', 'Q', 'R', 'S', 'T'},
+            {'U', 'V', 'W', 'X', 'Y'}
+        };
+
+        // Display original
+        System.out.println(&quot;=== Original Grid ===&quot;);
+        for (int i = 0; i &lt; grid.length; i++) {
+            for (int j = 0; j &lt; grid[i].length; j++) {
+                System.out.print(grid[i][j] + &quot; &quot;);
+            }
+            System.out.println();
+        }
+
+        // Search for character
+        System.out.print(&quot;\nEnter character to search: &quot;);
+        char target = scanner.next().toUpperCase().charAt(0);
+
+        boolean found = false;
+
+        search:
+        for (int i = 0; i &lt; grid.length; i++) {
+            for (int j = 0; j &lt; grid[i].length; j++) {
+                if (grid[i][j] == target) {
+                    System.out.println(&quot;Found at: Row &quot; + i + &quot;, Col &quot; + j);
+                    found = true;
+
+                    // Mark found location
+                    grid[i][j] = '*';
+                    break search;  // Exit both loops
+                }
+            }
+        }
+
+        if (!found) {
+            System.out.println(&quot;Character not found&quot;);
+        }
+
+        // Display modified
+        System.out.println(&quot;\n=== Modified Grid ===&quot;);
+        for (int i = 0; i &lt; grid.length; i++) {
+            for (int j = 0; j &lt; grid[i].length; j++) {
+                System.out.print(grid[i][j] + &quot; &quot;);
+            }
+            System.out.println();
+        }
+
+        // Replace all vowels
+        char[] vowels = {'A', 'E', 'I', 'O', 'U'};
+
+        for (int i = 0; i &lt; grid.length; i++) {
+            for (int j = 0; j &lt; grid[i].length; j++) {
+                for (int v = 0; v &lt; vowels.length; v++) {
+                    if (grid[i][j] == vowels[v]) {
+                        grid[i][j] = '-';
+                        break;  // Exit vowel loop only
+                    }
+                }
+            }
+        }
+
+        System.out.println(&quot;\n=== Vowels Replaced ===&quot;);
+        for (int i = 0; i &lt; grid.length; i++) {
+            for (int j = 0; j &lt; grid[i].length; j++) {
+                System.out.print(grid[i][j] + &quot; &quot;);
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-4-bubble-sort">Program 4: Bubble Sort</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class BubbleSort {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter number of elements: &quot;);
+        int n = scanner.nextInt();
+
+        int[] arr = new int[n];
+
+        System.out.println(&quot;Enter &quot; + n + &quot; numbers:&quot;);
+        for (int i = 0; i &lt; n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+
+        System.out.print(&quot;\nOriginal: &quot;);
+        for (int num : arr) {
+            System.out.print(num + &quot; &quot;);
+        }
+
+        // Bubble sort with nested loops
+        for (int i = 0; i &lt; n - 1; i++) {
+            boolean swapped = false;
+
+            for (int j = 0; j &lt; n - i - 1; j++) {
+                if (arr[j] &gt; arr[j + 1]) {
+                    // Swap
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    swapped = true;
+                }
+            }
+
+            // If no swap, array is sorted
+            if (!swapped) {
+                System.out.println(&quot;\nEarly termination at pass &quot; + (i + 1));
+                break;
+            }
+        }
+
+        System.out.print(&quot;\nSorted: &quot;);
+        for (int num : arr) {
+            System.out.print(num + &quot; &quot;);
+        }
+
+        // Find duplicates using nested loops
+        System.out.println(&quot;\n\n=== Duplicates ===&quot;);
+        boolean[] checked = new boolean[n];
+
+        for (int i = 0; i &lt; n; i++) {
+            if (checked[i]) continue;
+
+            int count = 1;
+            for (int j = i + 1; j &lt; n; j++) {
+                if (arr[i] == arr[j]) {
+                    count++;
+                    checked[j] = true;
+                }
+            }
+
+            if (count &gt; 1) {
+                System.out.println(arr[i] + &quot; appears &quot; + count + &quot; times&quot;);
+            }
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-5-pattern-matching-game">Program 5: Pattern Matching Game</h3>
 <pre><code class="language-java">import java.util.Scanner;
 import java.util.Random;
 
-public class DiceGameDoWhile {
+public class PatternGame {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        int balance = 100;
-        char playAgain;
+        int score = 0;
+        int rounds = 3;
 
-        System.out.println(&quot;=== Dice Betting Game ===&quot;);
-        System.out.println(&quot;Starting balance: $&quot; + balance);
+        System.out.println(&quot;=== Pattern Matching Game ===&quot;);
+        System.out.println(&quot;Find the hidden number in the grid!&quot;);
 
-        do {
-            // Get valid bet
-            int bet;
-            do {
-                System.out.print(&quot;\nEnter bet amount (1-&quot; + balance + &quot;): $&quot;);
-                bet = scanner.nextInt();
+        for (int round = 1; round &lt;= rounds; round++) {
+            System.out.println(&quot;\n--- Round &quot; + round + &quot; ---&quot;);
 
-                if (bet &lt; 1 || bet &gt; balance) {
-                    System.out.println(&quot;Invalid bet. Try again.&quot;);
-                }
-            } while (bet &lt; 1 || bet &gt; balance);
+            int size = 3 + round;  // Increasing difficulty
+            int hiddenRow = random.nextInt(size);
+            int hiddenCol = random.nextInt(size);
+            int hiddenNumber = random.nextInt(90) + 10;
 
-            // Roll dice
-            int dice1 = random.nextInt(6) + 1;
-            int dice2 = random.nextInt(6) + 1;
-            int total = dice1 + dice2;
-
-            System.out.println(&quot;Rolled: &quot; + dice1 + &quot; + &quot; + dice2 + &quot; = &quot; + total);
-
-            // Determine outcome
-            if (total == 7 || total == 11) {
-                System.out.println(&quot;You win! Double your bet!&quot;);
-                balance += bet;
-            } else if (total == 2 || total == 3 || total == 12) {
-                System.out.println(&quot;Craps! You lose your bet.&quot;);
-                balance -= bet;
-            } else {
-                System.out.println(&quot;Point is &quot; + total + &quot;. Roll again...&quot;);
-
-                // Continue rolling until win or lose
-                boolean pointResolved = false;
-                do {
-                    System.out.print(&quot;Press enter to roll...&quot;);
-                    scanner.nextLine(); // Wait for enter
-                    scanner.nextLine();
-
-                    dice1 = random.nextInt(6) + 1;
-                    dice2 = random.nextInt(6) + 1;
-                    int newTotal = dice1 + dice2;
-
-                    System.out.println(&quot;Rolled: &quot; + dice1 + &quot; + &quot; + dice2 + &quot; = &quot; + newTotal);
-
-                    if (newTotal == total) {
-                        System.out.println(&quot;You hit the point! You win!&quot;);
-                        balance += bet;
-                        pointResolved = true;
-                    } else if (newTotal == 7) {
-                        System.out.println(&quot;Seven out! You lose.&quot;);
-                        balance -= bet;
-                        pointResolved = true;
+            // Generate grid
+            int[][] grid = new int[size][size];
+            for (int i = 0; i &lt; size; i++) {
+                for (int j = 0; j &lt; size; j++) {
+                    if (i == hiddenRow &amp;&amp; j == hiddenCol) {
+                        grid[i][j] = hiddenNumber;
                     } else {
-                        System.out.println(&quot;Rolling again...&quot;);
+                        grid[i][j] = random.nextInt(90) + 10;
                     }
-
-                } while (!pointResolved);
+                }
             }
 
-            System.out.println(&quot;Current balance: $&quot; + balance);
+            // Display grid
+            System.out.println(&quot;Find this number: &quot; + hiddenNumber);
+            System.out.println(&quot;Grid:&quot;);
+            for (int i = 0; i &lt; size; i++) {
+                for (int j = 0; j &lt; size; j++) {
+                    System.out.printf(&quot;%3d &quot;, grid[i][j]);
+                }
+                System.out.println();
+            }
 
-            if (balance &gt; 0) {
-                System.out.print(&quot;\nPlay again? (y/n): &quot;);
-                playAgain = scanner.next().toLowerCase().charAt(0);
+            // Get guess
+            System.out.print(&quot;Enter row (0-&quot; + (size-1) + &quot;): &quot;);
+            int guessRow = scanner.nextInt();
+            System.out.print(&quot;Enter column (0-&quot; + (size-1) + &quot;): &quot;);
+            int guessCol = scanner.nextInt();
+
+            // Check
+            if (guessRow == hiddenRow &amp;&amp; guessCol == hiddenCol) {
+                System.out.println(&quot;Correct! +&quot; + (round * 10) + &quot; points&quot;);
+                score += round * 10;
             } else {
-                System.out.println(&quot;You're out of money!&quot;);
-                playAgain = 'n';
+                System.out.println(&quot;Wrong! It was at row &quot; + hiddenRow + &quot;, col &quot; + hiddenCol);
             }
+        }
 
-        } while (playAgain == 'y' &amp;&amp; balance &gt; 0);
+        System.out.println(&quot;\n=== Final Score: &quot; + score + &quot; ===&quot;);
 
-        System.out.println(&quot;\nFinal balance: $&quot; + balance);
-        System.out.println(&quot;Thanks for playing!&quot;);
+        // Bonus: Display performance pattern
+        System.out.println(&quot;\nPerformance:&quot;);
+        for (int i = 0; i &lt; score / 10; i++) {
+            for (int j = 0; j &lt;= i; j++) {
+                System.out.print(&quot;★ &quot;);
+            }
+            System.out.println();
+        }
 
         scanner.close();
     }
 }
 </code></pre>
 <hr />
-<h2 id="6-common-errors-fixes">6. Common Errors &amp; Fixes</h2>
+<h2 id="6-common-errors-fixes">⚠️ 6. Common Errors &amp; Fixes</h2>
 <table>
 <thead>
 <tr>
@@ -2338,45 +2438,45 @@ public class DiceGameDoWhile {
 </thead>
 <tbody>
 <tr>
-<td><strong>Missing semicolon</strong></td>
-<td><code>} while (x &lt; 5)</code></td>
-<td>Syntax error</td>
-<td>Add semicolon: <code>} while (x &lt; 5);</code></td>
+<td><strong>Wrong variable</strong></td>
+<td><code>for (j=0; j&lt;n; i++)</code></td>
+<td>Updating outer counter</td>
+<td>Use correct variable: <code>j++</code></td>
 </tr>
 <tr>
-<td><strong>Wrong braces</strong></td>
-<td><code>do x++; while (x &lt; 5);</code></td>
-<td>Only one statement</td>
-<td>Use braces: <code>do { x++; } while (x &lt; 5);</code></td>
+<td><strong>Infinite inner</strong></td>
+<td><code>for (j=0; j&lt;n; )</code></td>
+<td>No inner update</td>
+<td>Add <code>j++</code></td>
 </tr>
 <tr>
-<td><strong>Infinite loop</strong></td>
-<td><code>do { ... } while (true);</code></td>
-<td>Never exits</td>
-<td>Add break condition inside</td>
+<td><strong>O(n³) accidentally</strong></td>
+<td>Three nested loops</td>
+<td>Excessive complexity</td>
+<td>Reconsider algorithm</td>
 </tr>
 <tr>
-<td><strong>Wrong condition</strong></td>
-<td><code>do { i++; } while (i &gt; 10)</code> when i starts at 0</td>
-<td>Only runs once</td>
-<td>Check logic: should be <code>i &lt; 10</code></td>
+<td><strong>Wrong bounds</strong></td>
+<td><code>j &lt;= n</code> for array</td>
+<td>Index out of bounds</td>
+<td>Use <code>&lt;</code> not <code>&lt;=</code></td>
 </tr>
 <tr>
-<td><strong>Variable scope</strong></td>
-<td>Declare inside do, use in while</td>
-<td>Variable not visible</td>
-<td>Declare before do block</td>
+<td><strong>Variable reuse</strong></td>
+<td>Same <code>i</code> in both loops</td>
+<td>Shadowing/confusion</td>
+<td>Use different names</td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h2 id="7-quick-rules-checklist">7. Quick Rules Checklist</h2>
-<h3 id="do-while-rules">✅ Do-While Rules</h3>
+<h3 id="nested-loop-rules">✅ Nested Loop Rules</h3>
 <ul>
-<li>[ ] <strong>Post-test</strong>: Condition checked after each iteration</li>
-<li>[ ] <strong>Executes at least once</strong>: Guaranteed first iteration</li>
-<li>[ ] <strong>Semicolon required</strong>: After <code>while (condition);</code></li>
-<li>[ ] <strong>Braces recommended</strong>: Even for single statement</li>
+<li>[ ] <strong>Inner completes first</strong>: Full inner loop per outer iteration</li>
+<li>[ ] <strong>Independent counters</strong>: Inner variable resets each outer iteration</li>
+<li>[ ] <strong>Multiplication</strong>: Total iterations = outer × inner</li>
+<li>[ ] <strong>Different names</strong>: Use <code>i</code>, <code>j</code>, <code>k</code> or descriptive names</li>
 </ul>
 <h3 id="best-practices">✅ Best Practices</h3>
 <table>
@@ -2388,47 +2488,47 @@ public class DiceGameDoWhile {
 </thead>
 <tbody>
 <tr>
-<td>Use for menu systems (show menu, then check exit)</td>
-<td>Use when zero iterations might be needed</td>
+<td>Use for grids, tables, matrices</td>
+<td>Use when single loop suffices</td>
 </tr>
 <tr>
-<td>Use for input validation (prompt at least once)</td>
-<td>Use for simple counting (use for loop)</td>
+<td>Keep nesting shallow (2-3 max)</td>
+<td>Nest deeply (4+ levels)</td>
 </tr>
 <tr>
-<td>Keep condition clear and simple</td>
-<td>Create infinite loops accidentally</td>
+<td>Use labeled break for early exit</td>
+<td>Create accidental infinite loops</td>
 </tr>
 <tr>
-<td>Ensure termination condition possible</td>
-<td>Forget the semicolon at end</td>
+<td>Comment which loop does what</td>
+<td>Reuse same counter variable</td>
 </tr>
 </tbody>
 </table>
-<h3 id="do-while-vs-while-vs-for">✅ Do-While vs While vs For</h3>
+<h3 id="complexity-awareness">✅ Complexity Awareness</h3>
 <table>
 <thead>
 <tr>
-<th>Use Do-When</th>
-<th>Use While</th>
+<th>Nesting</th>
+<th>Complexity</th>
 <th>Use For</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Menu must display at least once</td>
-<td>Unknown iterations, might be zero</td>
-<td>Known iteration count</td>
+<td>1 loop</td>
+<td>O(n)</td>
+<td>Simple iteration</td>
 </tr>
 <tr>
-<td>Input validation (prompt guaranteed)</td>
-<td>Waiting for external condition</td>
-<td>Array/list iteration</td>
+<td>2 loops</td>
+<td>O(n²)</td>
+<td>Matrices, pairs, bubbles</td>
 </tr>
 <tr>
-<td>Roll until condition met</td>
-<td>Polling/checking status</td>
-<td>Counting/ranging</td>
+<td>3 loops</td>
+<td>O(n³)</td>
+<td>Cubes, triplets (rare)</td>
 </tr>
 </tbody>
 </table>
@@ -2438,38 +2538,38 @@ public class DiceGameDoWhile {
 <thead>
 <tr>
 <th>Aspect</th>
-<th>Do-While</th>
+<th>Nested Loops</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Syntax</strong></td>
-<td><code>do { body } while (condition);</code></td>
+<td><strong>Structure</strong></td>
+<td>Loop inside loop</td>
 </tr>
 <tr>
-<td><strong>Check</strong></td>
-<td>After each iteration</td>
+<td><strong>Execution</strong></td>
+<td>Inner completes per outer iteration</td>
 </tr>
 <tr>
-<td><strong>Minimum runs</strong></td>
-<td>One time</td>
-</tr>
-<tr>
-<td><strong>Semicolon</strong></td>
-<td>Required after while</td>
+<td><strong>Total iterations</strong></td>
+<td>Outer count × Inner count</td>
 </tr>
 <tr>
 <td><strong>Best for</strong></td>
-<td>Guaranteed first execution</td>
+<td>Tables, matrices, patterns, pairs</td>
+</tr>
+<tr>
+<td><strong>Maximum depth</strong></td>
+<td>2-3 for readability</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Golden Rules:</strong>
-1. Do-while = post-test loop (check after)
-2. Body always executes at least once
-3. Don't forget the semicolon at the end!
-4. Use for menus, validation, guaranteed first prompt
-5. Ensure condition can become false to avoid infinite loops</p>
+1. Inner loop runs completely for each outer loop iteration
+2. Use different variable names (i, j, k or row, col)
+3. Total iterations multiply: 3×3 = 9 iterations
+4. Keep nesting shallow - 2 levels for most cases
+5. Use labeled break to exit multiple levels early</p>
 
 
 
