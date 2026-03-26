@@ -1,0 +1,3176 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Core Java">
+      
+      
+        <meta name="author" content="Afwan">
+      
+      
+        <link rel="canonical" href="https://yuhasproSoftwareTester.github.io/Java-course/Java/11-Control%20Statements/2-Switch%20Statements/switch/">
+      
+      
+        <link rel="prev" href="../../1-If%20...%20Else/Nested%20If/nested%20if/">
+      
+      
+        <link rel="next" href="../../3-Loops/Break%20and%20Continue/break%26continue/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Switch - Yuhaspro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#switch-statement" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Yuhaspro" class="md-header__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yuhaspro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Switch
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Yuhaspro" class="md-nav__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Yuhaspro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SoftwareTesting notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SoftwareTesting notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Java
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-Install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-Syntax/Syntax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4-Data%20Types/DataType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../5-Variables/Variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_6" id="__nav_1_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input & Output
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input & Output
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6-Output%26Input/Print/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Print
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../6-Output%26Input/Scanner/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scanner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../7-Type%20Casting/typeCasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Type Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_8" id="__nav_1_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../8-Operators/Arithmetic%20Operators/arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arithmetic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../8-Operators/Assignment%20Operators/assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../8-Operators/Comparison%20Operators/comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../8-Operators/Logical%20Operators/logical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logical
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../9-Strings/string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../10-Math/math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Math
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11" id="__nav_1_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control Statements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Control Statements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11_1" id="__nav_1_1_11_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If Else
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_1_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    If Else
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-If%20...%20Else/If%20else%20Statements/If%20else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If Else
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-If%20...%20Else/else%20if%20Statement/else%20if/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Else If
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-If%20...%20Else/Nested%20If/nested%20if/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nested If
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Ternary operator/ternary.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ternary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switch
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-traditional-switch-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Traditional Switch Statement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Traditional Switch Statement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntax
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-rule-fall-through-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical Rule: Fall-Through Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-modern-switch-expression-java-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Modern Switch Expression (Java 12+)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Modern Switch Expression (Java 12+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrow-syntax-no-break-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arrow Syntax (No break needed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-yield-multi-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        With Yield (Multi-statement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-what-switch-can-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. What Switch Can Check
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. What Switch Can Check">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cannot-switch-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cannot Switch On
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-complete-working-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Complete Working Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Complete Working Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-traditional-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Traditional Switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-fall-through-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Fall-Through Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-modern-switch-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: Modern Switch Expression
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-five-practical-programs-copy-paste-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Five Practical Programs (Copy-Paste Ready)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Five Practical Programs (Copy-Paste Ready)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-1-menu-system-traditional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 1: Menu System (Traditional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-2-http-status-code-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 2: HTTP Status Code Handler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-3-currency-converter-modern-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 3: Currency Converter (Modern Switch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-4-roman-numeral-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 4: Roman Numeral Converter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-5-calculator-with-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 5: Calculator with Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-common-errors-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Common Errors &amp; Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-quick-rules-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Quick Rules Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Quick Rules Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#switch-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Switch Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traditional-vs-modern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Traditional vs Modern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ When to Use
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11_3" id="__nav_1_1_11_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loops
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_1_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Loops
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3-Loops/For Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For Loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3-Loops/While Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    While Loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3-Loops/DoWhile Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Do While
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3-Loops/Nested Loops.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nested Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-Loops/Break%20and%20Continue/break%26continue/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Break & Continue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_12" id="__nav_1_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collections
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Collections
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../12-Collection/ArrayList.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ArrayList
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../12-Collection/Arrays.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arrays
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../12-Collection/HashMap.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HashMap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../12-Collection/HashSet.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HashSet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../12-Collection/List.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../12-Collection/Map.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../12-Collection/Set.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Set
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../13-OOP/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-traditional-switch-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Traditional Switch Statement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Traditional Switch Statement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntax
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-rule-fall-through-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Critical Rule: Fall-Through Behavior
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-modern-switch-expression-java-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Modern Switch Expression (Java 12+)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Modern Switch Expression (Java 12+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arrow-syntax-no-break-needed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arrow Syntax (No break needed)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#with-yield-multi-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        With Yield (Multi-statement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-what-switch-can-check" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. What Switch Can Check
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. What Switch Can Check">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cannot-switch-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cannot Switch On
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-complete-working-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Complete Working Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Complete Working Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-traditional-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Traditional Switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-fall-through-pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Fall-Through Pattern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-modern-switch-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: Modern Switch Expression
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-five-practical-programs-copy-paste-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Five Practical Programs (Copy-Paste Ready)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Five Practical Programs (Copy-Paste Ready)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-1-menu-system-traditional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 1: Menu System (Traditional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-2-http-status-code-handler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 2: HTTP Status Code Handler
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-3-currency-converter-modern-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 3: Currency Converter (Modern Switch)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-4-roman-numeral-converter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 4: Roman Numeral Converter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-5-calculator-with-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 5: Calculator with Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-common-errors-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Common Errors &amp; Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-quick-rules-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Quick Rules Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Quick Rules Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#switch-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Switch Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traditional-vs-modern" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Traditional vs Modern
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ When to Use
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="switch-statement">Switch Statement</h1>
+<h2 id="1-traditional-switch-statement">1. Traditional Switch Statement</h2>
+<h3 id="syntax">Syntax</h3>
+<pre><code class="language-java">switch (expression) {
+    case value1:
+        // statements
+        break;
+    case value2:
+        // statements
+        break;
+    default:
+        // statements
+}
+</code></pre>
+<h3 id="how-it-works">How It Works</h3>
+<pre><code>Expression value?
+    │
+    ├── matches case1 ──► Execute case1 block ──► break ──► Exit
+    │
+    ├── matches case2 ──► Execute case2 block ──► break ──► Exit
+    │
+    ├── matches case3 ──► Execute case3 block ──► (no break)
+    │                      Fall through to case4 ──► Execute ──► break ──► Exit
+    │
+    └── no match ───────► Execute default ──► Exit
+</code></pre>
+<h3 id="critical-rule-fall-through-behavior">Critical Rule: Fall-Through Behavior</h3>
+<pre><code class="language-java">int day = 3;
+
+switch (day) {
+    case 1:
+        System.out.println(&quot;Monday&quot;);
+        // No break! Falls through
+    case 2:
+        System.out.println(&quot;Tuesday&quot;);
+        // No break! Falls through
+    case 3:
+        System.out.println(&quot;Wednesday&quot;);
+        // No break! Falls through
+    case 4:
+        System.out.println(&quot;Thursday&quot;);
+        break;  // Finally stops
+    case 5:
+        System.out.println(&quot;Friday&quot;);
+        break;
+    default:
+        System.out.println(&quot;Weekend&quot;);
+}
+
+// Output for day=3: Wednesday, Thursday
+</code></pre>
+<hr />
+<h2 id="2-modern-switch-expression-java-12">2. Modern Switch Expression (Java 12+)</h2>
+<h3 id="arrow-syntax-no-break-needed">Arrow Syntax (No break needed)</h3>
+<pre><code class="language-java">String result = switch (day) {
+    case 1, 2, 3, 4, 5 -&gt; &quot;Weekday&quot;;
+    case 6, 7 -&gt; &quot;Weekend&quot;;
+    default -&gt; &quot;Invalid&quot;;
+};
+</code></pre>
+<h3 id="with-yield-multi-statement">With Yield (Multi-statement)</h3>
+<pre><code class="language-java">int result = switch (score) {
+    case 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 -&gt; {
+        System.out.println(&quot;Excellent!&quot;);
+        yield 4;  // Return value
+    }
+    case 80, 81, 82, 83, 84, 85, 86, 87, 88, 89 -&gt; {
+        yield 3;
+    }
+    default -&gt; {
+        yield 0;
+    }
+};
+</code></pre>
+<hr />
+<h2 id="3-what-switch-can-check">3. What Switch Can Check</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>int, byte, short, char</strong></td>
+<td><code>case 5:</code></td>
+<td>Primitive integers</td>
+</tr>
+<tr>
+<td><strong>Integer, Character, etc.</strong></td>
+<td><code>case Integer.valueOf(5):</code></td>
+<td>Wrapper types (auto-unboxed)</td>
+</tr>
+<tr>
+<td><strong>String</strong></td>
+<td><code>case "hello":</code></td>
+<td>Java 7+</td>
+</tr>
+<tr>
+<td><strong>enum</strong></td>
+<td><code>case MONDAY:</code></td>
+<td>Most common modern use</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cannot-switch-on">Cannot Switch On</h3>
+<ul>
+<li><code>long</code>, <code>float</code>, <code>double</code>, <code>boolean</code></li>
+<li><code>null</code> (until Java 17, needs special handling)</li>
+</ul>
+<hr />
+<h2 id="4-complete-working-examples">4. Complete Working Examples</h2>
+<h3 id="example-1-traditional-switch">Example 1: Traditional Switch</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class TraditionalSwitch {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter day number (1-7): &quot;);
+        int day = scanner.nextInt();
+
+        String dayName;
+        String type;
+
+        switch (day) {
+            case 1:
+                dayName = &quot;Monday&quot;;
+                type = &quot;Weekday&quot;;
+                break;
+            case 2:
+                dayName = &quot;Tuesday&quot;;
+                type = &quot;Weekday&quot;;
+                break;
+            case 3:
+                dayName = &quot;Wednesday&quot;;
+                type = &quot;Weekday&quot;;
+                break;
+            case 4:
+                dayName = &quot;Thursday&quot;;
+                type = &quot;Weekday&quot;;
+                break;
+            case 5:
+                dayName = &quot;Friday&quot;;
+                type = &quot;Weekday&quot;;
+                break;
+            case 6:
+                dayName = &quot;Saturday&quot;;
+                type = &quot;Weekend&quot;;
+                break;
+            case 7:
+                dayName = &quot;Sunday&quot;;
+                type = &quot;Weekend&quot;;
+                break;
+            default:
+                dayName = &quot;Invalid&quot;;
+                type = &quot;Unknown&quot;;
+        }
+
+        System.out.println(&quot;Day: &quot; + dayName);
+        System.out.println(&quot;Type: &quot; + type);
+
+        scanner.close();
+    }
+}
+</code></pre>
+<h3 id="example-2-fall-through-pattern">Example 2: Fall-Through Pattern</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class FallThroughExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter month (1-12): &quot;);
+        int month = scanner.nextInt();
+
+        String season;
+
+        switch (month) {
+            case 12:
+            case 1:
+            case 2:
+                season = &quot;Winter&quot;;
+                break;
+            case 3:
+            case 4:
+            case 5:
+                season = &quot;Spring&quot;;
+                break;
+            case 6:
+            case 7:
+            case 8:
+                season = &quot;Summer&quot;;
+                break;
+            case 9:
+            case 10:
+            case 11:
+                season = &quot;Fall&quot;;
+                break;
+            default:
+                season = &quot;Invalid month&quot;;
+        }
+
+        System.out.println(&quot;Month &quot; + month + &quot; is in &quot; + season);
+
+        scanner.close();
+    }
+}
+</code></pre>
+<h3 id="example-3-modern-switch-expression">Example 3: Modern Switch Expression</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class ModernSwitch {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter grade (A/B/C/D/F): &quot;);
+        char grade = scanner.next().toUpperCase().charAt(0);
+
+        // Modern switch expression with arrow syntax
+        String message = switch (grade) {
+            case 'A' -&gt; &quot;Excellent! 90-100%&quot;;
+            case 'B' -&gt; &quot;Good job! 80-89%&quot;;
+            case 'C' -&gt; &quot;Satisfactory 70-79%&quot;;
+            case 'D' -&gt; &quot;Passing 60-69%&quot;;
+            case 'F' -&gt; &quot;Failing below 60%&quot;;
+            default -&gt; &quot;Invalid grade&quot;;
+        };
+
+        // With yield for complex logic
+        int points = switch (grade) {
+            case 'A' -&gt; {
+                System.out.println(&quot;Honor roll!&quot;);
+                yield 4;
+            }
+            case 'B' -&gt; 3;
+            case 'C' -&gt; 2;
+            case 'D' -&gt; 1;
+            case 'F' -&gt; 0;
+            default -&gt; -1;
+        };
+
+        System.out.println(&quot;Message: &quot; + message);
+        System.out.println(&quot;Grade points: &quot; + points);
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h2 id="5-five-practical-programs-copy-paste-ready">5. Five Practical Programs (Copy-Paste Ready)</h2>
+<h3 id="program-1-menu-system-traditional">Program 1: Menu System (Traditional)</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class MenuSystem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;=== Main Menu ===&quot;);
+        System.out.println(&quot;1. View Profile&quot;);
+        System.out.println(&quot;2. Edit Settings&quot;);
+        System.out.println(&quot;3. View Reports&quot;);
+        System.out.println(&quot;4. Export Data&quot;);
+        System.out.println(&quot;5. Logout&quot;);
+        System.out.print(&quot;Select option: &quot;);
+
+        int choice = scanner.nextInt();
+        String action = &quot;&quot;;
+        boolean valid = true;
+
+        switch (choice) {
+            case 1:
+                action = &quot;Displaying user profile...&quot;;
+                break;
+            case 2:
+                action = &quot;Opening settings panel...&quot;;
+                break;
+            case 3:
+                action = &quot;Loading reports...&quot;;
+                break;
+            case 4:
+                action = &quot;Preparing export...&quot;;
+                break;
+            case 5:
+                action = &quot;Logging out...&quot;;
+                break;
+            default:
+                action = &quot;Invalid selection&quot;;
+                valid = false;
+        }
+
+        System.out.println(action);
+
+        if (valid) {
+            System.out.println(&quot;Operation completed successfully.&quot;);
+        } else {
+            System.out.println(&quot;Please try again.&quot;);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<p><strong>Expected Output:</strong></p>
+<pre><code>=== Main Menu ===
+1. View Profile
+2. Edit Settings
+3. View Reports
+4. Export Data
+5. Logout
+Select option: 3
+Loading reports...
+Operation completed successfully.
+</code></pre>
+<hr />
+<h3 id="program-2-http-status-code-handler">Program 2: HTTP Status Code Handler</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class HTTPStatusHandler {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter HTTP status code: &quot;);
+        int code = scanner.nextInt();
+
+        String category;
+        String description;
+        String action;
+
+        // First digit determines category
+        switch (code / 100) {
+            case 1:
+                category = &quot;Informational&quot;;
+                description = &quot;Request received, continuing process&quot;;
+                action = &quot;Wait for final response&quot;;
+                break;
+            case 2:
+                category = &quot;Success&quot;;
+                description = &quot;Request successfully processed&quot;;
+                action = &quot;Proceed with next step&quot;;
+                break;
+            case 3:
+                category = &quot;Redirection&quot;;
+                description = &quot;Further action needs to be taken&quot;;
+                action = &quot;Follow redirect location&quot;;
+                break;
+            case 4:
+                category = &quot;Client Error&quot;;
+                description = &quot;Request contains bad syntax or cannot be fulfilled&quot;;
+                action = &quot;Fix request and retry&quot;;
+                break;
+            case 5:
+                category = &quot;Server Error&quot;;
+                description = &quot;Server failed to fulfill valid request&quot;;
+                action = &quot;Retry later or contact support&quot;;
+                break;
+            default:
+                category = &quot;Unknown&quot;;
+                description = &quot;Invalid status code&quot;;
+                action = &quot;Check code validity&quot;;
+        }
+
+        // Specific codes (nested switch concept using if-else for precision)
+        String specific = &quot;&quot;;
+        switch (code) {
+            case 200:
+                specific = &quot;OK&quot;;
+                break;
+            case 201:
+                specific = &quot;Created&quot;;
+                break;
+            case 204:
+                specific = &quot;No Content&quot;;
+                break;
+            case 400:
+                specific = &quot;Bad Request&quot;;
+                break;
+            case 401:
+                specific = &quot;Unauthorized&quot;;
+                break;
+            case 403:
+                specific = &quot;Forbidden&quot;;
+                break;
+            case 404:
+                specific = &quot;Not Found&quot;;
+                break;
+            case 500:
+                specific = &quot;Internal Server Error&quot;;
+                break;
+            case 502:
+                specific = &quot;Bad Gateway&quot;;
+                break;
+            case 503:
+                specific = &quot;Service Unavailable&quot;;
+                break;
+        }
+
+        System.out.println(&quot;\n=== Status Analysis ===&quot;);
+        System.out.println(&quot;Code: &quot; + code);
+        System.out.println(&quot;Category: &quot; + category);
+        if (!specific.isEmpty()) {
+            System.out.println(&quot;Specific: &quot; + specific);
+        }
+        System.out.println(&quot;Description: &quot; + description);
+        System.out.println(&quot;Recommended Action: &quot; + action);
+
+        // Retry logic
+        boolean shouldRetry = (code == 408 || code == 429 || code == 500 || 
+                              code == 502 || code == 503 || code == 504);
+
+        if (shouldRetry) {
+            System.out.println(&quot;This error is retryable. Attempt again after delay.&quot;);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-3-currency-converter-modern-switch">Program 3: Currency Converter (Modern Switch)</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class CurrencyConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;Available currencies: USD, EUR, GBP, JPY, CAD, AUD&quot;);
+        System.out.print(&quot;Convert from: &quot;);
+        String from = scanner.next().toUpperCase();
+
+        System.out.print(&quot;Convert to: &quot;);
+        String to = scanner.next().toUpperCase();
+
+        System.out.print(&quot;Amount: &quot;);
+        double amount = scanner.nextDouble();
+
+        // Exchange rates to USD (base)
+        double toUSD = switch (from) {
+            case &quot;USD&quot; -&gt; 1.0;
+            case &quot;EUR&quot; -&gt; 1.09;
+            case &quot;GBP&quot; -&gt; 1.27;
+            case &quot;JPY&quot; -&gt; 0.0067;
+            case &quot;CAD&quot; -&gt; 0.74;
+            case &quot;AUD&quot; -&gt; 0.65;
+            default -&gt; -1;
+        };
+
+        if (toUSD == -1) {
+            System.out.println(&quot;Invalid source currency&quot;);
+            scanner.close();
+            return;
+        }
+
+        // Convert to USD first, then to target
+        double inUSD = amount * toUSD;
+
+        double result = switch (to) {
+            case &quot;USD&quot; -&gt; inUSD;
+            case &quot;EUR&quot; -&gt; inUSD / 1.09;
+            case &quot;GBP&quot; -&gt; inUSD / 1.27;
+            case &quot;JPY&quot; -&gt; inUSD / 0.0067;
+            case &quot;CAD&quot; -&gt; inUSD / 0.74;
+            case &quot;AUD&quot; -&gt; inUSD / 0.65;
+            default -&gt; -1;
+        };
+
+        if (result == -1) {
+            System.out.println(&quot;Invalid target currency&quot;);
+            scanner.close();
+            return;
+        }
+
+        // Currency symbols
+        String symbol = switch (to) {
+            case &quot;USD&quot; -&gt; &quot;$&quot;;
+            case &quot;EUR&quot; -&gt; &quot;€&quot;;
+            case &quot;GBP&quot; -&gt; &quot;£&quot;;
+            case &quot;JPY&quot; -&gt; &quot;¥&quot;;
+            case &quot;CAD&quot; -&gt; &quot;C$&quot;;
+            case &quot;AUD&quot; -&gt; &quot;A$&quot;;
+            default -&gt; &quot;&quot;;
+        };
+
+        System.out.printf(&quot;\n%.2f %s = %s%.2f %s%n&quot;, 
+            amount, from, symbol, result, to);
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-4-roman-numeral-converter">Program 4: Roman Numeral Converter</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class RomanNumeralConverter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter digit (1-9): &quot;);
+        int digit = scanner.nextInt();
+
+        System.out.print(&quot;Position (1=ones, 2=tens, 3=hundreds, 4=thousands): &quot;);
+        int position = scanner.nextInt();
+
+        String roman = &quot;&quot;;
+
+        // Traditional switch with fall-through pattern
+        switch (position) {
+            case 1: // Ones place
+                switch (digit) {
+                    case 1: roman = &quot;I&quot;; break;
+                    case 2: roman = &quot;II&quot;; break;
+                    case 3: roman = &quot;III&quot;; break;
+                    case 4: roman = &quot;IV&quot;; break;
+                    case 5: roman = &quot;V&quot;; break;
+                    case 6: roman = &quot;VI&quot;; break;
+                    case 7: roman = &quot;VII&quot;; break;
+                    case 8: roman = &quot;VIII&quot;; break;
+                    case 9: roman = &quot;IX&quot;; break;
+                }
+                break;
+            case 2: // Tens place
+                switch (digit) {
+                    case 1: roman = &quot;X&quot;; break;
+                    case 2: roman = &quot;XX&quot;; break;
+                    case 3: roman = &quot;XXX&quot;; break;
+                    case 4: roman = &quot;XL&quot;; break;
+                    case 5: roman = &quot;L&quot;; break;
+                    case 6: roman = &quot;LX&quot;; break;
+                    case 7: roman = &quot;LXX&quot;; break;
+                    case 8: roman = &quot;LXXX&quot;; break;
+                    case 9: roman = &quot;XC&quot;; break;
+                }
+                break;
+            case 3: // Hundreds place
+                switch (digit) {
+                    case 1: roman = &quot;C&quot;; break;
+                    case 2: roman = &quot;CC&quot;; break;
+                    case 3: roman = &quot;CCC&quot;; break;
+                    case 4: roman = &quot;CD&quot;; break;
+                    case 5: roman = &quot;D&quot;; break;
+                    case 6: roman = &quot;DC&quot;; break;
+                    case 7: roman = &quot;DCC&quot;; break;
+                    case 8: roman = &quot;DCCC&quot;; break;
+                    case 9: roman = &quot;CM&quot;; break;
+                }
+                break;
+            case 4: // Thousands place
+                switch (digit) {
+                    case 1: roman = &quot;M&quot;; break;
+                    case 2: roman = &quot;MM&quot;; break;
+                    case 3: roman = &quot;MMM&quot;; break;
+                    default: roman = &quot;Number too large&quot;; break;
+                }
+                break;
+            default:
+                roman = &quot;Invalid position&quot;;
+        }
+
+        System.out.println(&quot;Roman numeral: &quot; + roman);
+
+        // Alternative: Modern switch for digit names
+        String digitName = switch (digit) {
+            case 1 -&gt; &quot;One&quot;;
+            case 2 -&gt; &quot;Two&quot;;
+            case 3 -&gt; &quot;Three&quot;;
+            case 4 -&gt; &quot;Four&quot;;
+            case 5 -&gt; &quot;Five&quot;;
+            case 6 -&gt; &quot;Six&quot;;
+            case 7 -&gt; &quot;Seven&quot;;
+            case 8 -&gt; &quot;Eight&quot;;
+            case 9 -&gt; &quot;Nine&quot;;
+            default -&gt; &quot;Invalid&quot;;
+        };
+
+        String positionName = switch (position) {
+            case 1 -&gt; &quot;Ones&quot;;
+            case 2 -&gt; &quot;Tens&quot;;
+            case 3 -&gt; &quot;Hundreds&quot;;
+            case 4 -&gt; &quot;Thousands&quot;;
+            default -&gt; &quot;Unknown&quot;;
+        };
+
+        System.out.println(&quot;You entered &quot; + digitName + &quot; in the &quot; + positionName + &quot; place&quot;);
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-5-calculator-with-operations">Program 5: Calculator with Operations</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class SwitchCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter first number: &quot;);
+        double num1 = scanner.nextDouble();
+
+        System.out.print(&quot;Enter operator (+, -, *, /, %, ^): &quot;);
+        char operator = scanner.next().charAt(0);
+
+        System.out.print(&quot;Enter second number: &quot;);
+        double num2 = scanner.nextDouble();
+
+        double result = 0;
+        boolean valid = true;
+        String operationName = &quot;&quot;;
+
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                operationName = &quot;Addition&quot;;
+                break;
+            case '-':
+                result = num1 - num2;
+                operationName = &quot;Subtraction&quot;;
+                break;
+            case '*':
+            case 'x':
+            case 'X':
+                result = num1 * num2;
+                operationName = &quot;Multiplication&quot;;
+                break;
+            case '/':
+                if (num2 != 0) {
+                    result = num1 / num2;
+                    operationName = &quot;Division&quot;;
+                } else {
+                    System.out.println(&quot;Error: Cannot divide by zero&quot;);
+                    valid = false;
+                }
+                break;
+            case '%':
+                if (num2 != 0) {
+                    result = num1 % num2;
+                    operationName = &quot;Modulo&quot;;
+                } else {
+                    System.out.println(&quot;Error: Cannot modulo by zero&quot;);
+                    valid = false;
+                }
+                break;
+            case '^':
+                result = Math.pow(num1, num2);
+                operationName = &quot;Power&quot;;
+                break;
+            default:
+                System.out.println(&quot;Error: Invalid operator&quot;);
+                valid = false;
+        }
+
+        if (valid) {
+            System.out.println(&quot;\n=== Result ===&quot;);
+            System.out.println(&quot;Operation: &quot; + operationName);
+            System.out.println(num1 + &quot; &quot; + operator + &quot; &quot; + num2 + &quot; = &quot; + result);
+
+            // Additional info using modern switch
+            String numberType = switch ((int)result % 2) {
+                case 0 -&gt; &quot;Even&quot;;
+                case 1, -1 -&gt; &quot;Odd&quot;;
+                default -&gt; &quot;Unknown&quot;;
+            };
+
+            System.out.println(&quot;Result is &quot; + numberType);
+
+            if (result == Math.floor(result)) {
+                System.out.println(&quot;Result is a whole number&quot;);
+            } else {
+                System.out.println(&quot;Result has decimal places&quot;);
+            }
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h2 id="6-common-errors-fixes">6. Common Errors &amp; Fixes</h2>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Wrong Code</th>
+<th>Problem</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Missing break</strong></td>
+<td><code>case 1: x(); case 2: y();</code></td>
+<td>Falls through unintentionally</td>
+<td>Add <code>break;</code> after each case</td>
+</tr>
+<tr>
+<td><strong>Wrong types</strong></td>
+<td><code>switch (3.14)</code></td>
+<td>Cannot switch on double</td>
+<td>Use <code>int</code>, <code>String</code>, <code>enum</code></td>
+</tr>
+<tr>
+<td><strong>Case expression</strong></td>
+<td><code>case x &gt; 0:</code></td>
+<td>Case needs constant value</td>
+<td><code>case 1:</code> with if inside or use if-else</td>
+</tr>
+<tr>
+<td><strong>Null string</strong></td>
+<td><code>switch (str)</code> when str is null</td>
+<td>Throws NullPointerException</td>
+<td>Check <code>if (str != null)</code> first</td>
+</tr>
+<tr>
+<td><strong>Duplicate cases</strong></td>
+<td><code>case 1:</code> and <code>case 1:</code></td>
+<td>Compile error</td>
+<td>Remove duplicate</td>
+</tr>
+<tr>
+<td><strong>Boolean switch</strong></td>
+<td><code>switch (flag)</code></td>
+<td>Cannot switch on boolean</td>
+<td>Use <code>if (flag)</code> instead</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-quick-rules-checklist">7. Quick Rules Checklist</h2>
+<h3 id="switch-rules">✅ Switch Rules</h3>
+<ul>
+<li>[ ] <strong>Expression type</strong>: <code>int</code>, <code>String</code>, <code>enum</code>, or wrapper</li>
+<li>[ ] <strong>Case values</strong>: Must be compile-time constants</li>
+<li>[ ] <strong>Break required</strong>: In traditional switch to prevent fall-through</li>
+<li>[ ] <strong>Default case</strong>: Always include for unhandled values</li>
+<li>[ ] <strong>No duplicates</strong>: Case values must be unique</li>
+</ul>
+<h3 id="traditional-vs-modern">✅ Traditional vs Modern</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Traditional</th>
+<th>Modern (Java 12+)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Syntax</td>
+<td><code>case 1: x; break;</code></td>
+<td><code>case 1 -&gt; x</code></td>
+</tr>
+<tr>
+<td>Fall-through</td>
+<td>Yes (needs break)</td>
+<td>No (implicit break)</td>
+</tr>
+<tr>
+<td>Multiple cases</td>
+<td><code>case 1: case 2:</code></td>
+<td><code>case 1, 2 -&gt;</code></td>
+</tr>
+<tr>
+<td>Return value</td>
+<td>No</td>
+<td>Yes (switch expression)</td>
+</tr>
+<tr>
+<td>Yield</td>
+<td>No</td>
+<td><code>yield value;</code> for blocks</td>
+</tr>
+</tbody>
+</table>
+<h3 id="when-to-use">✅ When to Use</h3>
+<table>
+<thead>
+<tr>
+<th>Use Switch</th>
+<th>Use If-Else</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single variable, many values</td>
+<td>Range checks (<code>x &gt; 5</code>)</td>
+</tr>
+<tr>
+<td><code>int</code>, <code>String</code>, <code>enum</code></td>
+<td>Multiple variables</td>
+</tr>
+<tr>
+<td>Discrete values</td>
+<td>Complex boolean logic</td>
+</tr>
+<tr>
+<td>3+ branches</td>
+<td>Only 1-2 branches</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Traditional Switch</th>
+<th>Modern Switch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Break needed</strong></td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Fall-through</strong></td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Multiple cases</strong></td>
+<td><code>case 1: case 2:</code></td>
+<td><code>case 1, 2 -&gt;</code></td>
+</tr>
+<tr>
+<td><strong>Return value</strong></td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Arrow syntax</strong></td>
+<td>No</td>
+<td><code>-&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Golden Rules:</strong>
+1. Always use <code>break</code> in traditional switch (unless intentional fall-through)
+2. Use modern switch (<code>-&gt;</code>) for cleaner code in Java 12+
+3. Include <code>default</code> case for unhandled values
+4. Switch works with <code>int</code>, <code>String</code>, <code>enum</code> - not <code>double</code> or <code>boolean</code>
+5. Use fall-through intentionally for grouped cases (months → seasons)</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

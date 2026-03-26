@@ -1,0 +1,3187 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Core Java">
+      
+      
+        <meta name="author" content="Afwan">
+      
+      
+        <link rel="canonical" href="https://yuhasproSoftwareTester.github.io/Java-course/Java/11-Control%20Statements/3-Loops/Break%20and%20Continue/break%26continue/">
+      
+      
+        <link rel="prev" href="../../../2-Switch%20Statements/switch/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Break & Continue - Yuhaspro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#break-continue" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="Yuhaspro" class="md-header__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yuhaspro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Break & Continue
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Yuhaspro" class="md-nav__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Yuhaspro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SoftwareTesting notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SoftwareTesting notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Java
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../1-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../2-Install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../3-Syntax/Syntax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../4-Data%20Types/DataType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../5-Variables/Variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_6" id="__nav_1_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input & Output
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input & Output
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../6-Output%26Input/Print/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Print
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../6-Output%26Input/Scanner/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scanner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../7-Type%20Casting/typeCasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Type Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_8" id="__nav_1_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../8-Operators/Arithmetic%20Operators/arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arithmetic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../8-Operators/Assignment%20Operators/assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../8-Operators/Comparison%20Operators/comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../8-Operators/Logical%20Operators/logical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logical
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../9-Strings/string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../10-Math/math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Math
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11" id="__nav_1_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control Statements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Control Statements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11_1" id="__nav_1_1_11_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If Else
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_1_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    If Else
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-If%20...%20Else/If%20else%20Statements/If%20else/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If Else
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-If%20...%20Else/else%20if%20Statement/else%20if/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Else If
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../1-If%20...%20Else/Nested%20If/nested%20if/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nested If
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Ternary operator/ternary.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ternary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-Switch%20Statements/switch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11_3" id="__nav_1_1_11_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loops
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_1_11_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_1_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Loops
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../3-Loops/For Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For Loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../3-Loops/While Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    While Loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../3-Loops/DoWhile Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Do While
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../3-Loops/Nested Loops.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nested Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Break & Continue
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Break & Continue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-break-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Break Statement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Break Statement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-it-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What It Does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two Forms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break-in-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Break in Loops
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break-in-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Break in Switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-continue-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Continue Statement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Continue Statement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-it-does_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What It Does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continue-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Continue Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-labeled-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Labeled Break
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Labeled Break">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntax
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#without-label-vs-with-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Without Label vs With Label
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-complete-working-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Complete Working Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Complete Working Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-search-with-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Search with Break
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-filter-with-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Filter with Continue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-labeled-break-in-nested-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: Labeled Break in Nested Loops
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-five-practical-programs-copy-paste-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 5. Five Practical Programs (Copy-Paste Ready)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 5. Five Practical Programs (Copy-Paste Ready)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-1-prime-number-finder-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 1: Prime Number Finder (Break)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-2-data-validator-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 2: Data Validator (Continue)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-3-menu-system-with-exit-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 3: Menu System with Exit (Break)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-4-matrix-search-labeled-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 4: Matrix Search (Labeled Break)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-5-password-strength-checker-break-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 5: Password Strength Checker (Break &amp; Continue)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-common-errors-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Common Errors &amp; Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-quick-rules-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Quick Rules Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Quick Rules Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#break-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Break Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continue-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Continue Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_12" id="__nav_1_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collections
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Collections
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/ArrayList.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ArrayList
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/Arrays.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arrays
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/HashMap.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HashMap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/HashSet.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HashSet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/List.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/Map.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../12-Collection/Set.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Set
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../13-OOP/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-break-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Break Statement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Break Statement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-it-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What It Does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-forms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two Forms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break-in-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Break in Loops
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#break-in-switch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Break in Switch
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-continue-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Continue Statement
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Continue Statement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-it-does_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What It Does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How It Works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continue-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Continue Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-labeled-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Labeled Break
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Labeled Break">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Syntax
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#without-label-vs-with-label" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Without Label vs With Label
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-complete-working-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Complete Working Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Complete Working Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-search-with-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Search with Break
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-filter-with-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Filter with Continue
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-3-labeled-break-in-nested-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 3: Labeled Break in Nested Loops
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-five-practical-programs-copy-paste-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧪 5. Five Practical Programs (Copy-Paste Ready)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧪 5. Five Practical Programs (Copy-Paste Ready)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-1-prime-number-finder-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 1: Prime Number Finder (Break)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-2-data-validator-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 2: Data Validator (Continue)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-3-menu-system-with-exit-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 3: Menu System with Exit (Break)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-4-matrix-search-labeled-break" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 4: Matrix Search (Labeled Break)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-5-password-strength-checker-break-continue" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 5: Password Strength Checker (Break &amp; Continue)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-common-errors-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Common Errors &amp; Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-quick-rules-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Quick Rules Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Quick Rules Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#break-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Break Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continue-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Continue Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="break-continue">Break &amp; Continue</h1>
+<h2 id="1-break-statement">1. Break Statement</h2>
+<h3 id="what-it-does">What It Does</h3>
+<p>Immediately exits the <strong>nearest enclosing loop or switch</strong>.</p>
+<h3 id="two-forms">Two Forms</h3>
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>Usage</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Unlabeled</strong></td>
+<td>Exit current loop/switch</td>
+<td><code>break;</code></td>
+</tr>
+<tr>
+<td><strong>Labeled</strong></td>
+<td>Exit specific outer loop</td>
+<td><code>break outerLoop;</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="break-in-loops">Break in Loops</h3>
+<pre><code class="language-java">// Exit when condition met
+for (int i = 0; i &lt; 100; i++) {
+    if (i == 10) {
+        break;  // Exit loop immediately, i stops at 10
+    }
+    System.out.println(i);  // Prints 0-9 only
+}
+</code></pre>
+<h3 id="break-in-switch">Break in Switch</h3>
+<pre><code class="language-java">switch (choice) {
+    case 1:
+        System.out.println(&quot;One&quot;);
+        break;  // Exit switch, don't fall through
+    case 2:
+        System.out.println(&quot;Two&quot;);
+        break;
+    default:
+        System.out.println(&quot;Other&quot;);
+}
+</code></pre>
+<hr />
+<h2 id="2-continue-statement">2. Continue Statement</h2>
+<h3 id="what-it-does_1">What It Does</h3>
+<p>Skips the <strong>rest of current iteration</strong> and jumps to next iteration.</p>
+<h3 id="how-it-works">How It Works</h3>
+<pre><code>Loop starts iteration
+    │
+    ▼
+Check condition ──No──► Exit loop
+    │
+   Yes
+    ▼
+Execute loop body
+    │
+    ▼
+continue encountered?
+    │
+   Yes
+    ▼
+Skip to next iteration (condition check)
+    │
+   No
+    ▼
+Complete iteration normally
+</code></pre>
+<h3 id="continue-example">Continue Example</h3>
+<pre><code class="language-java">// Skip even numbers, print only odd
+for (int i = 0; i &lt; 10; i++) {
+    if (i % 2 == 0) {
+        continue;  // Skip rest of loop, go to i++
+    }
+    System.out.println(i);  // Prints 1, 3, 5, 7, 9 only
+}
+</code></pre>
+<hr />
+<h2 id="3-labeled-break">3. Labeled Break</h2>
+<h3 id="syntax">Syntax</h3>
+<pre><code class="language-java">outerLoop:  // Label
+for (int i = 0; i &lt; 5; i++) {
+    for (int j = 0; j &lt; 5; j++) {
+        if (i * j &gt; 6) {
+            break outerLoop;  // Exit BOTH loops
+        }
+    }
+}
+</code></pre>
+<h3 id="without-label-vs-with-label">Without Label vs With Label</h3>
+<table>
+<thead>
+<tr>
+<th>Without Label</th>
+<th>With Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exits inner loop only</td>
+<td>Exits specified outer loop</td>
+</tr>
+<tr>
+<td>Outer loop continues</td>
+<td>All loops exited</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-complete-working-examples">4. Complete Working Examples</h2>
+<h3 id="example-1-search-with-break">Example 1: Search with Break</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class SearchWithBreak {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int[] numbers = {10, 25, 30, 45, 50, 65, 70, 85, 90, 100};
+
+        System.out.print(&quot;Enter number to search: &quot;);
+        int target = scanner.nextInt();
+
+        boolean found = false;
+        int position = -1;
+
+        // Linear search with early exit
+        for (int i = 0; i &lt; numbers.length; i++) {
+            if (numbers[i] == target) {
+                found = true;
+                position = i;
+                break;  // Exit immediately when found
+            }
+        }
+
+        if (found) {
+            System.out.println(&quot;Found at position: &quot; + position);
+        } else {
+            System.out.println(&quot;Not found in array&quot;);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<h3 id="example-2-filter-with-continue">Example 2: Filter with Continue</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class FilterWithContinue {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;Enter 5 numbers:&quot;);
+
+        int sum = 0;
+        int count = 0;
+
+        for (int i = 0; i &lt; 5; i++) {
+            System.out.print(&quot;Number &quot; + (i + 1) + &quot;: &quot;);
+            int num = scanner.nextInt();
+
+            // Skip negative numbers
+            if (num &lt; 0) {
+                System.out.println(&quot;  (Skipped - negative)&quot;);
+                continue;  // Skip to next iteration
+            }
+
+            // Skip numbers above 100
+            if (num &gt; 100) {
+                System.out.println(&quot;  (Skipped - too large)&quot;);
+                continue;
+            }
+
+            sum += num;
+            count++;
+        }
+
+        System.out.println(&quot;\nValid numbers: &quot; + count);
+        System.out.println(&quot;Sum: &quot; + sum);
+        if (count &gt; 0) {
+            System.out.println(&quot;Average: &quot; + (sum / count));
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<h3 id="example-3-labeled-break-in-nested-loops">Example 3: Labeled Break in Nested Loops</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class LabeledBreakExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter target product: &quot;);
+        int target = scanner.nextInt();
+
+        int[][] inventory = {
+            {101, 102, 103},
+            {201, 202, 203},
+            {301, 302, 303}
+        };
+
+        boolean found = false;
+        int foundRow = -1;
+        int foundCol = -1;
+
+        // Labeled outer loop
+        searchLoop:
+        for (int row = 0; row &lt; inventory.length; row++) {
+            for (int col = 0; col &lt; inventory[row].length; col++) {
+                if (inventory[row][col] == target) {
+                    found = true;
+                    foundRow = row;
+                    foundCol = col;
+                    break searchLoop;  // Exit both loops immediately
+                }
+            }
+        }
+
+        if (found) {
+            System.out.println(&quot;Product &quot; + target + &quot; found at warehouse &quot; + 
+                foundRow + &quot;, shelf &quot; + foundCol);
+        } else {
+            System.out.println(&quot;Product not in inventory&quot;);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h2 id="5-five-practical-programs-copy-paste-ready">🧪 5. Five Practical Programs (Copy-Paste Ready)</h2>
+<h3 id="program-1-prime-number-finder-break">Program 1: Prime Number Finder (Break)</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class PrimeFinder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Find primes up to: &quot;);
+        int limit = scanner.nextInt();
+
+        System.out.println(&quot;\nPrime numbers up to &quot; + limit + &quot;:&quot;);
+
+        for (int num = 2; num &lt;= limit; num++) {
+            boolean isPrime = true;
+
+            // Check divisibility up to square root
+            for (int div = 2; div &lt;= Math.sqrt(num); div++) {
+                if (num % div == 0) {
+                    isPrime = false;
+                    break;  // Not prime, stop checking
+                }
+            }
+
+            if (isPrime) {
+                System.out.print(num + &quot; &quot;);
+            }
+        }
+
+        System.out.println();  // New line
+
+        // Alternative: First 10 primes only
+        System.out.println(&quot;\nFirst 10 primes:&quot;);
+        int count = 0;
+        int num = 2;
+
+        while (count &lt; 10) {
+            boolean isPrime = true;
+
+            for (int div = 2; div &lt;= Math.sqrt(num); div++) {
+                if (num % div == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) {
+                System.out.print(num + &quot; &quot;);
+                count++;
+            }
+            num++;
+        }
+
+        System.out.println();
+        scanner.close();
+    }
+}
+</code></pre>
+<p><strong>Expected Output:</strong></p>
+<pre><code>Find primes up to: 50
+
+Prime numbers up to 50:
+2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 
+
+First 10 primes:
+2 3 5 7 11 13 17 19 23 29
+</code></pre>
+<hr />
+<h3 id="program-2-data-validator-continue">Program 2: Data Validator (Continue)</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class DataValidator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;=== Student Grade Entry ===&quot;);
+        System.out.println(&quot;Enter 10 scores (0-100), invalid entries will be skipped&quot;);
+
+        int validCount = 0;
+        int sum = 0;
+        int min = 100;
+        int max = 0;
+
+        for (int i = 1; i &lt;= 10; i++) {
+            System.out.print(&quot;Score &quot; + i + &quot;: &quot;);
+            int score = scanner.nextInt();
+
+            // Skip if out of range
+            if (score &lt; 0 || score &gt; 100) {
+                System.out.println(&quot;  Invalid range! Skipped.&quot;);
+                continue;
+            }
+
+            // Skip if suspicious (perfect scores need verification)
+            if (score == 100) {
+                System.out.print(&quot;  Perfect score! Verify (y/n): &quot;);
+                String verify = scanner.next();
+                if (!verify.equalsIgnoreCase(&quot;y&quot;)) {
+                    System.out.println(&quot;  Skipped pending verification.&quot;);
+                    continue;
+                }
+            }
+
+            // Process valid score
+            sum += score;
+            validCount++;
+
+            if (score &lt; min) min = score;
+            if (score &gt; max) max = score;
+
+            System.out.println(&quot;  Recorded.&quot;);
+        }
+
+        System.out.println(&quot;\n=== Summary ===&quot;);
+        System.out.println(&quot;Valid entries: &quot; + validCount + &quot;/10&quot;);
+
+        if (validCount &gt; 0) {
+            System.out.println(&quot;Average: &quot; + (sum / validCount));
+            System.out.println(&quot;Highest: &quot; + max);
+            System.out.println(&quot;Lowest: &quot; + min);
+        } else {
+            System.out.println(&quot;No valid data entered.&quot;);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-3-menu-system-with-exit-break">Program 3: Menu System with Exit (Break)</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class MenuWithExit {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        boolean running = true;
+
+        while (running) {
+            System.out.println(&quot;\n=== Main Menu ===&quot;);
+            System.out.println(&quot;1. View Balance&quot;);
+            System.out.println(&quot;2. Deposit&quot;);
+            System.out.println(&quot;3. Withdraw&quot;);
+            System.out.println(&quot;4. Transfer&quot;);
+            System.out.println(&quot;5. Exit&quot;);
+            System.out.print(&quot;Choice: &quot;);
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.println(&quot;Current balance: $1,000.00&quot;);
+                    break;
+
+                case 2:
+                    System.out.print(&quot;Enter amount: $&quot;);
+                    double deposit = scanner.nextDouble();
+                    System.out.println(&quot;Deposited: $&quot; + deposit);
+                    break;
+
+                case 3:
+                    System.out.print(&quot;Enter amount: $&quot;);
+                    double withdraw = scanner.nextDouble();
+                    System.out.println(&quot;Withdrew: $&quot; + withdraw);
+                    break;
+
+                case 4:
+                    System.out.println(&quot;Transfer initiated...&quot;);
+                    break;
+
+                case 5:
+                    System.out.println(&quot;Thank you! Goodbye.&quot;);
+                    running = false;
+                    break;  // Exit switch
+
+                default:
+                    System.out.println(&quot;Invalid choice.&quot;);
+            }
+
+            // Alternative: break out of while from inside switch
+            // Requires labeled break
+        }
+
+        // Alternative approach with labeled break
+        menuLoop:
+        while (true) {
+            System.out.println(&quot;\n=== Alternative Menu ===&quot;);
+            System.out.println(&quot;1. Option A&quot;);
+            System.out.println(&quot;2. Option B&quot;);
+            System.out.println(&quot;3. Exit&quot;);
+            System.out.print(&quot;Choice: &quot;);
+
+            int altChoice = scanner.nextInt();
+
+            switch (altChoice) {
+                case 1:
+                    System.out.println(&quot;You chose A&quot;);
+                    break;
+                case 2:
+                    System.out.println(&quot;You chose B&quot;);
+                    break;
+                case 3:
+                    System.out.println(&quot;Exiting via labeled break...&quot;);
+                    break menuLoop;  // Exits the WHILE loop
+                default:
+                    System.out.println(&quot;Invalid&quot;);
+            }
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-4-matrix-search-labeled-break">Program 4: Matrix Search (Labeled Break)</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class MatrixSearch {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int[][] matrix = {
+            {1, 2, 3, 4, 5},
+            {6, 7, 8, 9, 10},
+            {11, 12, 13, 14, 15},
+            {16, 17, 18, 19, 20},
+            {21, 22, 23, 24, 25}
+        };
+
+        System.out.print(&quot;Enter number to find (1-25): &quot;);
+        int target = scanner.nextInt();
+
+        boolean found = false;
+        int foundRow = -1;
+        int foundCol = -1;
+        int checks = 0;
+
+        // Labeled search
+        search:
+        for (int row = 0; row &lt; matrix.length; row++) {
+            for (int col = 0; col &lt; matrix[row].length; col++) {
+                checks++;
+
+                if (matrix[row][col] == target) {
+                    found = true;
+                    foundRow = row;
+                    foundCol = col;
+                    break search;  // Exit both loops immediately
+                }
+            }
+        }
+
+        System.out.println(&quot;\n=== Search Results ===&quot;);
+        System.out.println(&quot;Target: &quot; + target);
+        System.out.println(&quot;Found: &quot; + found);
+
+        if (found) {
+            System.out.println(&quot;Position: Row &quot; + foundRow + &quot;, Col &quot; + foundCol);
+            System.out.println(&quot;Checks performed: &quot; + checks + &quot; (optimized)&quot;);
+        } else {
+            System.out.println(&quot;Checks performed: &quot; + checks);
+        }
+
+        // Compare with unlabeled break (inefficient)
+        System.out.println(&quot;\n=== Without Labeled Break ===&quot;);
+        checks = 0;
+        found = false;
+
+        for (int row = 0; row &lt; matrix.length; row++) {
+            boolean rowFound = false;
+            for (int col = 0; col &lt; matrix[row].length; col++) {
+                checks++;
+                if (matrix[row][col] == target) {
+                    found = true;
+                    rowFound = true;
+                    break;  // Only exits inner loop!
+                }
+            }
+            if (rowFound) break;  // Need extra check to exit outer
+        }
+
+        System.out.println(&quot;Checks with unlabeled break: &quot; + checks);
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-5-password-strength-checker-break-continue">Program 5: Password Strength Checker (Break &amp; Continue)</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class PasswordChecker {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;=== Password Strength Checker ===&quot;);
+        System.out.println(&quot;Requirements:&quot;);
+        System.out.println(&quot;- At least 8 characters&quot;);
+        System.out.println(&quot;- Contains uppercase&quot;);
+        System.out.println(&quot;- Contains lowercase&quot;);
+        System.out.println(&quot;- Contains digit&quot;);
+        System.out.println(&quot;- Contains special character (!@#$%^&amp;*)&quot;);
+
+        System.out.print(&quot;\nEnter password: &quot;);
+        String password = scanner.nextLine();
+
+        boolean hasUpper = false;
+        boolean hasLower = false;
+        boolean hasDigit = false;
+        boolean hasSpecial = false;
+        String specialChars = &quot;!@#$%^&amp;*&quot;;
+
+        // Check each character
+        checkLoop:
+        for (int i = 0; i &lt; password.length(); i++) {
+            char c = password.charAt(i);
+
+            // Skip spaces
+            if (c == ' ') {
+                System.out.println(&quot;Warning: Space detected at position &quot; + i);
+                continue;  // Skip to next character
+            }
+
+            if (Character.isUpperCase(c)) {
+                hasUpper = true;
+                continue;  // No need to check other conditions
+            }
+
+            if (Character.isLowerCase(c)) {
+                hasLower = true;
+                continue;
+            }
+
+            if (Character.isDigit(c)) {
+                hasDigit = true;
+                continue;
+            }
+
+            // Check special characters
+            for (int j = 0; j &lt; specialChars.length(); j++) {
+                if (c == specialChars.charAt(j)) {
+                    hasSpecial = true;
+                    break;  // Exit inner special char loop
+                }
+            }
+
+            // Early exit if all requirements met
+            if (hasUpper &amp;&amp; hasLower &amp;&amp; hasDigit &amp;&amp; hasSpecial) {
+                System.out.println(&quot;All requirements met early at position &quot; + i);
+                break;  // Exit main check loop
+            }
+        }
+
+        // Calculate strength
+        int strength = 0;
+        StringBuilder feedback = new StringBuilder();
+
+        if (password.length() &gt;= 8) {
+            strength++;
+        } else {
+            feedback.append(&quot;Too short. &quot;);
+        }
+
+        if (hasUpper) strength++; else feedback.append(&quot;Need uppercase. &quot;);
+        if (hasLower) strength++; else feedback.append(&quot;Need lowercase. &quot;);
+        if (hasDigit) strength++; else feedback.append(&quot;Need digit. &quot;);
+        if (hasSpecial) strength++; else feedback.append(&quot;Need special char. &quot;);
+
+        // Determine rating
+        String rating;
+        switch (strength) {
+            case 5:
+                rating = &quot;Excellent&quot;;
+                break;
+            case 4:
+                rating = &quot;Good&quot;;
+                break;
+            case 3:
+                rating = &quot;Fair&quot;;
+                break;
+            case 2:
+                rating = &quot;Weak&quot;;
+                break;
+            case 1:
+            case 0:
+                rating = &quot;Very Weak&quot;;
+                break;
+            default:
+                rating = &quot;Unknown&quot;;
+        }
+
+        System.out.println(&quot;\n=== Results ===&quot;);
+        System.out.println(&quot;Length: &quot; + password.length());
+        System.out.println(&quot;Has uppercase: &quot; + hasUpper);
+        System.out.println(&quot;Has lowercase: &quot; + hasLower);
+        System.out.println(&quot;Has digit: &quot; + hasDigit);
+        System.out.println(&quot;Has special: &quot; + hasSpecial);
+        System.out.println(&quot;Strength score: &quot; + strength + &quot;/5&quot;);
+        System.out.println(&quot;Rating: &quot; + rating);
+
+        if (feedback.length() &gt; 0) {
+            System.out.println(&quot;Feedback: &quot; + feedback.toString());
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<p><strong>Expected Output:</strong></p>
+<pre><code>=== Password Strength Checker ===
+Requirements:
+- At least 8 characters
+- Contains uppercase
+- Contains lowercase
+- Contains digit
+- Contains special character (!@#$%^&amp;*)
+
+Enter password: Hello1!
+
+=== Results ===
+Length: 7
+Has uppercase: true
+Has lowercase: true
+Has digit: true
+Has special: true
+Strength score: 4/5
+Rating: Good
+Feedback: Too short. 
+</code></pre>
+<hr />
+<h2 id="6-common-errors-fixes">6. Common Errors &amp; Fixes</h2>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Wrong Code</th>
+<th>Problem</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Break outside loop</strong></td>
+<td><code>if (x) break;</code> outside loop</td>
+<td>Compile error</td>
+<td>Use only inside loops/switch</td>
+</tr>
+<tr>
+<td><strong>Continue outside loop</strong></td>
+<td><code>if (x) continue;</code> outside loop</td>
+<td>Compile error</td>
+<td>Use only inside loops</td>
+</tr>
+<tr>
+<td><strong>Wrong loop exited</strong></td>
+<td><code>break</code> in nested loop</td>
+<td>Only exits innermost</td>
+<td>Use labeled break: <code>break outer;</code></td>
+</tr>
+<tr>
+<td><strong>Unreachable code</strong></td>
+<td>Code after break/continue</td>
+<td>Never executes</td>
+<td>Remove or move code</td>
+</tr>
+<tr>
+<td><strong>Break vs return</strong></td>
+<td><code>break</code> when should exit method</td>
+<td>Only exits loop, not method</td>
+<td>Use <code>return</code> to exit method</td>
+</tr>
+<tr>
+<td><strong>Infinite loop</strong></td>
+<td><code>continue</code> without increment</td>
+<td>Skips increment, infinite loop</td>
+<td>Ensure increment before continue</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-quick-rules-checklist">7. Quick Rules Checklist</h2>
+<h3 id="break-rules">✅ Break Rules</h3>
+<ul>
+<li>[ ] <strong>Use</strong>: Exit loop early when condition met</li>
+<li>[ ] <strong>Use</strong>: Exit switch case (prevent fall-through)</li>
+<li>[ ] <strong>Use labeled</strong>: Exit specific outer nested loop</li>
+<li>[ ] <strong>Don't use</strong>: As substitute for proper loop condition</li>
+</ul>
+<h3 id="continue-rules">✅ Continue Rules</h3>
+<ul>
+<li>[ ] <strong>Use</strong>: Skip invalid/special case iterations</li>
+<li>[ ] <strong>Use</strong>: Filter data in loop</li>
+<li>[ ] <strong>Ensure</strong>: Loop still progresses (increment not skipped)</li>
+<li>[ ] <strong>Don't use</strong>: When if-else is clearer</li>
+</ul>
+<h3 id="best-practices">✅ Best Practices</h3>
+<table>
+<thead>
+<tr>
+<th>Use</th>
+<th>Don't Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>break</code> for early exit on found/match</td>
+<td><code>break</code> for normal loop end</td>
+</tr>
+<tr>
+<td><code>continue</code> for data filtering</td>
+<td><code>continue</code> for main logic path</td>
+</tr>
+<tr>
+<td>Labeled break for matrix search</td>
+<td>Deep nesting requiring labels</td>
+</tr>
+<tr>
+<td><code>return</code> to exit method from loop</td>
+<td><code>break</code> when you mean <code>return</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Statement</th>
+<th>Purpose</th>
+<th>Use When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>break</code></td>
+<td>Exit loop/switch immediately</td>
+<td>Found target, error detected, done early</td>
+</tr>
+<tr>
+<td><code>continue</code></td>
+<td>Skip to next iteration</td>
+<td>Invalid data, special case, filter</td>
+</tr>
+<tr>
+<td><code>break label</code></td>
+<td>Exit specific outer loop</td>
+<td>Nested loops, matrix search</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Golden Rules:</strong>
+1. <code>break</code> exits the nearest loop/switch (or labeled one)
+2. <code>continue</code> skips to next iteration (check increment isn't skipped)
+3. Use labeled break for clean exit from nested loops
+4. Don't overuse - clear loop conditions are often better
+5. Never use break/continue outside loops/switch</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
