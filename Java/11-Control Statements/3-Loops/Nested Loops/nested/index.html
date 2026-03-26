@@ -1569,17 +1569,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#hello" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        hello
-      
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2202,17 +2191,6 @@
     <span class="md-ellipsis">
       
         Summary
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hello" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        hello
       
     </span>
   </a>
@@ -2933,60 +2911,116 @@ public class PatternGame {
 -4. Keep nesting shallow - 2 levels for most cases
 -5. Use labeled break to exit multiple levels early</p>
 <div class="terminal">
-  <div class="output" id="output"></div>
+  <div id="output"></div>
   <div class="input-line">
-    <span>&gt;</span>
-    <input id="input" type="text" autofocus />
+    <span class="prompt">$</span>
+    <input id="input" autofocus />
   </div>
 </div>
 
 <style>
 .terminal {
-  background: #000;
-  color: #0f0;
+  background: #0d1117;
+  color: #c9d1d9;
   font-family: monospace;
-  padding: 10px;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 600px;
+  padding: 16px;
+  border-radius: 10px;
+  max-width: 700px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.prompt {
+  color: #58a6ff;
+  margin-right: 8px;
 }
 .input-line {
   display: flex;
 }
 input {
-  background: black;
-  color: #0f0;
+  background: transparent;
   border: none;
+  color: #c9d1d9;
   outline: none;
   flex: 1;
 }
+.correct { color: #3fb950; }
+.wrong { color: #f85149; }
+.hint { color: #d29922; }
 </style>
 
 <script>
-const input = document.getElementById("input");
 const output = document.getElementById("output");
+const input = document.getElementById("input");
 
+// 🧠 Exercise system
+const exercises = [
+  {
+    question: "List files in the current directory",
+    answer: ["ls"],
+    hint: "Use the command that lists directory contents"
+  },
+  {
+    question: "Print current directory path",
+    answer: ["pwd"],
+    hint: "Think: where am I?"
+  },
+  {
+    question: "Create a folder named test",
+    answer: ["mkdir test"],
+    hint: "Command to make a directory"
+  }
+];
+
+let current = 0;
+
+// 🖥️ Print function
+function print(text, className="") {
+  const div = document.createElement("div");
+  div.innerHTML = text;
+  if (className) div.classList.add(className);
+  output.appendChild(div);
+  output.scrollTop = output.scrollHeight;
+}
+
+// 🎬 Start
+print("💻 Terminal Practice");
+print("Type 'hint' for help\n");
+askQuestion();
+
+function askQuestion() {
+  if (current >= exercises.length) {
+    print("🎉 All exercises completed!", "correct");
+    return;
+  }
+  print(`\n👉 Task: ${exercises[current].question}`);
+}
+
+// ⌨️ Input handling
 input.addEventListener("keydown", function(e) {
   if (e.key === "Enter") {
-    const cmd = input.value;
-    output.innerHTML += "<div>&gt; " + cmd + "</div>";
-
-    // simple commands
-    if (cmd === "help") {
-      output.innerHTML += "<div>Available: help, hello</div>";
-    } else if (cmd === "hello") {
-      output.innerHTML += "<div>Hello student 👋</div>";
-    } else {
-      output.innerHTML += "<div>Command not found</div>";
-    }
-
+    const cmd = input.value.trim();
+    print(`$ ${cmd}`);
+    handleCommand(cmd);
     input.value = "";
-    output.scrollTop = output.scrollHeight;
   }
 });
-</script>
 
-<h2 id="hello">hello</h2>
+function handleCommand(cmd) {
+  const ex = exercises[current];
+
+  if (cmd === "hint") {
+    print("💡 " + ex.hint, "hint");
+    return;
+  }
+
+  if (ex.answer.includes(cmd)) {
+    print("✅ Correct!", "correct");
+    current++;
+    askQuestion();
+  } else {
+    print("❌ Try again", "wrong");
+  }
+}
+</script>
 
 
 
