@@ -1,0 +1,3440 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Core Java">
+      
+      
+        <meta name="author" content="Afwan">
+      
+      
+        <link rel="canonical" href="https://yuhasproSoftwareTester.github.io/Java-course/Java/10-Math/math/">
+      
+      
+        <link rel="prev" href="../../9-Strings/string/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Math - Yuhaspro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#section-14-math-methods" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Yuhaspro" class="md-header__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yuhaspro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Math
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yuhaspro" class="md-nav__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Yuhaspro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SoftwareTesting notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SoftwareTesting notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Java
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-Syntax/Syntax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-Data%20Types/DataType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-Variables/Variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_6" id="__nav_1_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input & Output
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input & Output
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6-Output%26Input/Print/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Print
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6-Output%26Input/Scanner/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scanner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7-Type%20Casting/typeCasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Type Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_8" id="__nav_1_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8-Operators/Arithmetic%20Operators/arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arithmetic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8-Operators/Assignment%20Operators/assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8-Operators/Comparison%20Operators/comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8-Operators/Logical%20Operators/logical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logical
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../9-Strings/string/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Math
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Math
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-math-class-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Math Class Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Math Class Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Facts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-essential-math-methods-by-category" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Essential Math Methods by Category
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Essential Math Methods by Category">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-basic-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Basic Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-rounding-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Rounding Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-trigonometric-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Trigonometric Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-exponential-logarithmic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Exponential &amp; Logarithmic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-random-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Random Generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Constants
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-random-number-generation-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Random Number Generation Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Random Number Generation Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-random" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Random
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Random Ranges
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-complete-working-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Complete Working Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Complete Working Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-calculator-with-math" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Calculator with Math
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-random-generator-utility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Random Generator Utility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-five-practical-programs-copy-paste-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Five Practical Programs (Copy-Paste Ready)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Five Practical Programs (Copy-Paste Ready)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-1-test-data-generator-selenium-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 1: Test Data Generator (Selenium Prep)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-2-geometry-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 2: Geometry Calculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-3-financial-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 3: Financial Calculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-4-statistical-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 4: Statistical Analyzer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-5-selenium-coordinate-timing-calculator-automation-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 5: Selenium Coordinate &amp; Timing Calculator (Automation Prep)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-common-errors-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Common Errors &amp; Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-quick-rules-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Quick Rules Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Quick Rules Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#math-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Math Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-selenium-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Selenium Connection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Selenium Connection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-automation-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real Automation Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selenium-example-smart-scrolling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selenium Example: Smart Scrolling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#another-example-dynamic-wait-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Another Example: Dynamic Wait Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11" id="__nav_1_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control Statements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Control Statements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11_1" id="__nav_1_1_11_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If Else
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_1_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    If Else
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-If... Else/If.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-If... Else/If else Statements.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If Else
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-If... Else/else if Statement.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Else If
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-If... Else/Nested If.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nested If
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-If... Else/Ternary operator.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ternary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-Switch Statements/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11_3" id="__nav_1_1_11_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loops
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_1_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Loops
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-Loops/For Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For Loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-Loops/While Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    While Loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-Loops/DoWhile Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Do While
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-Loops/Nested Loops.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nested Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-Loops/Break and Continue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Break & Continue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_12" id="__nav_1_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collections
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Collections
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/ArrayList.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ArrayList
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/Arrays.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arrays
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/HashMap.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HashMap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/HashSet.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HashSet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/List.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/Map.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/Set.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Set
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../13-OOP/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-math-class-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Math Class Overview
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Math Class Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Facts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#import" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Import
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-essential-math-methods-by-category" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Essential Math Methods by Category
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Essential Math Methods by Category">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-basic-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 Basic Operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-rounding-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Rounding Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-trigonometric-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Trigonometric Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-exponential-logarithmic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 Exponential &amp; Logarithmic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-random-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.5 Random Generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-constants" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.6 Constants
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-random-number-generation-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Random Number Generation Patterns
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Random Number Generation Patterns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-random" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Random
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-ranges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Random Ranges
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-complete-working-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Complete Working Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Complete Working Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-calculator-with-math" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: Calculator with Math
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-random-generator-utility" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: Random Generator Utility
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-five-practical-programs-copy-paste-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Five Practical Programs (Copy-Paste Ready)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Five Practical Programs (Copy-Paste Ready)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-1-test-data-generator-selenium-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 1: Test Data Generator (Selenium Prep)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-2-geometry-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 2: Geometry Calculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-3-financial-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 3: Financial Calculator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-4-statistical-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 4: Statistical Analyzer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-5-selenium-coordinate-timing-calculator-automation-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 5: Selenium Coordinate &amp; Timing Calculator (Automation Prep)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-common-errors-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Common Errors &amp; Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-quick-rules-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Quick Rules Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Quick Rules Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#math-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Math Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Best Practices
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-selenium-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Selenium Connection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Selenium Connection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-automation-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real Automation Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selenium-example-smart-scrolling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selenium Example: Smart Scrolling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#another-example-dynamic-wait-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Another Example: Dynamic Wait Strategy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="section-14-math-methods">Section 14: Math Methods</h1>
+<h2 id="1-math-class-overview">1. Math Class Overview</h2>
+<h3 id="key-facts">Key Facts</h3>
+<ul>
+<li><strong>Static methods</strong>: Call directly via <code>Math.method()</code></li>
+<li><strong>No instantiation</strong>: Cannot create <code>new Math()</code></li>
+<li><strong>Primitive operations</strong>: Works with <code>int</code>, <code>long</code>, <code>float</code>, <code>double</code></li>
+<li><strong>Returns</strong>: <code>double</code> for most operations (except <code>min</code>, <code>max</code>, <code>abs</code> variants)</li>
+</ul>
+<h3 id="import">Import</h3>
+<pre><code class="language-java">// No import needed! java.lang.Math is auto-imported
+double result = Math.sqrt(25);  // Direct use
+</code></pre>
+<hr />
+<h2 id="2-essential-math-methods-by-category">2. Essential Math Methods by Category</h2>
+<h3 id="21-basic-operations">2.1 Basic Operations</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Math.abs(x)</code></td>
+<td>Same type</td>
+<td>Absolute value</td>
+<td><code>Math.abs(-5)</code> → <code>5</code></td>
+</tr>
+<tr>
+<td><code>Math.max(a, b)</code></td>
+<td>Same type</td>
+<td>Larger of two</td>
+<td><code>Math.max(10, 20)</code> → <code>20</code></td>
+</tr>
+<tr>
+<td><code>Math.min(a, b)</code></td>
+<td>Same type</td>
+<td>Smaller of two</td>
+<td><code>Math.min(10, 20)</code> → <code>10</code></td>
+</tr>
+<tr>
+<td><code>Math.pow(a, b)</code></td>
+<td><code>double</code></td>
+<td>Power (a^b)</td>
+<td><code>Math.pow(2, 3)</code> → <code>8.0</code></td>
+</tr>
+<tr>
+<td><code>Math.sqrt(x)</code></td>
+<td><code>double</code></td>
+<td>Square root</td>
+<td><code>Math.sqrt(16)</code> → <code>4.0</code></td>
+</tr>
+<tr>
+<td><code>Math.cbrt(x)</code></td>
+<td><code>double</code></td>
+<td>Cube root</td>
+<td><code>Math.cbrt(27)</code> → <code>3.0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-rounding-methods">2.2 Rounding Methods</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Math.round(x)</code></td>
+<td><code>long</code>/<code>int</code></td>
+<td>Round to nearest</td>
+<td><code>Math.round(4.6)</code> → <code>5</code></td>
+</tr>
+<tr>
+<td><code>Math.floor(x)</code></td>
+<td><code>double</code></td>
+<td>Round down</td>
+<td><code>Math.floor(4.9)</code> → <code>4.0</code></td>
+</tr>
+<tr>
+<td><code>Math.ceil(x)</code></td>
+<td><code>double</code></td>
+<td>Round up</td>
+<td><code>Math.ceil(4.1)</code> → <code>5.0</code></td>
+</tr>
+<tr>
+<td><code>Math.rint(x)</code></td>
+<td><code>double</code></td>
+<td>Round to nearest integer</td>
+<td><code>Math.rint(4.5)</code> → <code>4.0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-trigonometric-methods">2.3 Trigonometric Methods</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Math.sin(x)</code></td>
+<td><code>double</code></td>
+<td>Sine (radians)</td>
+<td><code>Math.sin(Math.PI/2)</code> → <code>1.0</code></td>
+</tr>
+<tr>
+<td><code>Math.cos(x)</code></td>
+<td><code>double</code></td>
+<td>Cosine (radians)</td>
+<td><code>Math.cos(0)</code> → <code>1.0</code></td>
+</tr>
+<tr>
+<td><code>Math.tan(x)</code></td>
+<td><code>double</code></td>
+<td>Tangent (radians)</td>
+<td><code>Math.tan(Math.PI/4)</code> → <code>1.0</code></td>
+</tr>
+<tr>
+<td><code>Math.toRadians(deg)</code></td>
+<td><code>double</code></td>
+<td>Degrees to radians</td>
+<td><code>Math.toRadians(180)</code> → <code>π</code></td>
+</tr>
+<tr>
+<td><code>Math.toDegrees(rad)</code></td>
+<td><code>double</code></td>
+<td>Radians to degrees</td>
+<td><code>Math.toDegrees(Math.PI)</code> → <code>180.0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="24-exponential-logarithmic">2.4 Exponential &amp; Logarithmic</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Math.exp(x)</code></td>
+<td><code>double</code></td>
+<td>e^x</td>
+<td><code>Math.exp(1)</code> → <code>2.718...</code></td>
+</tr>
+<tr>
+<td><code>Math.log(x)</code></td>
+<td><code>double</code></td>
+<td>Natural log (ln)</td>
+<td><code>Math.log(Math.E)</code> → <code>1.0</code></td>
+</tr>
+<tr>
+<td><code>Math.log10(x)</code></td>
+<td><code>double</code></td>
+<td>Base-10 log</td>
+<td><code>Math.log10(100)</code> → <code>2.0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="25-random-generation">2.5 Random Generation</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Math.random()</code></td>
+<td><code>double</code></td>
+<td>0.0 to &lt;1.0</td>
+<td><code>Math.random()</code> → <code>0.753...</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="26-constants">2.6 Constants</h3>
+<table>
+<thead>
+<tr>
+<th>Constant</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Math.PI</code></td>
+<td><code>3.14159...</code></td>
+<td>Circle ratio</td>
+</tr>
+<tr>
+<td><code>Math.E</code></td>
+<td><code>2.71828...</code></td>
+<td>Euler's number</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-random-number-generation-patterns">3. Random Number Generation Patterns</h2>
+<h3 id="basic-random">Basic Random</h3>
+<pre><code class="language-java">// 0.0 to 0.999...
+double random = Math.random();
+
+// 0 to 99
+int zeroTo99 = (int)(Math.random() * 100);
+
+// 1 to 100
+int oneTo100 = (int)(Math.random() * 100) + 1;
+
+// Min to Max formula: (int)(Math.random() * (max - min + 1)) + min
+int dice = (int)(Math.random() * 6) + 1;  // 1-6
+</code></pre>
+<h3 id="random-ranges">Random Ranges</h3>
+<table>
+<thead>
+<tr>
+<th>Range</th>
+<th>Formula</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 to n-1</td>
+<td><code>(int)(Math.random() * n)</code></td>
+<td>0-9: <code>(int)(Math.random() * 10)</code></td>
+</tr>
+<tr>
+<td>1 to n</td>
+<td><code>(int)(Math.random() * n) + 1</code></td>
+<td>1-10: <code>(int)(Math.random() * 10) + 1</code></td>
+</tr>
+<tr>
+<td>min to max</td>
+<td><code>(int)(Math.random() * (max-min+1)) + min</code></td>
+<td>5-15: <code>(int)(Math.random() * 11) + 5</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-complete-working-examples">4. Complete Working Examples</h2>
+<h3 id="example-1-calculator-with-math">Example 1: Calculator with Math</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class MathCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter number: &quot;);
+        double num = scanner.nextDouble();
+
+        System.out.println(&quot;\n=== Math Operations ===&quot;);
+        System.out.println(&quot;Absolute: &quot; + Math.abs(num));
+        System.out.println(&quot;Square: &quot; + Math.pow(num, 2));
+        System.out.println(&quot;Cube: &quot; + Math.pow(num, 3));
+        System.out.println(&quot;Square root: &quot; + Math.sqrt(Math.abs(num)));
+        System.out.println(&quot;Floor: &quot; + Math.floor(num));
+        System.out.println(&quot;Ceiling: &quot; + Math.ceil(num));
+        System.out.println(&quot;Rounded: &quot; + Math.round(num));
+
+        // Power of 10
+        System.out.println(&quot;10^&quot; + num + &quot; = &quot; + Math.pow(10, num));
+
+        scanner.close();
+    }
+}
+</code></pre>
+<h3 id="example-2-random-generator-utility">Example 2: Random Generator Utility</h3>
+<pre><code class="language-java">public class RandomUtility {
+    public static void main(String[] args) {
+        // Generate various random data
+
+        // Random integer 1-100
+        int randomInt = (int)(Math.random() * 100) + 1;
+        System.out.println(&quot;Random 1-100: &quot; + randomInt);
+
+        // Random double 0-100 with 2 decimals
+        double randomDouble = Math.round(Math.random() * 10000.0) / 100.0;
+        System.out.println(&quot;Random price: $&quot; + randomDouble);
+
+        // Random boolean
+        boolean randomBool = Math.random() &gt; 0.5;
+        System.out.println(&quot;Random boolean: &quot; + randomBool);
+
+        // Random from array
+        String[] colors = {&quot;Red&quot;, &quot;Blue&quot;, &quot;Green&quot;, &quot;Yellow&quot;};
+        String randomColor = colors[(int)(Math.random() * colors.length)];
+        System.out.println(&quot;Random color: &quot; + randomColor);
+    }
+}
+</code></pre>
+<hr />
+<h2 id="5-five-practical-programs-copy-paste-ready">5. Five Practical Programs (Copy-Paste Ready)</h2>
+<h3 id="program-1-test-data-generator-selenium-prep">Program 1: Test Data Generator (Selenium Prep)</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class TestDataGenerator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;=== Test Data Generator ===&quot;);
+        System.out.print(&quot;How many records to generate? &quot;);
+        int count = scanner.nextInt();
+
+        String[] firstNames = {&quot;John&quot;, &quot;Jane&quot;, &quot;Bob&quot;, &quot;Alice&quot;, &quot;Charlie&quot;, &quot;Diana&quot;};
+        String[] lastNames = {&quot;Smith&quot;, &quot;Johnson&quot;, &quot;Williams&quot;, &quot;Brown&quot;, &quot;Jones&quot;, &quot;Garcia&quot;};
+        String[] domains = {&quot;gmail.com&quot;, &quot;yahoo.com&quot;, &quot;test.com&quot;, &quot;company.org&quot;};
+
+        System.out.println(&quot;\n=== Generated Test Data ===&quot;);
+
+        for (int i = 0; i &lt; count; i++) {
+            // Random selections
+            String first = firstNames[(int)(Math.random() * firstNames.length)];
+            String last = lastNames[(int)(Math.random() * lastNames.length)];
+            String domain = domains[(int)(Math.random() * domains.length)];
+
+            // Random age 18-65
+            int age = (int)(Math.random() * 48) + 18;
+
+            // Random salary 30000-150000
+            int salary = ((int)(Math.random() * 120) + 30) * 1000;
+
+            // Random score 0.0-100.0
+            double score = Math.round(Math.random() * 1000) / 10.0;
+
+            // Generate email
+            String email = (first + &quot;.&quot; + last + age + &quot;@&quot; + domain).toLowerCase();
+
+            // Generate phone (XXX) XXX-XXXX
+            int areaCode = (int)(Math.random() * 900) + 100;
+            int prefix = (int)(Math.random() * 900) + 100;
+            int lineNum = (int)(Math.random() * 9000) + 1000;
+            String phone = String.format(&quot;(%d) %d-%d&quot;, areaCode, prefix, lineNum);
+
+            // Random date within last year
+            int daysAgo = (int)(Math.random() * 365);
+
+            System.out.println(&quot;\nRecord #&quot; + (i + 1));
+            System.out.println(&quot;Name: &quot; + first + &quot; &quot; + last);
+            System.out.println(&quot;Email: &quot; + email);
+            System.out.println(&quot;Phone: &quot; + phone);
+            System.out.println(&quot;Age: &quot; + age);
+            System.out.println(&quot;Salary: $&quot; + salary);
+            System.out.println(&quot;Score: &quot; + score + &quot;%&quot;);
+            System.out.println(&quot;Days since registration: &quot; + daysAgo);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<p><strong>Expected Output:</strong></p>
+<pre><code>=== Test Data Generator ===
+How many records to generate? 2
+
+=== Generated Test Data ===
+
+Record #1
+Name: Alice Johnson
+Email: alice.johnson42@gmail.com
+Phone: (555) 123-4567
+Age: 42
+Salary: $85000
+Score: 87.5%
+Days since registration: 156
+
+Record #2
+Name: Bob Williams
+Email: bob.williams29@yahoo.com
+Phone: (555) 987-6543
+Age: 29
+Salary: $62000
+Score: 45.2%
+Days since registration: 23
+</code></pre>
+<hr />
+<h3 id="program-2-geometry-calculator">Program 2: Geometry Calculator</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class GeometryCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;=== Geometry Calculator ===&quot;);
+        System.out.println(&quot;1. Circle&quot;);
+        System.out.println(&quot;2. Rectangle&quot;);
+        System.out.println(&quot;3. Triangle&quot;);
+        System.out.println(&quot;4. Sphere&quot;);
+        System.out.print(&quot;Choose shape: &quot;);
+        int choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1: // Circle
+                System.out.print(&quot;Enter radius: &quot;);
+                double r = scanner.nextDouble();
+
+                double circleArea = Math.PI * Math.pow(r, 2);
+                double circumference = 2 * Math.PI * r;
+
+                System.out.println(&quot;Area: &quot; + Math.round(circleArea * 100) / 100.0);
+                System.out.println(&quot;Circumference: &quot; + Math.round(circumference * 100) / 100.0);
+                break;
+
+            case 2: // Rectangle
+                System.out.print(&quot;Enter width: &quot;);
+                double w = scanner.nextDouble();
+                System.out.print(&quot;Enter height: &quot;);
+                double h = scanner.nextDouble();
+
+                double rectArea = w * h;
+                double diagonal = Math.sqrt(Math.pow(w, 2) + Math.pow(h, 2));
+
+                System.out.println(&quot;Area: &quot; + rectArea);
+                System.out.println(&quot;Diagonal: &quot; + Math.round(diagonal * 100) / 100.0);
+                break;
+
+            case 3: // Triangle
+                System.out.print(&quot;Enter side a: &quot;);
+                double a = scanner.nextDouble();
+                System.out.print(&quot;Enter side b: &quot;);
+                double b = scanner.nextDouble();
+                System.out.print(&quot;Enter side c: &quot;);
+                double c = scanner.nextDouble();
+
+                // Heron's formula
+                double s = (a + b + c) / 2;  // semi-perimeter
+                double triangleArea = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+
+                System.out.println(&quot;Area: &quot; + Math.round(triangleArea * 100) / 100.0);
+                break;
+
+            case 4: // Sphere
+                System.out.print(&quot;Enter radius: &quot;);
+                double radius = scanner.nextDouble();
+
+                double sphereVolume = (4.0 / 3.0) * Math.PI * Math.pow(radius, 3);
+                double surfaceArea = 4 * Math.PI * Math.pow(radius, 2);
+
+                System.out.println(&quot;Volume: &quot; + Math.round(sphereVolume * 100) / 100.0);
+                System.out.println(&quot;Surface Area: &quot; + Math.round(surfaceArea * 100) / 100.0);
+                break;
+
+            default:
+                System.out.println(&quot;Invalid choice&quot;);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-3-financial-calculator">Program 3: Financial Calculator</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class FinancialCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;=== Financial Calculator ===&quot;);
+
+        System.out.print(&quot;Principal amount: $&quot;);
+        double principal = scanner.nextDouble();
+
+        System.out.print(&quot;Annual interest rate (%): &quot;);
+        double rate = scanner.nextDouble() / 100;
+
+        System.out.print(&quot;Time in years: &quot;);
+        int years = scanner.nextInt();
+
+        System.out.print(&quot;Compounding periods per year: &quot;);
+        int n = scanner.nextInt();
+
+        // Compound Interest: A = P(1 + r/n)^(nt)
+        double amount = principal * Math.pow(1 + rate / n, n * years);
+        double interest = amount - principal;
+
+        System.out.println(&quot;\n=== Results ===&quot;);
+        System.out.println(&quot;Final Amount: $&quot; + Math.round(amount * 100) / 100.0);
+        System.out.println(&quot;Interest Earned: $&quot; + Math.round(interest * 100) / 100.0);
+
+        // Monthly Payment for Loan (Amortization)
+        System.out.print(&quot;\nCalculate loan payment? (y/n): &quot;);
+        if (scanner.next().equalsIgnoreCase(&quot;y&quot;)) {
+            System.out.print(&quot;Loan amount: $&quot;);
+            double loan = scanner.nextDouble();
+            System.out.print(&quot;Annual rate (%): &quot;);
+            double loanRate = scanner.nextDouble() / 100 / 12;  // monthly rate
+            System.out.print(&quot;Years: &quot;);
+            int loanYears = scanner.nextInt();
+            int payments = loanYears * 12;
+
+            // M = P[r(1+r)^n]/[(1+r)^n-1]
+            double monthlyPayment = loan * (loanRate * Math.pow(1 + loanRate, payments)) 
+                                   / (Math.pow(1 + loanRate, payments) - 1);
+
+            System.out.println(&quot;Monthly Payment: $&quot; + Math.round(monthlyPayment * 100) / 100.0);
+            System.out.println(&quot;Total Paid: $&quot; + Math.round(monthlyPayment * payments * 100) / 100.0);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-4-statistical-analyzer">Program 4: Statistical Analyzer</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class StatisticalAnalyzer {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;=== Statistical Analyzer ===&quot;);
+        System.out.print(&quot;How many numbers? &quot;);
+        int n = scanner.nextInt();
+
+        double[] numbers = new double[n];
+        double sum = 0;
+        double min = Double.MAX_VALUE;
+        double max = Double.MIN_VALUE;
+
+        System.out.println(&quot;Enter &quot; + n + &quot; numbers:&quot;);
+        for (int i = 0; i &lt; n; i++) {
+            numbers[i] = scanner.nextDouble();
+            sum += numbers[i];
+            min = Math.min(min, numbers[i]);
+            max = Math.max(max, numbers[i]);
+        }
+
+        double mean = sum / n;
+
+        // Calculate standard deviation
+        double sumSquaredDiff = 0;
+        for (double num : numbers) {
+            sumSquaredDiff += Math.pow(num - mean, 2);
+        }
+        double stdDev = Math.sqrt(sumSquaredDiff / n);
+
+        // Median (requires sorting - simplified here assuming sorted or use Arrays.sort)
+        java.util.Arrays.sort(numbers);
+        double median;
+        if (n % 2 == 0) {
+            median = (numbers[n/2 - 1] + numbers[n/2]) / 2;
+        } else {
+            median = numbers[n/2];
+        }
+
+        // Range and variance
+        double range = max - min;
+        double variance = Math.pow(stdDev, 2);
+
+        System.out.println(&quot;\n=== Statistics ===&quot;);
+        System.out.println(&quot;Count: &quot; + n);
+        System.out.println(&quot;Sum: &quot; + Math.round(sum * 100) / 100.0);
+        System.out.println(&quot;Mean: &quot; + Math.round(mean * 100) / 100.0);
+        System.out.println(&quot;Median: &quot; + Math.round(median * 100) / 100.0);
+        System.out.println(&quot;Min: &quot; + min);
+        System.out.println(&quot;Max: &quot; + max);
+        System.out.println(&quot;Range: &quot; + Math.round(range * 100) / 100.0);
+        System.out.println(&quot;Variance: &quot; + Math.round(variance * 100) / 100.0);
+        System.out.println(&quot;Std Dev: &quot; + Math.round(stdDev * 100) / 100.0);
+
+        // Outlier detection (mean ± 2*stdDev)
+        System.out.println(&quot;\nOutliers (beyond 2 std dev):&quot;);
+        int outlierCount = 0;
+        for (double num : numbers) {
+            if (Math.abs(num - mean) &gt; 2 * stdDev) {
+                System.out.println(&quot;  &quot; + num);
+                outlierCount++;
+            }
+        }
+        if (outlierCount == 0) System.out.println(&quot;  None detected&quot;);
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-5-selenium-coordinate-timing-calculator-automation-prep">Program 5: Selenium Coordinate &amp; Timing Calculator (Automation Prep)</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class SeleniumMathHelper {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;=== Selenium Math Helper ===&quot;);
+
+        // 1. Random wait time generator (exponential backoff)
+        System.out.println(&quot;\n1. RANDOM WAIT TIMES&quot;);
+        System.out.print(&quot;Base wait (ms): &quot;);
+        int baseWait = scanner.nextInt();
+        System.out.print(&quot;Max retries: &quot;);
+        int maxRetries = scanner.nextInt();
+
+        System.out.println(&quot;Exponential backoff schedule:&quot;);
+        for (int i = 0; i &lt; maxRetries; i++) {
+            // Exponential: base * 2^i, capped at reasonable max
+            long waitTime = Math.min(baseWait * (long)Math.pow(2, i), 30000);
+            System.out.println(&quot;  Retry &quot; + (i + 1) + &quot;: &quot; + waitTime + &quot;ms&quot;);
+        }
+
+        // 2. Scroll position calculator
+        System.out.println(&quot;\n2. SCROLL POSITIONS&quot;);
+        System.out.print(&quot;Page height (px): &quot;);
+        int pageHeight = scanner.nextInt();
+        System.out.print(&quot;Viewport height (px): &quot;);
+        int viewportHeight = scanner.nextInt();
+        System.out.print(&quot;Target element Y position: &quot;);
+        int elementY = scanner.nextInt();
+
+        // Calculate optimal scroll position (center element in viewport)
+        int optimalScroll = Math.max(0, elementY - (viewportHeight / 2));
+        int maxScroll = Math.max(0, pageHeight - viewportHeight);
+        int finalScroll = Math.min(optimalScroll, maxScroll);
+
+        System.out.println(&quot;Optimal scroll Y: &quot; + finalScroll);
+        System.out.println(&quot;Scroll percentage: &quot; + Math.round((double)finalScroll / maxScroll * 100) + &quot;%&quot;);
+
+        // 3. Random click position within element (to avoid bot detection)
+        System.out.println(&quot;\n3. RANDOM CLICK POSITION&quot;);
+        System.out.print(&quot;Element X: &quot;);
+        int elemX = scanner.nextInt();
+        System.out.print(&quot;Element Y: &quot;);
+        int elemY = scanner.nextInt();
+        System.out.print(&quot;Element width: &quot;);
+        int elemWidth = scanner.nextInt();
+        System.out.print(&quot;Element height: &quot;);
+        int elemHeight = scanner.nextInt();
+
+        // Random position with padding (avoid edges)
+        int padding = 5;
+        int clickX = elemX + padding + (int)(Math.random() * (elemWidth - 2 * padding));
+        int clickY = elemY + padding + (int)(Math.random() * (elemHeight - 2 * padding));
+
+        System.out.println(&quot;Random click at: (&quot; + clickX + &quot;, &quot; + clickY + &quot;)&quot;);
+
+        // 4. Pagination calculator
+        System.out.println(&quot;\n4. PAGINATION MATH&quot;);
+        System.out.print(&quot;Total items: &quot;);
+        int totalItems = scanner.nextInt();
+        System.out.print(&quot;Items per page: &quot;);
+        int perPage = scanner.nextInt();
+        System.out.print(&quot;Current page: &quot;);
+        int currentPage = scanner.nextInt();
+
+        int totalPages = (int)Math.ceil((double)totalItems / perPage);
+        int startItem = (currentPage - 1) * perPage + 1;
+        int endItem = Math.min(currentPage * perPage, totalItems);
+
+        System.out.println(&quot;Total pages: &quot; + totalPages);
+        System.out.println(&quot;Showing items &quot; + startItem + &quot;-&quot; + endItem);
+        System.out.println(&quot;Progress: &quot; + Math.round((double)currentPage / totalPages * 100) + &quot;%&quot;);
+
+        // 5. Screenshot grid calculator
+        System.out.println(&quot;\n5. SCREENSHOT GRID&quot;);
+        System.out.print(&quot;Page width: &quot;);
+        int pageWidth = scanner.nextInt();
+        System.out.print(&quot;Page height: &quot;);
+        int pageHeight2 = scanner.nextInt();
+        System.out.print(&quot;Max screenshot size: &quot;);
+        int maxSize = scanner.nextInt();
+
+        int cols = (int)Math.ceil((double)pageWidth / maxSize);
+        int rows = (int)Math.ceil((double)pageHeight2 / maxSize);
+
+        System.out.println(&quot;Grid needed: &quot; + cols + &quot;x&quot; + rows + &quot; = &quot; + (cols * rows) + &quot; screenshots&quot;);
+
+        // Calculate overlap for stitching
+        int overlap = 50; // pixels
+        int effectiveWidth = (pageWidth + (cols - 1) * overlap) / cols;
+        int effectiveHeight = (pageHeight2 + (rows - 1) * overlap) / rows;
+
+        System.out.println(&quot;Effective capture size: &quot; + effectiveWidth + &quot;x&quot; + effectiveHeight);
+
+        scanner.close();
+    }
+}
+</code></pre>
+<p><strong>Expected Output:</strong></p>
+<pre><code>=== Selenium Math Helper ===
+
+1. RANDOM WAIT TIMES
+Base wait (ms): 1000
+Max retries: 4
+Exponential backoff schedule:
+  Retry 1: 1000ms
+  Retry 2: 2000ms
+  Retry 3: 4000ms
+  Retry 4: 8000ms
+
+2. SCROLL POSITIONS
+Page height (px): 2000
+Viewport height (px): 800
+Target element Y position: 1500
+Optimal scroll Y: 1100
+Scroll percentage: 69%
+
+3. RANDOM CLICK POSITION
+Element X: 100
+Element Y: 200
+Element width: 200
+Element height: 50
+Random click at: (234, 217)
+
+4. PAGINATION MATH
+Total items: 95
+Items per page: 10
+Current page: 3
+Total pages: 10
+Showing items 21-30
+Progress: 30%
+
+5. SCREENSHOT GRID
+Page width: 1920
+Page height: 1080
+Max screenshot size: 800
+Grid needed: 3x2 = 6 screenshots
+Effective capture size: 673x565
+</code></pre>
+<hr />
+<h2 id="6-common-errors-fixes">6. Common Errors &amp; Fixes</h2>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Wrong Code</th>
+<th>Problem</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Integer division</strong></td>
+<td><code>(int)(Math.random() * 100)</code> gives 0-99</td>
+<td>Need +1 for 1-100</td>
+<td><code>(int)(Math.random() * 100) + 1</code></td>
+</tr>
+<tr>
+<td><strong>Floating point comparison</strong></td>
+<td><code>if (Math.sqrt(2) == 1.414)</code></td>
+<td>Precision loss</td>
+<td><code>if (Math.abs(Math.sqrt(2) - 1.414) &lt; 0.001)</code></td>
+</tr>
+<tr>
+<td><strong>Negative square root</strong></td>
+<td><code>Math.sqrt(-4)</code></td>
+<td>Returns NaN</td>
+<td>Check <code>if (x &gt;= 0)</code> first</td>
+</tr>
+<tr>
+<td><strong>Overflow in pow</strong></td>
+<td><code>Math.pow(2, 10000)</code></td>
+<td>Returns Infinity</td>
+<td>Use <code>BigInteger</code> for large numbers</td>
+</tr>
+<tr>
+<td><strong>Wrong rounding</strong></td>
+<td><code>Math.round(4.5)</code> gives 4</td>
+<td>Banker's rounding (to even)</td>
+<td>Use <code>Math.floor(x + 0.5)</code> for always up</td>
+</tr>
+<tr>
+<td><strong>Casting truncation</strong></td>
+<td><code>(int) Math.pow(2, 31)</code></td>
+<td>Overflow</td>
+<td>Use <code>long</code> for large powers</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-quick-rules-checklist">7. Quick Rules Checklist</h2>
+<h3 id="math-rules">✅ Math Rules</h3>
+<ul>
+<li>[ ] <code>Math.random()</code> returns 0.0 to &lt;1.0 (never 1.0)</li>
+<li>[ ] Cast to <code>int</code> after multiplication for random integers</li>
+<li>[ ] Range formula: <code>(int)(Math.random() * (max - min + 1)) + min</code></li>
+<li>[ ] <code>Math.pow()</code> returns <code>double</code>, may need casting</li>
+<li>[ ] <code>Math.round()</code> returns <code>long</code> (cast to <code>int</code> if needed)</li>
+<li>[ ] Check for negative inputs before <code>sqrt()</code></li>
+</ul>
+<h3 id="best-practices">✅ Best Practices</h3>
+<ul>
+<li>[ ] Use <code>Math.abs()</code> for distance/difference calculations</li>
+<li>[ ] Use <code>Math.max()</code>/<code>Math.min()</code> for boundary checks</li>
+<li>[ ] Round only for display, keep precision for calculations</li>
+<li>[ ] Use <code>BigDecimal</code> for financial precision (not <code>double</code>)</li>
+<li>[ ] Cache random results if used multiple times</li>
+</ul>
+<hr />
+<h2 id="8-selenium-connection">8. Selenium Connection</h2>
+<h3 id="real-automation-use-cases">Real Automation Use Cases</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Math Method</th>
+<th>Code Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Random test data</strong></td>
+<td><code>Math.random()</code></td>
+<td>Generate random usernames, ages</td>
+</tr>
+<tr>
+<td><strong>Exponential backoff</strong></td>
+<td><code>Math.pow()</code></td>
+<td><code>waitTime * Math.pow(2, retry)</code></td>
+</tr>
+<tr>
+<td><strong>Scroll calculations</strong></td>
+<td><code>Math.min()</code>, <code>Math.max()</code></td>
+<td>Ensure scroll within bounds</td>
+</tr>
+<tr>
+<td><strong>Element positioning</strong></td>
+<td><code>Math.abs()</code></td>
+<td>Calculate distance between elements</td>
+</tr>
+<tr>
+<td><strong>Timeout calculations</strong></td>
+<td><code>Math.max()</code></td>
+<td><code>Math.max(defaultTimeout, calculatedTimeout)</code></td>
+</tr>
+<tr>
+<td><strong>Screenshot coordinates</strong></td>
+<td><code>Math.ceil()</code></td>
+<td>Calculate grid divisions</td>
+</tr>
+<tr>
+<td><strong>Performance metrics</strong></td>
+<td><code>Math.round()</code></td>
+<td>Round response times for reporting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selenium-example-smart-scrolling">Selenium Example: Smart Scrolling</h3>
+<pre><code class="language-java">// Calculate optimal scroll position to center element
+WebElement element = driver.findElement(By.id(&quot;target&quot;));
+int elementY = element.getLocation().getY();
+int viewportHeight = driver.manage().window().getSize().getHeight();
+int pageHeight = driver.executeScript(&quot;return document.body.scrollHeight&quot;);
+
+// Center element in viewport
+int idealScroll = elementY - (viewportHeight / 2);
+int maxScroll = pageHeight - viewportHeight;
+int actualScroll = Math.max(0, Math.min(idealScroll, maxScroll));
+
+// Smooth scroll with randomization (avoid bot detection)
+int randomOffset = (int)(Math.random() * 20) - 10;  // -10 to +10
+((JavascriptExecutor) driver).executeScript(
+    &quot;window.scrollTo(0, arguments[0])&quot;, 
+    actualScroll + randomOffset
+);
+</code></pre>
+<h3 id="another-example-dynamic-wait-strategy">Another Example: Dynamic Wait Strategy</h3>
+<pre><code class="language-java">public void smartClick(By locator, int maxRetries) {
+    int baseWait = 500;  // ms
+
+    for (int i = 0; i &lt; maxRetries; i++) {
+        try {
+            WebElement element = driver.findElement(locator);
+            if (element.isDisplayed() &amp;&amp; element.isEnabled()) {
+                // Random offset click (avoid detection)
+                int offsetX = (int)(Math.random() * 10);
+                int offsetY = (int)(Math.random() * 10);
+
+                Actions actions = new Actions(driver);
+                actions.moveToElement(element, offsetX, offsetY).click().perform();
+                return;
+            }
+        } catch (Exception e) {
+            // Exponential backoff
+            long waitTime = (long)(baseWait * Math.pow(2, i));
+            waitTime = Math.min(waitTime, 10000);  // Cap at 10s
+
+            try {
+                Thread.sleep(waitTime);
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+            }
+        }
+    }
+    throw new RuntimeException(&quot;Failed to click after &quot; + maxRetries + &quot; retries&quot;);
+}
+</code></pre>
+<hr />
+<h2 id="summary">Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Key Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Basic</strong></td>
+<td><code>abs()</code>, <code>max()</code>, <code>min()</code>, <code>pow()</code>, <code>sqrt()</code></td>
+</tr>
+<tr>
+<td><strong>Rounding</strong></td>
+<td><code>round()</code>, <code>floor()</code>, <code>ceil()</code></td>
+</tr>
+<tr>
+<td><strong>Random</strong></td>
+<td><code>random()</code> (0.0 to &lt;1.0)</td>
+</tr>
+<tr>
+<td><strong>Trig</strong></td>
+<td><code>sin()</code>, <code>cos()</code>, <code>tan()</code>, <code>toRadians()</code></td>
+</tr>
+<tr>
+<td><strong>Constants</strong></td>
+<td><code>Math.PI</code>, <code>Math.E</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Golden Rules:</strong>
+1. Random integer formula: <code>(int)(Math.random() * range) + min</code>
+2. Use <code>Math.abs()</code> for safe difference calculations
+3. Round only at display time, keep precision during calculations
+4. Check bounds with <code>Math.max()</code>/<code>Math.min()</code> before operations</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

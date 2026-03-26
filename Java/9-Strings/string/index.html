@@ -1,0 +1,3622 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Core Java">
+      
+      
+        <meta name="author" content="Afwan">
+      
+      
+        <link rel="canonical" href="https://yuhasproSoftwareTester.github.io/Java-course/Java/9-Strings/string/">
+      
+      
+        <link rel="prev" href="../../8-Operators/Logical%20Operators/logical/">
+      
+      
+        <link rel="next" href="../../10-Math/math/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Strings - Yuhaspro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#strings-and-methods" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Yuhaspro" class="md-header__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yuhaspro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Strings
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="cyan"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Yuhaspro" class="md-nav__button md-logo" aria-label="Yuhaspro" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Yuhaspro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SoftwareTesting notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SoftwareTesting notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Java
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Java
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-Introduction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../2-Install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Install
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3-Syntax/Syntax/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Syntax
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../4-Data%20Types/DataType/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Data Types
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../5-Variables/Variables/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Variables
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_6" id="__nav_1_1_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Input & Output
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Input & Output
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6-Output%26Input/Print/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Print
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../6-Output%26Input/Scanner/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scanner
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../7-Type%20Casting/typeCasting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Type Casting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_8" id="__nav_1_1_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operators
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operators
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8-Operators/Arithmetic%20Operators/arithmetic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arithmetic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8-Operators/Assignment%20Operators/assignment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Assignment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8-Operators/Comparison%20Operators/comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../8-Operators/Logical%20Operators/logical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Logical
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strings
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Strings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-string-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. String Fundamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. String Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a String?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-immutability-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String Immutability Explained
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-immutable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Immutable?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-creating-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Creating Strings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-essential-string-methods-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Essential String Methods (20+)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Essential String Methods (20+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-length-and-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Length and Inspection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-search-and-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Search and Index
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Extraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-modification-returns-new-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Modification (Returns NEW String)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-splitting-and-joining" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Splitting and Joining
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-formatting-and-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Formatting and Conversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-complete-working-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 4. Complete Working Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 4. Complete Working Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-string-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: String Inspection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-string-manipulation-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: String Manipulation Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-five-practical-programs-copy-paste-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Five Practical Programs (Copy-Paste Ready)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Five Practical Programs (Copy-Paste Ready)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-1-email-validator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 1: Email Validator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-2-url-parser-selenium-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 2: URL Parser (Selenium Prep)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-3-csv-data-parser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 3: CSV Data Parser
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-4-text-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 4: Text Analyzer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-5-selenium-locator-builder-automation-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 5: Selenium Locator Builder (Automation Prep)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-common-errors-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Common Errors &amp; Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-quick-rules-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Quick Rules Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Quick Rules Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ String Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Performance Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-selenium-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Selenium Connection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Selenium Connection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-automation-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real Automation Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selenium-example-robust-text-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selenium Example: Robust Text Extraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#another-example-dynamic-xpath-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Another Example: Dynamic XPath Builder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-stringbuilder-vs-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. StringBuilder vs String
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. StringBuilder vs String">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stringbuilder-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StringBuilder Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../10-Math/math/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Math
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11" id="__nav_1_1_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Control Statements
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Control Statements
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11_1" id="__nav_1_1_11_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If Else
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_1_11_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    If Else
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-If... Else/If.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-If... Else/If else Statements.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    If Else
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-If... Else/else if Statement.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Else If
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-If... Else/Nested If.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nested If
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../1-If... Else/Ternary operator.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ternary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2-Switch Statements/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Switch
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_11_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_11_3" id="__nav_1_1_11_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Loops
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_1_1_11_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_11_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Loops
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-Loops/For Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    For Loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-Loops/While Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    While Loop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-Loops/DoWhile Loop.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Do While
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-Loops/Nested Loops.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Nested Loops
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../3-Loops/Break and Continue.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Break & Continue
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_12" id="__nav_1_1_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Collections
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Collections
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/ArrayList.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ArrayList
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/Arrays.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arrays
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/HashMap.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HashMap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/HashSet.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    HashSet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/List.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/Map.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../12-Collection/Set.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Set
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../13-OOP/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OOP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-string-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. String Fundamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. String Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a String?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-immutability-explained" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        String Immutability Explained
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-immutable" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why Immutable?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-creating-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Creating Strings
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-essential-string-methods-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Essential String Methods (20+)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Essential String Methods (20+)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-length-and-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Length and Inspection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Comparison
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-search-and-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Search and Index
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Extraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35-modification-returns-new-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Modification (Returns NEW String)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-splitting-and-joining" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 Splitting and Joining
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#37-formatting-and-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.7 Formatting and Conversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-complete-working-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 4. Complete Working Examples
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💻 4. Complete Working Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1-string-inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 1: String Inspection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-2-string-manipulation-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example 2: String Manipulation Pipeline
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-five-practical-programs-copy-paste-ready" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Five Practical Programs (Copy-Paste Ready)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Five Practical Programs (Copy-Paste Ready)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#program-1-email-validator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 1: Email Validator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-2-url-parser-selenium-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 2: URL Parser (Selenium Prep)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-3-csv-data-parser" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 3: CSV Data Parser
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-4-text-analyzer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 4: Text Analyzer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#program-5-selenium-locator-builder-automation-prep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Program 5: Selenium Locator Builder (Automation Prep)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-common-errors-fixes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Common Errors &amp; Fixes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-quick-rules-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Quick Rules Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Quick Rules Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#string-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ String Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#performance-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Performance Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-selenium-connection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Selenium Connection
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Selenium Connection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#real-automation-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real Automation Use Cases
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selenium-example-robust-text-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Selenium Example: Robust Text Extraction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#another-example-dynamic-xpath-builder" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Another Example: Dynamic XPath Builder
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-stringbuilder-vs-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. StringBuilder vs String
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. StringBuilder vs String">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stringbuilder-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        StringBuilder Example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 Summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<hr />
+<h1 id="strings-and-methods">Strings and Methods</h1>
+<h2 id="1-string-fundamentals">1. String Fundamentals</h2>
+<h3 id="what-is-a-string">What is a String?</h3>
+<ul>
+<li><strong>Object</strong>, not primitive (stored in heap memory)</li>
+<li><strong>Immutable</strong>: Cannot be changed after creation</li>
+<li><strong>Sequence of characters</strong> (Unicode support)</li>
+<li><strong>Stored in String Pool</strong> for memory efficiency</li>
+</ul>
+<h3 id="string-immutability-explained">String Immutability Explained</h3>
+<pre><code class="language-java">String name = &quot;Java&quot;;
+name = name + &quot; Course&quot;;  // Creates NEW object, doesn't modify original
+
+// Memory view:
+// Step 1: &quot;Java&quot; created in pool
+// Step 2: &quot; Course&quot; created
+// Step 3: &quot;Java Course&quot; created (NEW object)
+// Step 4: name reference moved to new object
+// Step 1 object &quot;Java&quot; remains unchanged (garbage collected later)
+</code></pre>
+<h3 id="why-immutable">Why Immutable?</h3>
+<table>
+<thead>
+<tr>
+<th>Benefit</th>
+<th>Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Security</strong></td>
+<td>Can't modify sensitive data (passwords, URLs)</td>
+</tr>
+<tr>
+<td><strong>Thread-safe</strong></td>
+<td>Multiple threads can share safely</td>
+</tr>
+<tr>
+<td><strong>HashCode caching</strong></td>
+<td>Faster HashMap/HashSet operations</td>
+</tr>
+<tr>
+<td><strong>String Pool</strong></td>
+<td>Reuse saves memory</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-creating-strings">2. Creating Strings</h2>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Example</th>
+<th>Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String literal</td>
+<td><code>String s = "Hello"</code></td>
+<td>Preferred, uses String Pool</td>
+</tr>
+<tr>
+<td><code>new</code> keyword</td>
+<td><code>new String("Hello")</code></td>
+<td>Creates separate heap object</td>
+</tr>
+<tr>
+<td>From char array</td>
+<td><code>new String(char[])</code></td>
+<td>Convert char array</td>
+</tr>
+<tr>
+<td>From byte array</td>
+<td><code>new String(byte[])</code></td>
+<td>Convert bytes to text</td>
+</tr>
+<tr>
+<td><code>valueOf()</code></td>
+<td><code>String.valueOf(123)</code></td>
+<td>Convert any type to String</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-java">// Preferred (String Pool)
+String a = &quot;Test&quot;;
+
+// Creates duplicate object (avoid)
+String b = new String(&quot;Test&quot;);
+
+// a == b is FALSE (different objects)
+// a.equals(b) is TRUE (same content)
+</code></pre>
+<hr />
+<h2 id="3-essential-string-methods-20">3. Essential String Methods (20+)</h2>
+<h3 id="31-length-and-inspection">3.1 Length and Inspection</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>length()</code></td>
+<td><code>int</code></td>
+<td>Number of characters</td>
+<td><code>"Hello".length()</code> → <code>5</code></td>
+</tr>
+<tr>
+<td><code>isEmpty()</code></td>
+<td><code>boolean</code></td>
+<td>True if length 0</td>
+<td><code>"".isEmpty()</code> → <code>true</code></td>
+</tr>
+<tr>
+<td><code>isBlank()</code></td>
+<td><code>boolean</code></td>
+<td>True if empty or whitespace only</td>
+<td><code>"  ".isBlank()</code> → <code>true</code> (Java 11+)</td>
+</tr>
+<tr>
+<td><code>charAt(int)</code></td>
+<td><code>char</code></td>
+<td>Character at index</td>
+<td><code>"Java".charAt(0)</code> → <code>'J'</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-comparison">3.2 Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>equals(String)</code></td>
+<td><code>boolean</code></td>
+<td>Case-sensitive content match</td>
+<td><code>"A".equals("a")</code> → <code>false</code></td>
+</tr>
+<tr>
+<td><code>equalsIgnoreCase(String)</code></td>
+<td><code>boolean</code></td>
+<td>Case-insensitive match</td>
+<td><code>"A".equalsIgnoreCase("a")</code> → <code>true</code></td>
+</tr>
+<tr>
+<td><code>compareTo(String)</code></td>
+<td><code>int</code></td>
+<td>Lexicographic comparison</td>
+<td><code>"a".compareTo("b")</code> → <code>-1</code></td>
+</tr>
+<tr>
+<td><code>startsWith(String)</code></td>
+<td><code>boolean</code></td>
+<td>Prefix check</td>
+<td><code>"Test".startsWith("Te")</code> → <code>true</code></td>
+</tr>
+<tr>
+<td><code>endsWith(String)</code></td>
+<td><code>boolean</code></td>
+<td>Suffix check</td>
+<td><code>"Test.java".endsWith(".java")</code> → <code>true</code></td>
+</tr>
+<tr>
+<td><code>contains(CharSequence)</code></td>
+<td><code>boolean</code></td>
+<td>Substring check</td>
+<td><code>"Hello".contains("ell")</code> → <code>true</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-search-and-index">3.3 Search and Index</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>indexOf(String)</code></td>
+<td><code>int</code></td>
+<td>First occurrence index</td>
+<td><code>"banana".indexOf("a")</code> → <code>1</code></td>
+</tr>
+<tr>
+<td><code>indexOf(String, int)</code></td>
+<td><code>int</code></td>
+<td>Search from index</td>
+<td><code>"banana".indexOf("a", 2)</code> → <code>3</code></td>
+</tr>
+<tr>
+<td><code>lastIndexOf(String)</code></td>
+<td><code>int</code></td>
+<td>Last occurrence index</td>
+<td><code>"banana".lastIndexOf("a")</code> → <code>5</code></td>
+</tr>
+<tr>
+<td><code>indexOf(char)</code></td>
+<td><code>int</code></td>
+<td>Find character</td>
+<td><code>"Java".indexOf('v')</code> → <code>2</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-extraction">3.4 Extraction</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>substring(int)</code></td>
+<td><code>String</code></td>
+<td>From index to end</td>
+<td><code>"Hello".substring(2)</code> → <code>"llo"</code></td>
+</tr>
+<tr>
+<td><code>substring(int, int)</code></td>
+<td><code>String</code></td>
+<td>From start to end-1</td>
+<td><code>"Hello".substring(1, 4)</code> → <code>"ell"</code></td>
+</tr>
+<tr>
+<td><code>trim()</code></td>
+<td><code>String</code></td>
+<td>Remove leading/trailing spaces</td>
+<td><code>"  hi  ".trim()</code> → <code>"hi"</code></td>
+</tr>
+<tr>
+<td><code>strip()</code></td>
+<td><code>String</code></td>
+<td>Unicode-aware trim (Java 11)</td>
+<td>Same but better</td>
+</tr>
+<tr>
+<td><code>stripLeading()</code></td>
+<td><code>String</code></td>
+<td>Remove leading spaces only</td>
+<td><code>"  hi".stripLeading()</code> → <code>"hi"</code></td>
+</tr>
+<tr>
+<td><code>stripTrailing()</code></td>
+<td><code>String</code></td>
+<td>Remove trailing spaces only</td>
+<td><code>"hi  ".stripTrailing()</code> → <code>"hi"</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="35-modification-returns-new-string">3.5 Modification (Returns NEW String)</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>toLowerCase()</code></td>
+<td><code>String</code></td>
+<td>All lowercase</td>
+<td><code>"JAVA".toLowerCase()</code> → <code>"java"</code></td>
+</tr>
+<tr>
+<td><code>toUpperCase()</code></td>
+<td><code>String</code></td>
+<td>All uppercase</td>
+<td><code>"java".toUpperCase()</code> → <code>"JAVA"</code></td>
+</tr>
+<tr>
+<td><code>replace(char, char)</code></td>
+<td><code>String</code></td>
+<td>Replace all chars</td>
+<td><code>"aabb".replace('a', 'x')</code> → <code>"xxbb"</code></td>
+</tr>
+<tr>
+<td><code>replace(String, String)</code></td>
+<td><code>String</code></td>
+<td>Replace all substrings</td>
+<td><code>"aa".replace("a", "xx")</code> → <code>"xxxx"</code></td>
+</tr>
+<tr>
+<td><code>replaceAll(String, String)</code></td>
+<td><code>String</code></td>
+<td>Regex replace</td>
+<td><code>"a1b2".replaceAll("\\d", "X")</code> → <code>"aXbX"</code></td>
+</tr>
+<tr>
+<td><code>replaceFirst(String, String)</code></td>
+<td><code>String</code></td>
+<td>First regex match only</td>
+<td><code>"a1b2".replaceFirst("\\d", "X")</code> → <code>"aXb2"</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="36-splitting-and-joining">3.6 Splitting and Joining</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>split(String)</code></td>
+<td><code>String[]</code></td>
+<td>Split by regex</td>
+<td><code>"a,b,c".split(",")</code> → <code>["a", "b", "c"]</code></td>
+</tr>
+<tr>
+<td><code>split(String, int)</code></td>
+<td><code>String[]</code></td>
+<td>Split with limit</td>
+<td><code>"a,b,c".split(",", 2)</code> → <code>["a", "b,c"]</code></td>
+</tr>
+<tr>
+<td><code>join(CharSequence, ...)</code></td>
+<td><code>String</code></td>
+<td>Join with delimiter</td>
+<td><code>String.join("-", "a", "b")</code> → <code>"a-b"</code></td>
+</tr>
+<tr>
+<td><code>repeat(int)</code></td>
+<td><code>String</code></td>
+<td>Repeat string (Java 11)</td>
+<td><code>"ab".repeat(3)</code> → <code>"ababab"</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="37-formatting-and-conversion">3.7 Formatting and Conversion</h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Returns</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>format(String, ...)</code></td>
+<td><code>String</code></td>
+<td>Static format method</td>
+<td><code>String.format("Hi %s", "Joe")</code></td>
+</tr>
+<tr>
+<td><code>toCharArray()</code></td>
+<td><code>char[]</code></td>
+<td>Convert to char array</td>
+<td><code>"Hi".toCharArray()</code> → <code>['H', 'i']</code></td>
+</tr>
+<tr>
+<td><code>getBytes()</code></td>
+<td><code>byte[]</code></td>
+<td>Convert to bytes</td>
+<td><code>"Hi".getBytes()</code></td>
+</tr>
+<tr>
+<td><code>valueOf(any)</code></td>
+<td><code>String</code></td>
+<td>Static conversion</td>
+<td><code>String.valueOf(123)</code> → <code>"123"</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-complete-working-examples">💻 4. Complete Working Examples</h2>
+<h3 id="example-1-string-inspection">Example 1: String Inspection</h3>
+<pre><code class="language-java">public class StringInspection {
+    public static void main(String[] args) {
+        String text = &quot;  Selenium WebDriver  &quot;;
+
+        System.out.println(&quot;Original: '&quot; + text + &quot;'&quot;);
+        System.out.println(&quot;Length: &quot; + text.length());
+        System.out.println(&quot;Trimmed length: &quot; + text.trim().length());
+        System.out.println(&quot;Is empty: &quot; + text.isEmpty());
+        System.out.println(&quot;Is blank: &quot; + text.isBlank());
+
+        String clean = text.trim();
+        System.out.println(&quot;First char: &quot; + clean.charAt(0));
+        System.out.println(&quot;Starts with 'Selenium': &quot; + clean.startsWith(&quot;Selenium&quot;));
+        System.out.println(&quot;Ends with 'Driver': &quot; + clean.endsWith(&quot;Driver&quot;));
+        System.out.println(&quot;Contains 'Web': &quot; + clean.contains(&quot;Web&quot;));
+    }
+}
+</code></pre>
+<h3 id="example-2-string-manipulation-pipeline">Example 2: String Manipulation Pipeline</h3>
+<pre><code class="language-java">public class StringPipeline {
+    public static void main(String[] args) {
+        String raw = &quot;  USER@Example.COM  &quot;;
+
+        // Processing pipeline
+        String processed = raw
+            .trim()                    // Remove spaces
+            .toLowerCase()             // user@example.com
+            .replace(&quot;example&quot;, &quot;gmail&quot;); // user@gmail.com
+
+        System.out.println(&quot;Raw: '&quot; + raw + &quot;'&quot;);
+        System.out.println(&quot;Processed: '&quot; + processed + &quot;'&quot;);
+
+        // Extract username
+        int atIndex = processed.indexOf('@');
+        String username = processed.substring(0, atIndex);
+        String domain = processed.substring(atIndex + 1);
+
+        System.out.println(&quot;Username: &quot; + username);
+        System.out.println(&quot;Domain: &quot; + domain);
+    }
+}
+</code></pre>
+<hr />
+<h2 id="5-five-practical-programs-copy-paste-ready">5. Five Practical Programs (Copy-Paste Ready)</h2>
+<h3 id="program-1-email-validator">Program 1: Email Validator</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class EmailValidator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter email: &quot;);
+        String email = scanner.nextLine().trim();
+
+        // Validation checks
+        boolean hasAt = email.contains(&quot;@&quot;);
+        boolean hasDot = email.contains(&quot;.&quot;);
+        boolean noSpaces = !email.contains(&quot; &quot;);
+        boolean properLength = email.length() &gt;= 5;
+
+        // Extract parts if valid format
+        boolean isValidFormat = hasAt &amp;&amp; hasDot &amp;&amp; noSpaces &amp;&amp; properLength;
+
+        String username = &quot;&quot;;
+        String domain = &quot;&quot;;
+
+        if (isValidFormat) {
+            int atIndex = email.indexOf('@');
+            username = email.substring(0, atIndex);
+            domain = email.substring(atIndex + 1);
+
+            // Additional domain checks
+            boolean validDomain = domain.contains(&quot;.&quot;) &amp;&amp; 
+                                 !domain.startsWith(&quot;.&quot;) &amp;&amp; 
+                                 !domain.endsWith(&quot;.&quot;);
+            isValidFormat = isValidFormat &amp;&amp; validDomain;
+        }
+
+        System.out.println(&quot;\n=== Validation Results ===&quot;);
+        System.out.println(&quot;Contains @: &quot; + hasAt);
+        System.out.println(&quot;Contains dot: &quot; + hasDot);
+        System.out.println(&quot;No spaces: &quot; + noSpaces);
+        System.out.println(&quot;Proper length: &quot; + properLength);
+        System.out.println(&quot;✅ VALID: &quot; + isValidFormat);
+
+        if (isValidFormat) {
+            System.out.println(&quot;Username: &quot; + username);
+            System.out.println(&quot;Domain: &quot; + domain);
+
+            // Normalize
+            String normalized = email.toLowerCase();
+            System.out.println(&quot;Normalized: &quot; + normalized);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<p><strong>Expected Output:</strong></p>
+<pre><code>Enter email:  John.Doe@Example.COM  
+
+=== Validation Results ===
+Contains @: true
+Contains dot: true
+No spaces: true
+Proper length: true
+✅ VALID: true
+Username: John.Doe
+Domain: Example.COM
+Normalized: john.doe@example.com
+</code></pre>
+<hr />
+<h3 id="program-2-url-parser-selenium-prep">Program 2: URL Parser (Selenium Prep)</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class URLParser {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print(&quot;Enter URL: &quot;);
+        String url = scanner.nextLine().trim();
+
+        // Protocol extraction
+        String protocol = &quot;&quot;;
+        if (url.contains(&quot;://&quot;)) {
+            protocol = url.substring(0, url.indexOf(&quot;://&quot;));
+        }
+
+        // Remove protocol for further parsing
+        String withoutProtocol = url.replaceFirst(&quot;.*://&quot;, &quot;&quot;);
+
+        // Domain extraction (before / or :)
+        String domain = withoutProtocol;
+        int pathIndex = withoutProtocol.indexOf('/');
+        int portIndex = withoutProtocol.indexOf(':');
+
+        int endIndex = withoutProtocol.length();
+        if (pathIndex != -1) endIndex = Math.min(endIndex, pathIndex);
+        if (portIndex != -1) endIndex = Math.min(endIndex, portIndex);
+
+        domain = withoutProtocol.substring(0, endIndex);
+
+        // Path extraction
+        String path = &quot;&quot;;
+        if (pathIndex != -1) {
+            int queryIndex = withoutProtocol.indexOf('?');
+            if (queryIndex == -1) {
+                path = withoutProtocol.substring(pathIndex);
+            } else {
+                path = withoutProtocol.substring(pathIndex, queryIndex);
+            }
+        }
+
+        // Query parameters
+        String query = &quot;&quot;;
+        int queryIndex = withoutProtocol.indexOf('?');
+        if (queryIndex != -1) {
+            int hashIndex = withoutProtocol.indexOf('#');
+            if (hashIndex == -1) {
+                query = withoutProtocol.substring(queryIndex + 1);
+            } else {
+                query = withoutProtocol.substring(queryIndex + 1, hashIndex);
+            }
+        }
+
+        System.out.println(&quot;\n=== URL Components ===&quot;);
+        System.out.println(&quot;Full URL: &quot; + url);
+        System.out.println(&quot;Protocol: &quot; + protocol);
+        System.out.println(&quot;Domain: &quot; + domain);
+        System.out.println(&quot;Path: &quot; + (path.isEmpty() ? &quot;/&quot; : path));
+        System.out.println(&quot;Query: &quot; + (query.isEmpty() ? &quot;none&quot; : query));
+
+        // Validation for Selenium
+        boolean isSecure = protocol.equalsIgnoreCase(&quot;https&quot;);
+        boolean isValidDomain = domain.contains(&quot;.&quot;) &amp;&amp; !domain.startsWith(&quot;.&quot;);
+
+        System.out.println(&quot;\n=== Selenium Checks ===&quot;);
+        System.out.println(&quot;Is secure (HTTPS): &quot; + isSecure);
+        System.out.println(&quot;Valid domain format: &quot; + isValidDomain);
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-3-csv-data-parser">Program 3: CSV Data Parser</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class CSVParser {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;Enter CSV data (comma-separated):&quot;);
+        String csv = scanner.nextLine();
+
+        // Split by comma
+        String[] fields = csv.split(&quot;,&quot;);
+
+        System.out.println(&quot;\n=== Parsed Fields ===&quot;);
+        for (int i = 0; i &lt; fields.length; i++) {
+            // Clean each field
+            String field = fields[i].trim();
+
+            // Remove quotes if present
+            if (field.startsWith(&quot;\&quot;&quot;) &amp;&amp; field.endsWith(&quot;\&quot;&quot;)) {
+                field = field.substring(1, field.length() - 1);
+            }
+
+            System.out.println(&quot;Field &quot; + (i + 1) + &quot;: [&quot; + field + &quot;]&quot;);
+        }
+
+        // Reconstruct with different delimiter
+        String pipeDelimited = String.join(&quot;|&quot;, fields);
+        System.out.println(&quot;\nPipe-delimited: &quot; + pipeDelimited);
+
+        // Data transformation example
+        if (fields.length &gt;= 3) {
+            String name = fields[0].trim();
+            String email = fields[1].trim().toLowerCase();
+            String phone = fields[2].trim().replaceAll(&quot;-&quot;, &quot;&quot;);
+
+            System.out.println(&quot;\n=== Cleaned Data ===&quot;);
+            System.out.println(&quot;Name: &quot; + name.toUpperCase());
+            System.out.println(&quot;Email: &quot; + email);
+            System.out.println(&quot;Phone (digits only): &quot; + phone);
+        }
+
+        scanner.close();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-4-text-analyzer">Program 4: Text Analyzer</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class TextAnalyzer {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;Enter text to analyze:&quot;);
+        String text = scanner.nextLine();
+
+        // Basic stats
+        int length = text.length();
+        int wordCount = text.trim().isEmpty() ? 0 : text.trim().split(&quot;\\s+&quot;).length;
+        int lineCount = text.split(&quot;\n&quot;).length;
+
+        // Character analysis
+        int uppercaseCount = 0;
+        int lowercaseCount = 0;
+        int digitCount = 0;
+        int spaceCount = 0;
+
+        for (char c : text.toCharArray()) {
+            if (Character.isUpperCase(c)) uppercaseCount++;
+            else if (Character.isLowerCase(c)) lowercaseCount++;
+            else if (Character.isDigit(c)) digitCount++;
+            else if (Character.isWhitespace(c)) spaceCount++;
+        }
+
+        // Search functionality
+        System.out.print(&quot;\nEnter search term: &quot;);
+        String search = scanner.nextLine();
+
+        int searchIndex = text.indexOf(search);
+        int occurrenceCount = 0;
+        int lastIndex = 0;
+
+        while ((lastIndex = text.indexOf(search, lastIndex)) != -1) {
+            occurrenceCount++;
+            lastIndex += search.length();
+        }
+
+        // Case variations
+        String[] variations = {
+            text.toLowerCase(),
+            text.toUpperCase(),
+            capitalizeWords(text),
+            text.strip()
+        };
+
+        System.out.println(&quot;\n=== Text Statistics ===&quot;);
+        System.out.println(&quot;Total characters: &quot; + length);
+        System.out.println(&quot;Words: &quot; + wordCount);
+        System.out.println(&quot;Lines: &quot; + lineCount);
+        System.out.println(&quot;Uppercase letters: &quot; + uppercaseCount);
+        System.out.println(&quot;Lowercase letters: &quot; + lowercaseCount);
+        System.out.println(&quot;Digits: &quot; + digitCount);
+        System.out.println(&quot;Spaces: &quot; + spaceCount);
+
+        System.out.println(&quot;\n=== Search Results ===&quot;);
+        System.out.println(&quot;Searching for: '&quot; + search + &quot;'&quot;);
+        System.out.println(&quot;Occurrences: &quot; + occurrenceCount);
+        System.out.println(&quot;First found at index: &quot; + (searchIndex == -1 ? &quot;N/A&quot; : searchIndex));
+
+        System.out.println(&quot;\n=== Variations ===&quot;);
+        System.out.println(&quot;Lowercase: &quot; + variations[0].substring(0, Math.min(50, variations[0].length())) + &quot;...&quot;);
+        System.out.println(&quot;Uppercase: &quot; + variations[1].substring(0, Math.min(50, variations[1].length())) + &quot;...&quot;);
+        System.out.println(&quot;Title Case: &quot; + variations[2].substring(0, Math.min(50, variations[2].length())) + &quot;...&quot;);
+
+        scanner.close();
+    }
+
+    // Helper method
+    static String capitalizeWords(String text) {
+        String[] words = text.toLowerCase().split(&quot; &quot;);
+        StringBuilder result = new StringBuilder();
+        for (String word : words) {
+            if (!word.isEmpty()) {
+                result.append(Character.toUpperCase(word.charAt(0)))
+                      .append(word.substring(1))
+                      .append(&quot; &quot;);
+            }
+        }
+        return result.toString().trim();
+    }
+}
+</code></pre>
+<hr />
+<h3 id="program-5-selenium-locator-builder-automation-prep">Program 5: Selenium Locator Builder (Automation Prep)</h3>
+<pre><code class="language-java">import java.util.Scanner;
+
+public class LocatorBuilder {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println(&quot;=== Selenium Locator Builder ===&quot;);
+
+        System.out.print(&quot;Enter element attribute value (id, name, class, etc.): &quot;);
+        String rawValue = scanner.nextLine();
+
+        System.out.print(&quot;Attribute type (id/name/class/tag/text): &quot;);
+        String attrType = scanner.nextLine().toLowerCase().trim();
+
+        // Clean the value
+        String cleanValue = rawValue.trim()
+                                   .replace(&quot;\&quot;&quot;, &quot;\\\&quot;&quot;)
+                                   .replace(&quot;'&quot;, &quot;\\'&quot;);
+
+        // Generate locators
+        System.out.println(&quot;\n=== Generated Locators ===&quot;);
+
+        switch (attrType) {
+            case &quot;id&quot;:
+                System.out.println(&quot;By.id(\&quot;&quot; + cleanValue + &quot;\&quot;)&quot;);
+                System.out.println(&quot;By.cssSelector(\&quot;#&quot; + cleanValue + &quot;\&quot;)&quot;);
+                System.out.println(&quot;By.xpath(\&quot;//*[@id='&quot; + cleanValue + &quot;']\&quot;)&quot;);
+                break;
+
+            case &quot;name&quot;:
+                System.out.println(&quot;By.name(\&quot;&quot; + cleanValue + &quot;\&quot;)&quot;);
+                System.out.println(&quot;By.cssSelector(\&quot;[name='&quot; + cleanValue + &quot;']\&quot;)&quot;);
+                System.out.println(&quot;By.xpath(\&quot;//*[@name='&quot; + cleanValue + &quot;']\&quot;)&quot;);
+                break;
+
+            case &quot;class&quot;:
+                // Handle multiple classes
+                if (cleanValue.contains(&quot; &quot;)) {
+                    String cssClass = cleanValue.replace(&quot; &quot;, &quot;.&quot;);
+                    System.out.println(&quot;By.cssSelector(\&quot;.&quot; + cssClass + &quot;\&quot;)&quot;);
+                    // XPath with contains for partial class
+                    String[] classes = cleanValue.split(&quot;\\s+&quot;);
+                    System.out.println(&quot;By.xpath(\&quot;//*[contains(@class, '&quot; + classes[0] + &quot;')]\&quot;)&quot;);
+                } else {
+                    System.out.println(&quot;By.className(\&quot;&quot; + cleanValue + &quot;\&quot;)&quot;);
+                    System.out.println(&quot;By.cssSelector(\&quot;.&quot; + cleanValue + &quot;\&quot;)&quot;);
+                }
+                break;
+
+            case &quot;tag&quot;:
+                System.out.println(&quot;By.tagName(\&quot;&quot; + cleanValue + &quot;\&quot;)&quot;);
+                System.out.println(&quot;By.cssSelector(\&quot;&quot; + cleanValue + &quot;\&quot;)&quot;);
+                break;
+
+            case &quot;text&quot;:
+                // Exact match
+                System.out.println(&quot;By.xpath(\&quot;//*[text()='&quot; + cleanValue + &quot;']\&quot;)&quot;);
+                // Partial match
+                System.out.println(&quot;By.xpath(\&quot;//*[contains(text(), '&quot; + cleanValue + &quot;')]\&quot;)&quot;);
+                // Case insensitive
+                System.out.println(&quot;By.xpath(\&quot;//*[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), '&quot; 
+                    + cleanValue.toLowerCase() + &quot;')]\&quot;)&quot;);
+                break;
+
+            default:
+                System.out.println(&quot;Generic CSS: By.cssSelector(\&quot;[&quot; + attrType + &quot;='&quot; + cleanValue + &quot;']\&quot;)&quot;);
+                System.out.println(&quot;Generic XPath: By.xpath(\&quot;//*[@&quot; + attrType + &quot;='&quot; + cleanValue + &quot;']\&quot;)&quot;);
+        }
+
+        // Dynamic locator with variable
+        System.out.println(&quot;\n=== Dynamic Locator Template ===&quot;);
+        System.out.println(&quot;String dynamicValue = \&quot;&quot; + cleanValue + &quot;\&quot;;&quot;);
+        System.out.println(&quot;By dynamicLocator = By.xpath(\&quot;//*[@&quot; + attrType + &quot;='\&quot; + dynamicValue + \&quot;']\&quot;);&quot;);
+
+        // Validation helpers
+        System.out.println(&quot;\n=== Validation Methods ===&quot;);
+        System.out.println(&quot;// Check if value is valid identifier&quot;);
+        System.out.println(&quot;boolean isValid = !\&quot;&quot; + cleanValue + &quot;\&quot;.isBlank() &amp;&amp; !\&quot;&quot; + cleanValue + &quot;\&quot;.contains(\&quot; \&quot;);&quot;);
+
+        // Text normalization for comparison
+        System.out.println(&quot;\n=== Text Normalization for Assertions ===&quot;);
+        String normalized = cleanValue.toLowerCase().trim().replaceAll(&quot;\\s+&quot;, &quot; &quot;);
+        System.out.println(&quot;String expectedText = \&quot;&quot; + normalized + &quot;\&quot;;&quot;);
+        System.out.println(&quot;String actualText = element.getText().toLowerCase().trim().replaceAll(\&quot;\\\\s+\&quot;, \&quot; \&quot;);&quot;);
+        System.out.println(&quot;boolean match = actualText.contains(expectedText);&quot;);
+
+        scanner.close();
+    }
+}
+</code></pre>
+<p><strong>Expected Output:</strong></p>
+<pre><code>=== Selenium Locator Builder ===
+Enter element attribute value (id, name, class, etc.): search-button
+Attribute type (id/name/class/tag/text): id
+
+=== Generated Locators ===
+By.id(&quot;search-button&quot;)
+By.cssSelector(&quot;#search-button&quot;)
+By.xpath(&quot;//*[@id='search-button']&quot;)
+
+=== Dynamic Locator Template ===
+String dynamicValue = &quot;search-button&quot;;
+By dynamicLocator = By.xpath(&quot;//*[@id='&quot; + dynamicValue + &quot;']&quot;);
+
+=== Validation Methods ===
+// Check if value is valid identifier
+boolean isValid = !&quot;search-button&quot;.isBlank() &amp;&amp; !&quot;search-button&quot;.contains(&quot; &quot;);
+
+=== Text Normalization for Assertions ===
+String expectedText = &quot;search-button&quot;;
+String actualText = element.getText().toLowerCase().trim().replaceAll(&quot;\\s+&quot;, &quot; &quot;);
+boolean match = actualText.contains(expectedText);
+</code></pre>
+<hr />
+<h2 id="6-common-errors-fixes">6. Common Errors &amp; Fixes</h2>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Wrong Code</th>
+<th>Problem</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Using == for strings</strong></td>
+<td><code>if (s1 == s2)</code></td>
+<td>Compares references, not content</td>
+<td><code>if (s1.equals(s2))</code></td>
+</tr>
+<tr>
+<td><strong>Modifying "in place"</strong></td>
+<td><code>s.toUpperCase()</code></td>
+<td>Returns new string, original unchanged</td>
+<td><code>s = s.toUpperCase()</code></td>
+</tr>
+<tr>
+<td><strong>Index out of bounds</strong></td>
+<td><code>s.charAt(s.length())</code></td>
+<td>Valid indices: 0 to length-1</td>
+<td><code>s.charAt(s.length() - 1)</code></td>
+</tr>
+<tr>
+<td><strong>Substring end index</strong></td>
+<td><code>s.substring(0, 5)</code></td>
+<td>End index is exclusive</td>
+<td><code>s.substring(0, 4)</code> gets chars 0-3</td>
+</tr>
+<tr>
+<td><strong>Split regex special chars</strong></td>
+<td><code>"a.b".split(".")</code></td>
+<td><code>.</code> is regex for "any char"</td>
+<td><code>"a.b".split("\\.")</code></td>
+</tr>
+<tr>
+<td><strong>Null pointer</strong></td>
+<td><code>s.length()</code> if s is null</td>
+<td>Throws NPE</td>
+<td><code>if (s != null &amp;&amp; !s.isEmpty())</code></td>
+</tr>
+<tr>
+<td><strong>StringBuilder not used</strong></td>
+<td>Loop with <code>s += "x"</code></td>
+<td>Creates many objects, slow</td>
+<td>Use <code>StringBuilder</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-quick-rules-checklist">7. Quick Rules Checklist</h2>
+<h3 id="string-rules">✅ String Rules</h3>
+<ul>
+<li>[ ] <strong>Immutable</strong>: Every "modification" creates a new object</li>
+<li>[ ] <strong>Use <code>.equals()</code></strong> for content comparison (not <code>==</code>)</li>
+<li>[ ] <strong>Use <code>.equalsIgnoreCase()</code></strong> for case-insensitive comparison</li>
+<li>[ ] <strong>Check null first</strong> before calling methods: <code>if (str != null &amp;&amp; str.length() &gt; 0)</code></li>
+<li>[ ] <strong>Index bounds</strong>: <code>charAt(0)</code> to <code>charAt(length-1)</code></li>
+<li>[ ] <strong>Substring</strong>: End index is exclusive (not included)</li>
+</ul>
+<h3 id="performance-rules">✅ Performance Rules</h3>
+<ul>
+<li>[ ] <strong>String literals</strong> for constants: <code>String s = "constant"</code></li>
+<li>[ ] <strong>StringBuilder</strong> for loops/modifications</li>
+<li>[ ] <strong>StringBuffer</strong> only if thread safety needed (rare)</li>
+<li>[ ] <strong>Avoid <code>+</code> in loops</strong> (creates many temporary objects)</li>
+</ul>
+<hr />
+<h2 id="8-selenium-connection">8. Selenium Connection</h2>
+<h3 id="real-automation-use-cases">Real Automation Use Cases</h3>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>String Method</th>
+<th>Code Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normalize text</strong></td>
+<td><code>trim().toLowerCase()</code></td>
+<td><code>element.getText().trim().equalsIgnoreCase(expected)</code></td>
+</tr>
+<tr>
+<td><strong>Partial match</strong></td>
+<td><code>contains()</code></td>
+<td><code>element.getText().contains("Welcome")</code></td>
+</tr>
+<tr>
+<td><strong>Extract data</strong></td>
+<td><code>split()</code>, <code>substring()</code></td>
+<td>Parse table cells, URLs</td>
+</tr>
+<tr>
+<td><strong>Clean input</strong></td>
+<td><code>replaceAll()</code></td>
+<td>Remove currency symbols: <code>.replaceAll("[^0-9.]", "")</code></td>
+</tr>
+<tr>
+<td><strong>Build XPaths</strong></td>
+<td><code>format()</code>, <code>+</code></td>
+<td><code>"//div[text()='" + variable + "']"</code></td>
+</tr>
+<tr>
+<td><strong>Validate format</strong></td>
+<td><code>matches()</code></td>
+<td><code>text.matches("\\d{3}-\\d{3}-\\d{4}")</code> for phone</td>
+</tr>
+</tbody>
+</table>
+<h3 id="selenium-example-robust-text-extraction">Selenium Example: Robust Text Extraction</h3>
+<pre><code class="language-java">// BAD: Direct comparison fails on whitespace
+assert element.getText().equals(&quot;Welcome Admin&quot;);
+
+// GOOD: Normalized comparison
+String actual = element.getText().trim().replaceAll(&quot;\\s+&quot;, &quot; &quot;);
+String expected = &quot;Welcome Admin&quot;;
+assert actual.equalsIgnoreCase(expected);
+
+// BETTER: Partial match with contains
+String headerText = driver.findElement(By.tagName(&quot;h1&quot;)).getText();
+if (headerText.toLowerCase().contains(&quot;welcome&quot;)) {
+    System.out.println(&quot;Welcome message displayed&quot;);
+}
+
+// Extract price and convert to number
+String priceText = driver.findElement(By.className(&quot;price&quot;)).getText();
+// &quot;$1,299.99&quot; → &quot;1299.99&quot;
+String cleanPrice = priceText.replaceAll(&quot;[^0-9.]&quot;, &quot;&quot;);
+double price = Double.parseDouble(cleanPrice);
+</code></pre>
+<h3 id="another-example-dynamic-xpath-builder">Another Example: Dynamic XPath Builder</h3>
+<pre><code class="language-java">public By buildXPath(String tag, String attribute, String value) {
+    // Sanitize value for XPath
+    String safeValue = value.replace(&quot;'&quot;, &quot;\\'&quot;);
+
+    // Build XPath: //tag[@attribute='value']
+    String xpath = String.format(&quot;//%s[@%s='%s']&quot;, tag, attribute, safeValue);
+    return By.xpath(xpath);
+}
+
+// Usage
+By userNameField = buildXPath(&quot;input&quot;, &quot;id&quot;, &quot;userName&quot;);
+By dynamicButton = buildXPath(&quot;button&quot;, &quot;text()&quot;, &quot;Submit&quot;);
+
+// For partial match
+public By buildContainsXPath(String tag, String attribute, String partialValue) {
+    String safeValue = partialValue.replace(&quot;'&quot;, &quot;\\'&quot;);
+    String xpath = String.format(&quot;//%s[contains(@%s, '%s')]&quot;, tag, attribute, safeValue);
+    return By.xpath(xpath);
+}
+</code></pre>
+<hr />
+<h2 id="9-stringbuilder-vs-string">9. StringBuilder vs String</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>String</th>
+<th>StringBuilder</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Mutable</strong></td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Thread-safe</strong></td>
+<td>Yes (immutable)</td>
+<td>No</td>
+</tr>
+<tr>
+<td><strong>Speed</strong></td>
+<td>Slow for modifications</td>
+<td>Fast for modifications</td>
+</tr>
+<tr>
+<td><strong>Use case</strong></td>
+<td>Constants, single values</td>
+<td>Loops, building text</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stringbuilder-example">StringBuilder Example</h3>
+<pre><code class="language-java">// BAD: Creates 1000 String objects
+String result = &quot;&quot;;
+for (int i = 0; i &lt; 1000; i++) {
+    result += i;  // Creates new object each time!
+}
+
+// GOOD: Single mutable object
+StringBuilder sb = new StringBuilder();
+for (int i = 0; i &lt; 1000; i++) {
+    sb.append(i);
+}
+String result = sb.toString();
+
+// Methods: append(), insert(), delete(), replace(), reverse()
+</code></pre>
+<hr />
+<h2 id="summary">📝 Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Key Methods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inspection</strong></td>
+<td><code>length()</code>, <code>isEmpty()</code>, <code>charAt()</code>, <code>contains()</code></td>
+</tr>
+<tr>
+<td><strong>Comparison</strong></td>
+<td><code>equals()</code>, <code>equalsIgnoreCase()</code>, <code>startsWith()</code>, <code>endsWith()</code></td>
+</tr>
+<tr>
+<td><strong>Search</strong></td>
+<td><code>indexOf()</code>, <code>lastIndexOf()</code></td>
+</tr>
+<tr>
+<td><strong>Extraction</strong></td>
+<td><code>substring()</code>, <code>trim()</code>, <code>split()</code></td>
+</tr>
+<tr>
+<td><strong>Modification</strong></td>
+<td><code>toLowerCase()</code>, <code>toUpperCase()</code>, <code>replace()</code>, <code>replaceAll()</code></td>
+</tr>
+<tr>
+<td><strong>Building</strong></td>
+<td><code>StringBuilder.append()</code>, <code>String.join()</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Golden Rules:</strong>
+1. Use <code>.equals()</code> for String content comparison
+2. Strings are immutable - assign results back to variables
+3. Use StringBuilder for loop concatenations
+4. Always normalize text (trim, case) before comparison in Selenium</p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
